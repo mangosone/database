@@ -1,0 +1,2 @@
+-- Update db_version to set the latest release
+ALTER TABLE db_version CHANGE COLUMN required_s2060_mangos_creature_template_classlevelstats required_19000_Release_019_Initial bit;
