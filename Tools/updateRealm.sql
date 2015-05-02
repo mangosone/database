@@ -1,0 +1,1 @@
+update Realmlist set name='MangosOne Server', realmbuilds='8606' where id=1;
