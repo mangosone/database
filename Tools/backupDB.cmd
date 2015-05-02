@@ -116,6 +116,8 @@ mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% pool_gameobject
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% pool_pool >  _full_db\pool_pool.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% pool_template >  _full_db\pool_template.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% prospecting_loot_template >  _full_db\prospecting_loot_template.sql
+REM mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% pvpstats_battlegrounds >  _full_db\pvpstats_battlegrounds.sql
+REM mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% pvpstats_players >  _full_db\pvpstats_players.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% quest_template >  _full_db\quest_template.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% reference_loot_template >  _full_db\reference_loot_template.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% reputation_reward_rate >  _full_db\reputation_reward_rate.sql
