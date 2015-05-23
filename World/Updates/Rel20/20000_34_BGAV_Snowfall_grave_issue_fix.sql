@@ -43,7 +43,7 @@ BEGIN
 	DELETE FROM gameobject_template where entry = 180418;
 	INSERT INTO gameobject_template (entry,type,displayId,name,IconName,castBarCaption,faction,flags,size,data0,data1,data2,data3,data4,data5,data6,data7,data8,data9,data10,data11,data12,data13,data14,data15,data16,data17,data18,data19,data20,data21,data22,data23,mingold,maxgold,ScriptName)
 	VALUES
-	(180418,10,6211,'Snowfall Banner',,,0,0,1,1479,0,0,196608,0,0,0,0,0,0,24677,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,'');
+	(180418,10,6211,'Snowfall Banner','','',0,0,1,1479,0,0,196608,0,0,0,0,0,0,24677,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,'');
 	-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
     
     -- If we get here ok, commit the changes
