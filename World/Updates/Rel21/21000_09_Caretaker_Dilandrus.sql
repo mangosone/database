@@ -33,16 +33,11 @@ BEGIN
 
     -- -- -- -- Normal Update / Insert / Delete statements will go here  -- -- -- -- --
           
-    -- ================ Caretaker Dilandrus - missing text, and SD2 script linked ================ --
+    -- ================ Caretaker Dilandrus - missing text ================ --
           
     -- correct text
     -- http://wowwiki.wikia.com/Caretaker_Dilandrus
     UPDATE npc_text SET text0_0 = 'I was born here, $r. This is my world - all that I know... As a boy, my mother and father would regale me with tales of your world and the splendor it held. How I longed to leave this place.$B$BAlas, fate is a cruel mistress. My mother and father have long since passed, buried in this graveyard. I remain to uphold their honor and the honor of my family - The Sons of Lothar.' WHERE ID = 8676;
-
-    -- link to script (visiting graves)
-    -- http://www.wowhead.com/npc=16856/caretaker-dilandrus#comments
-    DELETE FROM script_binding WHERE bind = 16856;
-    INSERT INTO script_binding (type, ScriptName, bind, data) VALUES (0, 'npc_caretaker_dilandrus', 16856, 0);
 
     -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
     
