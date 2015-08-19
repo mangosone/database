@@ -10,7 +10,7 @@ BEGIN
     DECLARE bRollback BOOL  DEFAULT FALSE ;
     DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SET `bRollback` = TRUE;
 
-  SET @cOldRev = 'required_20000_33_Tortured_skeleton_issue_fix'; 
+  SET @cOldRev = 'required_20000_36_BGAV_Icewing_Marshal_Faction_Fix'; 
 
   -- Set the new revision string
   SET @cNewRev = 'required_21000_01_Release21_initial';
