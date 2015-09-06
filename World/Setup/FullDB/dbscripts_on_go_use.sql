@@ -114,7 +114,9 @@ INSERT INTO `dbscripts_on_go_use` (`id`, `delay`, `command`, `datalong`, `datalo
 (47301,10,10,22920,300000,0,0,0,0,0,0,0,3989.02,6071.37,266.41,3.72,''),
 (55359,1,11,55351,0,0,0,0,0,0,0,0,0,0,0,0,'Open Chromaggus side door'),
 (55359,2,25,1,0,14020,70,0,0,0,0,0,0,0,0,0,'Set Chromaggus run = true'),
-(55359,3,3,0,0,14020,70,0,0,0,0,0,-7484.91,-1072.98,476.55,2.18,'Move Chromaggus in the center of the room');
+(55359,3,3,0,0,14020,70,0,0,0,0,0,-7484.91,-1072.98,476.55,2.18,'Move Chromaggus in the center of the room'),
+(16775,1,3,0,0,10992,20,0,0,0,0,0,-4680.1,-1439.24,-50.49,5.77704,'Panther Move'),
+(16775,2,22,16,49,10992,20,0,0,0,0,0,0,0,0,0,'Panther set faction');
 /*!40000 ALTER TABLE `dbscripts_on_go_use` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

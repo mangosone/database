@@ -1042,7 +1042,7 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-642,'Listen carefully, for the lord of Blackrock will surely destroy you, should you not be prepared.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Vaelan greetings'),
 (-742,'My strength.... is... returning!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'16847'),
 (-743,'You\'ve restored my health! I\'m in your debt, $N.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'16847'),
-(-744,'You\'e found a cure! We will crush our enemies!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'16847'),
+(-744,'You\'ve found a cure! We will crush our enemies!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'16847'),
 (-747,'The %s flies up through the trees, free of Terokk\'s corruption.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'22339'),
 (-748,'SMOTTS, I HAVE YOUR LITTLE BELT....COME GET IT!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
 (-749,'SMOTTS! HEY, SMOTTS! COME OUT AND PLAY!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),

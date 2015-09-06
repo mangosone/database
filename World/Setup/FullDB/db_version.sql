@@ -35,10 +35,13 @@ DROP TABLE IF EXISTS `db_version`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `db_version` (
-  `version` varchar(120) DEFAULT NULL,
-  `creature_ai_version` varchar(120) DEFAULT NULL,
-  `required_20000_33_Tortured_skeleton_issue_fix` bit(1) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=FIXED COMMENT='Used DB version notes';
+  `version` int(3) NOT NULL,
+  `structure` int(3) NOT NULL,
+  `content` int(3) NOT NULL,
+  `description` varchar(30) NOT NULL DEFAULT '',
+  `comment` varchar(150) DEFAULT '',
+  PRIMARY KEY (`version`,`structure`,`content`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='Used DB version notes';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -47,7 +50,7 @@ CREATE TABLE `db_version` (
 
 LOCK TABLES `db_version` WRITE;
 /*!40000 ALTER TABLE `db_version` DISABLE KEYS */;
-INSERT INTO `db_version` (`version`, `creature_ai_version`, `required_20000_33_Tortured_skeleton_issue_fix`) VALUES ('MaNGOSOne Database Rev 20000_33','MaNGOSOne Artificial Creature Intelligence Database',NULL);
+INSERT INTO `db_version` (`version`, `structure`, `content`, `description`, `comment`) VALUES (21,1,0,'revision_refactor','');
 /*!40000 ALTER TABLE `db_version` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

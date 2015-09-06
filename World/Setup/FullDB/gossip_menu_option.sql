@@ -1332,7 +1332,7 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`,
 (7142,0,0,'Who is Midnight?',1,1,8170,0,0,0,0,'',0),
 (7146,0,1,'Let me browse your goods.',3,128,0,0,0,0,0,'',0),
 (7149,0,2,'Yes, I\'d like to purchase a ride down to the Ghostlands.',4,8192,0,0,0,0,0,'',0),
-(7162,0,1,'I want to browse your goods.',3,128,0,0,0,0,0,'',0),
+(7162,0,1,'I want to browse your goods.',3,128,0,0,0,0,0,'',1734),
 (7171,0,3,'Master chef, can you train me in the culinary arts?',5,16,0,0,0,0,0,'',0),
 (7171,1,1,'Have you any cooking supplies?',3,128,0,0,0,0,0,'',0),
 (7219,0,1,'Show me your wares, Wilhelm.',3,128,0,0,0,0,0,'',0),
@@ -2656,7 +2656,13 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`,
 (91,0,0,'What?',1,1,92,0,0,0,0,'',0),
 (92,0,0,'This is disturbing. Please continue.',1,1,93,0,0,0,0,'',0),
 (93,0,0,'Please, tell me more.',1,1,94,0,0,0,0,'',0),
-(94,0,0,'Is there anything else?',1,1,95,0,0,0,0,'',0);
+(94,0,0,'Is there anything else?',1,1,95,0,0,0,0,'',0),
+(7182,0,0,'<Administer the restorative draught.>',1,1,7179,0,0,0,0,NULL,873),
+(7179,0,0,'A bit ungrateful, aren\'t we? The way out is clear, flee quickly!',1,1,0,0,7179,0,0,NULL,873),
+(7185,0,0,'<Administer the restorative draught.>',1,1,7186,0,0,0,0,NULL,873),
+(7186,0,0,'You\'re free to go now. The way out is safe.',1,1,0,0,7186,0,0,NULL,873),
+(7177,0,0,'<Administer the restorative draught.>',1,1,7176,0,0,0,0,NULL,873),
+(7176,0,0,'You\'re free to go now. The way out is safe.',1,1,0,0,7176,0,0,NULL,873);
 /*!40000 ALTER TABLE `gossip_menu_option` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

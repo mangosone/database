@@ -123,11 +123,9 @@ mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% reference_loot_
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% reputation_reward_rate >  _full_db\reputation_reward_rate.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% reputation_spillover_template >  _full_db\reputation_spillover_template.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% reserved_name >  _full_db\reserved_name.sql
+mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% script_binding >  _full_db\script_binding.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% script_texts >  _full_db\script_texts.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% script_waypoint >  _full_db\script_waypoint.sql
-mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% scripted_areatrigger >  _full_db\scripted_areatrigger.sql
-mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% scripted_event >  _full_db\scripted_event.sql
-mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% sd2_db_version >  _full_db\sd2_db_version.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% skill_discovery_template >  _full_db\skill_discovery_template.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% skill_extra_item_template >  _full_db\skill_extra_item_template.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% skill_fishing_base_level >  _full_db\skill_fishing_base_level.sql
@@ -149,5 +147,4 @@ mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% skill_extra_ite
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% spell_threat >  _full_db\spell_threat.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% spell_template >  _full_db\spell_template.sql
 mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% transports >  _full_db\transports.sql
-mysqldump -Q -c -e -q -u%Username% -p%Password% -h %SERVER% %DB% world_template >  _full_db\world_template.sql
 pause

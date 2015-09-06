@@ -503,7 +503,17 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000005422,'Relax, Spark! I have it all under control. We\'ll strip mine the Exodar right out from under \'em - making both you and I very, very rich in the process.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'Event 10675 Geezle say4'),
 (2000005423,'Relax? Do you know what Kael\'thas does to those that fail him, Geezle? Eternal suffering and pain... Do NOT screw this up, fool.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,14,'Event 10675 Overgrind say5'),
 (2000005424,'Our Bloodmyst scouts have located our contact. The fool, Velen, will soon leave himself open and defenseless -- long enough for us to strike! Now get out of my sight before I vaporize you...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'Event 10675 Overgrind say6'),
-(2000005425,'Yes, sir. It won\'t happen again...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,66,'Event 10675 Geezle say7');
+(2000005425,'Yes, sir. It won\'t happen again...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,66,'Event 10675 Geezle say7'),
+(2000000388,'Ok, let\'s go. I know just the perfect spot!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000389,'What... is happening... to me? Get this cat away from me!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000390,'Twinkle looks at Viera Sunwhisper with very hungry eyes.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,NULL),
+(2000000391,'%s scurries away, attempting to flee from Twinkle.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,NULL),
+(2000000404,'Did you find something fun to chase around, Twinkle? I bet you did!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
+(2000000405,'It\'s just you and me, Twinkle. Daddy\'s not going to be coming home.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL),
+(2000000406,'I wonder how far this would launch that white cat...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000005543,'Thanks, I shouldve never left Silverpine Forest.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000005545,'Thank you. I thought I was going to die.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000005544,'You have my thanks!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL);
 /*!40000 ALTER TABLE `db_script_string` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -20436,7 +20436,7 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1687804,16878,2,0,100,0,30,0,0,0,11,8599,0,0,1,-106,0,0,0,0,0,0,'Shattered Hand Berserker - Cast Enrage at 30% HP'),
 (1687805,16878,6,3,100,0,0,0,0,0,12,22454,0,120000,0,0,0,0,0,0,0,0,'Shattered Hand Berserker - Cast Summon Fel Spirit On Death (Phase 2)'),
 (1696813,16968,7,0,100,0,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,'Tunneler - Set Phase 0 on Evade'),
-(1722601,17226,8,0,100,0,30077,-1,0,0,33,17226,6,0,48,2,0,0,0,0,0,0,'Viera Sunwhisper - Kill Credit and WP movement on Spell Hit'),
+(1722601,17226,8,0,100,0,30077,-1,0,0,33,17226,6,0,47,2,0,0,0,0,0,0,'Viera Sunwhisper - Kill Credit and WP movement on Spell Hit'),
 (1867811,18678,7,0,100,0,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,'Fulgorge - Set Phase 0 on Evade'),
 (1930507,19305,11,0,100,0,0,0,0,0,11,7741,0,1,0,0,0,0,0,0,0,0,'Goliathon - Cast Summoned Demon on Spawned'),
 (1942001,19420,11,0,100,0,0,0,0,0,11,24240,0,1,0,0,0,0,0,0,0,0,'Goliathon Shardling - Cast Spawn - Red Lightning on Spawned'),
