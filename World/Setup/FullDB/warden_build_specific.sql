@@ -1,7 +1,7 @@
 -- ---------------------------------------- 
 -- --        CLEAR DOWN THE TABLE        -- 
 -- ---------------------------------------- 
-TRUNCATE TABLE `dbdocsfields_localised`; 
+TRUNCATE TABLE `warden_build_specific`; 
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
@@ -21,12 +21,12 @@ TRUNCATE TABLE `dbdocsfields_localised`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Dumping data for table `dbdocsfields_localised`
+-- Dumping data for table `warden_build_specific`
 --
 
-LOCK TABLES `dbdocsfields_localised` WRITE;
-/*!40000 ALTER TABLE `dbdocsfields_localised` DISABLE KEYS */;
-/*!40000 ALTER TABLE `dbdocsfields_localised` ENABLE KEYS */;
+LOCK TABLES `warden_build_specific` WRITE;
+/*!40000 ALTER TABLE `warden_build_specific` DISABLE KEYS */;
+/*!40000 ALTER TABLE `warden_build_specific` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -38,4 +38,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:38
+-- Dump completed on 2015-09-13  0:50:50
