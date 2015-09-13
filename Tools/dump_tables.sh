@@ -43,6 +43,7 @@ creature_onkill_reputation \
 creature_questrelation \
 creature_template \
 creature_template_addon \
+creature_template_classlevelstats \
 creature_template_spells \
 db_script_string \
 db_version \
@@ -121,6 +122,8 @@ reference_loot_template \
 reputation_reward_rate \
 reputation_spillover_template \
 reserved_name \
+script_texts \
+script_waypoint \
 scripted_areatrigger \
 scripted_event \
 skill_discovery_template \
@@ -144,7 +147,7 @@ transports \
 world_template \
 ; do
 
-echo "Dumping ${i}/127 ${TABLE}..."
+echo "Dumping ${i}/128 ${TABLE}..."
 
 echo "--
 -- Copyright (C) 2005-2015 MaNGOS <http://getmangos.eu/>
