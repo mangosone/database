@@ -26,7 +26,8 @@ TRUNCATE TABLE `db_version`;
 
 LOCK TABLES `db_version` WRITE;
 /*!40000 ALTER TABLE `db_version` DISABLE KEYS */;
-INSERT INTO `db_version` (`version`, `structure`, `content`, `description`, `comment`) VALUES (21,3,0,'warden_multiversion','warden_multiversion');
+INSERT INTO `db_version` (`version`, `structure`, `content`, `description`, `comment`) VALUES (21,3,0,'warden_multiversion','warden_multiversion'),
+(21,3,3,'server_startup_fixes','server - startup_fixes');
 /*!40000 ALTER TABLE `db_version` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

@@ -806,7 +806,7 @@ INSERT INTO `script_binding` (`type`, `ScriptName`, `bind`, `data`) VALUES (0,'g
 (1,'go_crystalline_tear',180633,0),
 (1,'go_barov_journal',180794,0),
 (1,'go_sapphiron_birth',181356,0),
-(1,'spell_dummy_go',181616,0),
+(0,'npc_tyrion_spybot',8856,0),
 (1,'go_manticron_cube',181713,0),
 (1,'go_prison_cell_lever',181982,0),
 (1,'go_harbinger_second_trial',182052,0),
@@ -1036,7 +1036,10 @@ INSERT INTO `script_binding` (`type`, `ScriptName`, `bind`, `data`) VALUES (0,'g
 (4,'spell_tag_murloc_proc',30875,0),
 (4,'spell_fumping',39246,2),
 (4,'spell_throw_gordawg_boulder',32001,0),
-(4,'spell_expose_rathorthorn_root',44935,0);
+(4,'spell_expose_rathorthorn_root',44935,0),
+(4,'spell_orb_of_murloc_control',45109,0),
+(0,'npc_tyrion',7766,0),
+(0,'npc_caretaker_dilandrus',16856,0);
 /*!40000 ALTER TABLE `script_binding` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
