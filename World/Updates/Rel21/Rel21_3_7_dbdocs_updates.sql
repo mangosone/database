@@ -18,12 +18,12 @@ BEGIN
     -- Expected Values
     SET @cOldVersion = '21'; 
     SET @cOldStructure = '3'; 
-    SET @cOldContent = '3'; 
+    SET @cOldContent = '6'; 
 
     -- New Values
     SET @cNewVersion = '21';
     SET @cNewStructure = '3';
-    SET @cNewContent = '4';
+    SET @cNewContent = '7';
                             -- DESCRIPTION IS 30 Characters MAX    
     SET @cNewDescription = 'dbdocs_updates';
 
