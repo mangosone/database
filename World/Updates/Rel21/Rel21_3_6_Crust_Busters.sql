@@ -25,7 +25,7 @@ BEGIN
     SET @cNewStructure = '3';
     SET @cNewContent = '6';
                             -- DESCRIPTION IS 30 Characters MAX    
-    SET @cNewDescription = 'Incorrect UnitFlags for Crust Busters';
+    SET @cNewDescription = 'Wrong CrustBusters UnitFlags';
 
                         -- COMMENT is 150 Characters MAX
     SET @cNewComment = 'Crust Busters in Outlands have an incorrect UnitFlags setting';

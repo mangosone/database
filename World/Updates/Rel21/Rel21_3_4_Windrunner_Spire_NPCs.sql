@@ -25,7 +25,7 @@ BEGIN
     SET @cNewStructure = '3';
     SET @cNewContent = '4';
                             -- DESCRIPTION IS 30 Characters MAX    
-    SET @cNewDescription = 'Windrunner Spire NPC corrections';
+    SET @cNewDescription = 'Windrunner Spire NPC fixes';
 
                         -- COMMENT is 150 Characters MAX
     SET @cNewComment = 'Location and movement corrections made to the NPCs in Windrunner Spire';
