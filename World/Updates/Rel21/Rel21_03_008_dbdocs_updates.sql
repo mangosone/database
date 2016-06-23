@@ -1,5 +1,14 @@
-﻿-- --------------------------------------------------------------------------------
--- This is an attempt to create a full transactional update
+-- ----------------------------------------
+-- Added to prevent timeout's while loading
+-- ----------------------------------------
+SET GLOBAL net_read_timeout=30;
+SET GLOBAL net_write_timeout=60;
+SET GLOBAL net_buffer_length=1000000; 
+SET GLOBAL max_allowed_packet=1000000000;
+SET GLOBAL connect_timeout=10000000;
+
+-- --------------------------------------------------------------------------------
+-- This is an attempt to create a full transactional MaNGOS update (v1.3)
 -- --------------------------------------------------------------------------------
 DROP PROCEDURE IF EXISTS `update_mangos`; 
 
@@ -50,8 +59,8 @@ BEGIN
 
 -- dbocssubtables
 -- -- -- -- -- --
-delete from `dbdocssubtables` where `subtableId`= 13 and languageId=0;
-insert  into `dbdocssubtables`(`subtableId`,`languageId`,`subtableName`,`subtablecontent`,`subtableTemplate`) values (13,0,'Sheath State','<table border=\'1\' cellspacing=\'1\' cellpadding=\'3\' bgcolor=\'#f0f0f0\'>
+DELETE FROM `dbdocssubtables` WHERE `subtableId`= 13 AND languageId=0;
+INSERT  INTO `dbdocssubtables`(`subtableId`,`languageId`,`subtableName`,`subtablecontent`,`subtableTemplate`) VALUES (13,0,'Sheath State','<table border=\'1\' cellspacing=\'1\' cellpadding=\'3\' bgcolor=\'#f0f0f0\'>
 <tr bgcolor=\'#f0f0ff\'>
 <th><b>Value</b></th>
 <th align=\'left\'><b>State</b></th>
@@ -64,8 +73,8 @@ insert  into `dbdocssubtables`(`subtableId`,`languageId`,`subtableName`,`subtabl
 1|Melee weapon unsheathed 
 2|Ranged weapon unsheathed 
 ');
-delete from `dbdocssubtables` where `subtableId`= 109 and languageId=0;
-insert  into `dbdocssubtables`(`subtableId`,`languageId`,`subtableName`,`subtablecontent`,`subtableTemplate`) values (109,0,'Dummy2','<table border=\'1\' cellspacing=\'1\' cellpadding=\'3\' bgcolor=\'#f0f0f0\'>
+DELETE FROM `dbdocssubtables` WHERE `subtableId`= 109 AND languageId=0;
+INSERT  INTO `dbdocssubtables`(`subtableId`,`languageId`,`subtableName`,`subtablecontent`,`subtableTemplate`) VALUES (109,0,'Dummy2','<table border=\'1\' cellspacing=\'1\' cellpadding=\'3\' bgcolor=\'#f0f0f0\'>
 <tr bgcolor=\'#f0f0ff\'>
 <th><b>ID</b></th>
 <th align=\'left\'><b>Type</b></th>
@@ -459,7 +468,20 @@ update `dbdocsfields` set `FieldComment` = 'Dynamic flags are used to control th
             IF(@cCurResult IS NULL) THEN    -- Something has gone wrong
                 SELECT '* UPDATE FAILED *' AS `===== Status =====`,'Unable to locate DB Version Information' AS `============= Error Message =============`;
             ELSE
-                SELECT '* UPDATE SKIPPED *' AS `===== Status =====`,@cOldResult AS `=== Expected ===`,@cCurResult AS `===== Found Version =====`;
+		IF(@cOldResult IS NULL) THEN    -- Something has gone wrong
+		    SET @cCurVersion := (SELECT `version` FROM db_version ORDER BY `version` DESC, STRUCTURE DESC, CONTENT DESC LIMIT 0,1);
+		    SET @cCurStructure := (SELECT `STRUCTURE` FROM db_version ORDER BY `version` DESC, STRUCTURE DESC, CONTENT DESC LIMIT 0,1);
+		    SET @cCurContent := (SELECT `Content` FROM db_version ORDER BY `version` DESC, STRUCTURE DESC, CONTENT DESC LIMIT 0,1);
+                    SET @cCurOutput = CONCAT(@cCurVersion, '_', @cCurStructure, '_', @cCurContent, ' - ',@cCurResult);
+                    SET @cOldResult = CONCAT('Rel',@cOldVersion, '_', @cOldStructure, '_', @cOldContent, ' - ','IS NOT APPLIED');
+                    SELECT '* UPDATE SKIPPED *' AS `===== Status =====`,@cOldResult AS `=== Expected ===`,@cCurOutput AS `===== Found Version =====`;
+		ELSE
+		    SET @cCurVersion := (SELECT `version` FROM db_version ORDER BY `version` DESC, STRUCTURE DESC, CONTENT DESC LIMIT 0,1);
+		    SET @cCurStructure := (SELECT `STRUCTURE` FROM db_version ORDER BY `version` DESC, STRUCTURE DESC, CONTENT DESC LIMIT 0,1);
+		    SET @cCurContent := (SELECT `Content` FROM db_version ORDER BY `version` DESC, STRUCTURE DESC, CONTENT DESC LIMIT 0,1);
+                    SET @cCurOutput = CONCAT(@cCurVersion, '_', @cCurStructure, '_', @cCurContent, ' - ',@cCurResult);
+                    SELECT '* UPDATE SKIPPED *' AS `===== Status =====`,@cOldResult AS `=== Expected ===`,@cCurOutput AS `===== Found Version =====`;
+                END IF;
             END IF;
         END IF;
     END IF;
@@ -472,3 +494,4 @@ CALL update_mangos();
 
 -- Drop the procedure
 DROP PROCEDURE IF EXISTS `update_mangos`;
+
