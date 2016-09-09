@@ -19,17 +19,17 @@ BEGIN
     -- Expected Values
     SET @cOldVersion = '21'; 
     SET @cOldStructure = '03'; 
-    SET @cOldContent = '073'; 
+    SET @cOldContent = '075'; 
 
     -- New Values
     SET @cNewVersion = '21';
     SET @cNewStructure = '03';
-    SET @cNewContent = '074';
+    SET @cNewContent = '076';
                             -- DESCRIPTION IS 30 Characters MAX    
-    SET @cNewDescription = 'Quest 27469';
+    SET @cNewDescription = 'Grimm Guzzler';
 
                         -- COMMENT is 150 Characters MAX
-    SET @cNewComment = 'Quest 27469 Friends on The Other Side';
+    SET @cNewComment = 'Grimm Guzzler updates from cmangos';
 
     -- Evaluate all settings
     SET @cCurResult := (SELECT description FROM db_version ORDER BY `version` DESC, STRUCTURE DESC, CONTENT DESC LIMIT 0,1);
