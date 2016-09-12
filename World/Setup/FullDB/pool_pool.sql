@@ -7,7 +7,7 @@ TRUNCATE TABLE `pool_pool`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `pool_pool`;
 
 LOCK TABLES `pool_pool` WRITE;
 /*!40000 ALTER TABLE `pool_pool` DISABLE KEYS */;
-INSERT INTO `pool_pool` (`pool_id`, `mother_pool`, `chance`, `description`) VALUES (3000,2000,0,'Mineral Spawn Point 1 - Alterac Mountains (Inner Section)'),
+INSERT INTO `pool_pool` (`pool_id`, `mother_pool`, `chance`, `description`) VALUES 
+(3000,2000,0,'Mineral Spawn Point 1 - Alterac Mountains (Inner Section)'),
 (3001,2000,0,'Mineral Spawn Point 2 - Alterac Mountains (Inner Section)'),
 (3002,2000,0,'Mineral Spawn Point 3 - Alterac Mountains (Inner Section)'),
 (3003,2000,0,'Mineral Spawn Point 4 - Alterac Mountains (Inner Section)'),
@@ -5900,4 +5901,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:47
+-- Dump completed on 2016-09-12 12:17:17

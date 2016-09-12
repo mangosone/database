@@ -7,7 +7,7 @@ TRUNCATE TABLE `creature_template_spells`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `creature_template_spells`;
 
 LOCK TABLES `creature_template_spells` WRITE;
 /*!40000 ALTER TABLE `creature_template_spells` DISABLE KEYS */;
-INSERT INTO `creature_template_spells` (`entry`, `spell1`, `spell2`, `spell3`, `spell4`) VALUES (30,744,0,0,0),
+INSERT INTO `creature_template_spells` (`entry`, `spell1`, `spell2`, `spell3`, `spell4`) VALUES 
+(30,744,0,0,0),
 (40,6016,0,0,0),
 (43,744,0,0,0),
 (46,3368,0,0,0),
@@ -2886,7 +2887,7 @@ INSERT INTO `creature_template_spells` (`entry`, `spell1`, `spell2`, `spell3`, `
 (16540,29928,29492,29930,0),
 (16544,30013,29982,30014,0),
 (16545,30036,30039,37161,30007),
-(16573,15284,28991,28969,34970),
+(16573,0,28991,28969,34970),
 (16593,3391,36033,36020,0),
 (16594,15585,36052,30479,15587),
 (16595,3391,29935,29939,0),
@@ -4428,4 +4429,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:38
+-- Dump completed on 2016-09-12 12:17:04

@@ -7,7 +7,7 @@ TRUNCATE TABLE `creature_ai_scripts`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `creature_ai_scripts`;
 
 LOCK TABLES `creature_ai_scripts` WRITE;
 /*!40000 ALTER TABLE `creature_ai_scripts` DISABLE KEYS */;
-INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES (601,6,4,0,30,0,0,0,0,0,1,-7,-8,0,0,0,0,0,0,0,0,0,'Kobold Vermin - Random Say on Aggro'),
+INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES 
+(601,6,4,0,30,0,0,0,0,0,1,-7,-8,0,0,0,0,0,0,0,0,0,'Kobold Vermin - Random Say on Aggro'),
 (3001,30,11,0,100,0,0,0,0,0,11,11959,0,1,0,0,0,0,0,0,0,0,'Forest Spider - Cast Poison Proc on Spawn'),
 (3801,38,4,0,30,0,0,0,0,0,1,-2,-3,-4,0,0,0,0,0,0,0,0,'Defias Thug - Random Say on Aggro'),
 (4001,40,4,0,30,0,0,0,0,0,1,-7,0,0,0,0,0,0,0,0,0,0,'Kobold Miner - Random Say on Aggro'),
@@ -8726,7 +8727,8 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (828301,8283,1,0,100,0,0,0,0,0,21,0,0,0,20,0,0,0,22,1,0,0,'Slave Master Blackheart - Prevent Combat Movement and Prevent Melee and Set Phase 1 on Spawn'),
 (828302,8283,9,5,100,1,5,30,2300,3900,11,6660,1,0,40,2,0,0,0,0,0,0,'Slave Master Blackheart - Cast Shoot and Set Ranged Weapon Model (Phase 1)'),
 (828303,8283,9,5,100,1,30,80,1000,1000,21,1,1,0,20,1,0,0,0,0,0,0,'Slave Master Blackheart - Start Combat Movement and Start Melee at 30 Yards (Phase 1)');
-INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES (828304,8283,9,5,100,1,0,10,1000,1000,21,1,0,0,40,1,0,0,20,1,0,0,'Slave Master Blackheart - Start Combat Movement and Set Melee Weapon Model and Start Melee at 10 Yards (Phase 1)'),
+INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES 
+(828304,8283,9,5,100,1,0,10,1000,1000,21,1,0,0,40,1,0,0,20,1,0,0,'Slave Master Blackheart - Start Combat Movement and Set Melee Weapon Model and Start Melee at 10 Yards (Phase 1)'),
 (828305,8283,9,5,100,1,11,25,1000,1000,21,0,1,0,20,0,0,0,0,0,0,0,'Slave Master Blackheart - Prevent Combat Movement and Prevent Melee at 25 Yards (Phase 1)'),
 (828306,8283,9,0,100,1,0,20,8000,11000,11,6533,1,1,0,0,0,0,0,0,0,0,'Slave Master Blackheart - Cast Net'),
 (828307,8283,2,0,100,0,15,0,0,0,22,2,0,0,0,0,0,0,0,0,0,0,'Slave Master Blackheart - Set Phase 2 at 15% HP'),
@@ -14218,19 +14220,19 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1690101,16901,0,0,100,1,3000,3000,8000,8000,11,32722,0,0,0,0,0,0,0,0,0,0,'Blistering Rot - Cast Blistering Rot'),
 (1690401,16904,9,0,100,1,0,5,7000,11000,11,11976,1,0,0,0,0,0,0,0,0,0,'Unyielding Footman - Cast Strike'),
 (1690402,16904,0,0,100,1,8000,12000,10000,14000,11,11972,1,0,0,0,0,0,0,0,0,0,'Unyielding Footman - Cast Shield Bash'),
-(1690501,16905,1,0,100,0,0,0,0,0,21,0,0,0,0,0,0,0,0,0,0,0,'Unyielding Sorcerer - Prevent Combat Movement on Spawn'),
-(1690502,16905,4,0,100,0,0,0,0,0,11,9053,1,0,22,1,0,0,0,0,0,0,'Unyielding Sorcerer - Cast Fireball and Set Phase 1 on Aggro'),
-(1690503,16905,9,13,100,1,0,40,2400,3800,11,9053,1,0,0,0,0,0,0,0,0,0,'Unyielding Sorcerer - Cast Fireball (Phase 1)'),
-(1690504,16905,3,13,100,1,15,0,1000,1000,21,1,0,0,23,1,0,0,0,0,0,0,'Unyielding Sorcerer - Start Combat Movement and Set Phase 2 when Mana is at 15% (Phase 1)'),
-(1690505,16905,9,13,100,1,25,80,1000,1000,21,1,0,0,0,0,0,0,0,0,0,0,'Unyielding Sorcerer - Start Combat Movement at 35 Yards (Phase 1)'),
-(1690506,16905,9,13,100,1,5,15,1000,1000,21,0,0,0,0,0,0,0,0,0,0,0,'Unyielding Sorcerer - Prevent Combat Movement at 15 Yards (Phase 1)'),
+(1690513,16905,1,0,100,0,0,0,0,0,21,0,0,0,0,0,0,0,0,0,0,0,'Unyielding Sorcerer - Prevent Combat Movement on Spawn'),
+(1690512,16905,4,0,100,0,0,0,0,0,11,9053,1,0,22,1,0,0,0,0,0,0,'Unyielding Sorcerer - Cast Fireball and Set Phase 1 on Aggro'),
+(1690511,16905,9,13,100,1,0,40,2400,3800,11,9053,1,0,0,0,0,0,0,0,0,0,'Unyielding Sorcerer - Cast Fireball (Phase 1)'),
+(1690510,16905,3,13,100,1,15,0,1000,1000,21,1,0,0,23,1,0,0,0,0,0,0,'Unyielding Sorcerer - Start Combat Movement and Set Phase 2 when Mana is at 15% (Phase 1)'),
+(1690509,16905,9,13,100,1,25,80,1000,1000,21,1,0,0,0,0,0,0,0,0,0,0,'Unyielding Sorcerer - Start Combat Movement at 35 Yards (Phase 1)'),
+(1690508,16905,9,13,100,1,5,15,1000,1000,21,0,0,0,0,0,0,0,0,0,0,0,'Unyielding Sorcerer - Prevent Combat Movement at 15 Yards (Phase 1)'),
 (1690507,16905,9,13,100,1,0,5,1000,1000,21,1,0,0,0,0,0,0,0,0,0,0,'Unyielding Sorcerer - Start Combat Movement Below 5 Yards'),
-(1690508,16905,0,13,100,1,5000,9000,12000,15000,11,11829,1,0,0,0,0,0,0,0,0,0,'Unyielding Sorcerer - Cast Flamestrike (Phase 1)'),
-(1690509,16905,9,0,100,1,0,5,1000,1000,29,10,150,0,11,11831,0,1,0,0,0,0,'Unyielding Sorcerer - Ranged Movement at 5 Yards to Avoid Melee Combat'),
-(1690510,16905,3,11,100,1,100,30,1000,1000,22,1,0,0,0,0,0,0,0,0,0,0,'Unyielding Sorcerer - Set Phase 1 when Mana is above 30% (Phase 2)'),
-(1690511,16905,2,0,100,0,15,0,0,0,11,11831,0,1,22,3,0,0,0,0,0,0,'Unyielding Sorcerer - Cast Frost Nova and Set Phase 3 at 15% HP'),
-(1690512,16905,2,7,100,0,15,0,0,0,21,1,0,0,25,0,0,0,1,-47,0,0,'Unyielding Sorcerer - Start Combat Movement and Flee at 15% HP (Phase 3)'),
-(1690513,16905,7,0,100,0,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,'Unyielding Sorcerer - Set Phase to 0 on Evade'),
+(1690506,16905,0,13,100,1,5000,9000,12000,15000,11,11829,1,0,0,0,0,0,0,0,0,0,'Unyielding Sorcerer - Cast Flamestrike (Phase 1)'),
+(1690505,16905,9,0,100,0,0,5,10000,10000,34,0,0,0,11,11831,7,1,0,0,0,0,'Unyielding Sorcerer - Ranged Movement at 5 Yards to Avoid Melee Combat'),
+(1690504,16905,3,11,100,1,0,0,0,0,23,0,0,0,0,0,0,0,0,0,0,0,'Unyielding Sorcerer - Set Phase 1 when Mana is above 30% (Phase 2)'),
+(1690503,16905,2,0,100,0,15,0,0,0,11,11831,0,1,22,3,0,0,0,0,0,0,'Unyielding Sorcerer - Cast Frost Nova and Set Phase 3 at 15% HP'),
+(1690502,16905,2,7,100,0,15,0,0,0,21,1,0,0,25,0,0,0,1,-47,0,0,'Unyielding Sorcerer - Start Combat Movement and Flee at 15% HP (Phase 3)'),
+(1690501,16905,7,0,100,0,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,'Unyielding Sorcerer - Set Phase to 0 on Evade'),
 (1690601,16906,4,0,75,0,0,0,0,0,11,22911,1,0,0,0,0,0,0,0,0,0,'Unyielding Knight - Cast Charge'),
 (1690602,16906,2,0,100,0,50,0,0,0,11,33910,0,0,0,0,0,0,0,0,0,0,'Unyielding Knight - Cast Heal Other When Below 50% HP'),
 (1690701,16907,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Bleeding Hollow Peon - Flee at 15% HP'),
@@ -14250,7 +14252,7 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1691602,16916,1,0,100,1,242000,242000,242000,242000,5,18,0,0,1,-656,0,0,0,0,0,0,'Wretched Captive - Begging Text - Cry'),
 (1692401,16924,1,0,100,1,240000,240000,240000,240000,5,1,0,0,1,-655,0,0,0,0,0,0,'Sergent Kanren - Interrogating'),
 (1692402,16924,1,0,100,1,244000,244000,244000,244000,5,1,0,0,1,-657,0,0,0,0,0,0,'Sergent Kanren - Begging Response'),
-(1692501,16925,4,0,100,0,0,0,0,0,11,32723,0,0,0,0,0,0,0,0,0,0,'Bonechewer Raider - Summon Bonechewer Riding Wolf on Aggro'),
+(1692501,16925,0,0,100,0,500,500,0,0,12,18706,0,-1,39,10,0,0,0,0,0,0,'Bonechewer Raider - Summon Bonechewer Riding Wolf on Aggro'),
 (1692901,16929,0,0,50,1,3000,3000,8000,8000,11,33911,1,0,0,0,0,0,0,0,0,0,'Stonescythe Alpha - Cast Tear Armor'),
 (1693201,16932,0,0,100,1,6000,6000,10000,10000,11,33781,1,0,0,0,0,0,0,0,0,0,'Razorfang Hatchling - Cast Ravage'),
 (1693301,16933,0,0,100,1,6000,6000,10000,10000,11,33781,1,0,0,0,0,0,0,0,0,0,'Razorfang Ravager - Cast Ravage'),
@@ -14273,9 +14275,9 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1695001,16950,0,0,100,1,1000,1000,5000,5000,11,11981,1,0,0,0,0,0,0,0,0,0,'Netherhound - Cast Mana Burn'),
 (1695101,16951,0,0,75,1,5000,5000,10000,10000,11,37488,1,0,0,0,0,0,0,0,0,0,'Terrorfiend - Cast Fel Flamest'),
 (1695102,16951,0,0,75,1,4000,4000,8000,8000,11,45,0,0,0,0,0,0,0,0,0,0,'Terrorfiend - Cast War Stomp'),
-(1696401,16964,0,0,100,1,9000,9000,17000,17000,11,34080,0,1,0,0,0,0,0,0,0,0,'Warlord Morkh - Cast Riposte Stance'),
-(1696402,16964,0,0,100,1,7000,7000,8000,8000,11,11978,1,1,0,0,0,0,0,0,0,0,'Warlord Morkh - Cast Kick'),
 (1696403,16964,2,0,100,0,20,0,0,0,11,8599,0,1,1,-46,0,0,0,0,0,0,'Warlord Morkh - Cast Enrage at 20% HP'),
+(1696402,16964,0,0,100,1,7000,7000,8000,8000,11,11978,1,1,0,0,0,0,0,0,0,0,'Warlord Morkh - Cast Kick'),
+(1696401,16964,0,0,100,1,9000,9000,17000,17000,8,0,0,0,0,0,0,0,0,0,0,0,'Warlord Morkh - Cast Riposte Stance'),
 (1696801,16968,11,0,100,0,0,0,0,0,19,33554432,0,0,0,0,0,0,0,0,0,0,'Tunneler - Remove Unselectable Unit Flag on Spawn'),
 (1696802,16968,11,0,100,0,0,0,0,0,11,29147,0,16,11,33928,0,0,21,0,0,0,'Tunneler - Cast Sandworm Submerge Visual and Cast Tunnel Bore Passive and Prevent Combat Movement on Spawn'),
 (1696803,16968,1,0,100,1,1000,1000,1000,1000,11,29147,0,48,0,0,0,0,0,0,0,0,'Tunneler - Cast Sandworm Submerge Visual OOC'),
@@ -17080,7 +17082,6 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1943409,19434,0,0,100,1,4000,9000,18100,24000,11,11443,1,1,0,0,0,0,0,0,0,0,'Dreadcaller - Cast Cripple'),
 (1943410,19434,7,0,100,0,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,'Dreadcaller - Set Phase to 0 on Evade'),
 (1944001,19440,0,0,100,1,6000,6000,0,0,41,0,0,0,0,0,0,0,0,0,0,0,'Eye of Grillok - Despawn after 6 seconds'),
-(1944002,19440,4,0,100,0,0,0,0,0,1,-48,0,0,0,0,0,0,0,0,0,0,'Eye of Grillok - Emote on aggro'),
 (1944201,19442,0,0,100,1,5000,5000,8000,8000,11,30478,1,1,0,0,0,0,0,0,0,0,'Worg Master Kruush - Cast Hemmorrhage'),
 (1944202,19442,0,0,100,0,0,0,2500,2500,1,-187,0,0,0,0,0,0,0,0,0,0,'Worg Master Kruush - Emote on Aggro'),
 (1944203,19442,2,0,100,0,25,0,0,0,11,8599,0,1,1,-46,0,0,0,0,0,0,'Worg Master Kruush - Cast Enrage at 25% HP'),
@@ -17190,8 +17191,9 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1959303,19593,4,0,100,0,0,0,0,0,11,35927,1,0,22,1,0,0,0,0,0,0,'Spellbinder Maryana - Cast Arcane Blast and Set Phase 1 on Aggro'),
 (1959304,19593,9,5,100,1,0,30,4500,6000,11,35927,1,0,0,0,0,0,0,0,0,0,'Spellbinder Maryana - Cast Arcane Blast (Phase 1)'),
 (1959305,19593,3,5,100,0,7,0,0,0,21,1,0,0,23,1,0,0,0,0,0,0,'Spellbinder Maryana - Start Combat Movement and Set Phase 2 when Mana is at 7% (Phase 1)'),
-(1959306,19593,9,5,100,0,25,80,0,0,21,1,0,0,0,0,0,0,0,0,0,0,'Spellbinder Maryana - Start Combat Movement at 25 Yards (Phase 1)');
-INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES (1959307,19593,9,5,100,1,5,15,1000,1000,21,0,0,0,0,0,0,0,0,0,0,0,'Spellbinder Maryana - Prevent Combat Movement at 15 Yards (Phase 1)'),
+(1959306,19593,9,5,100,0,25,80,0,0,21,1,0,0,0,0,0,0,0,0,0,0,'Spellbinder Maryana - Start Combat Movement at 25 Yards (Phase 1)'),
+(1959307,19593,9,5,100,1,5,15,1000,1000,21,0,0,0,0,0,0,0,0,0,0,0,'Spellbinder Maryana - Prevent Combat Movement at 15 Yards (Phase 1)');
+INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inverse_phase_mask`, `event_chance`, `event_flags`, `event_param1`, `event_param2`, `event_param3`, `event_param4`, `action1_type`, `action1_param1`, `action1_param2`, `action1_param3`, `action2_type`, `action2_param1`, `action2_param2`, `action2_param3`, `action3_type`, `action3_param1`, `action3_param2`, `action3_param3`, `comment`) VALUES 
 (1959308,19593,9,5,100,1,0,5,1000,1000,21,1,0,0,0,0,0,0,0,0,0,0,'Spellbinder Maryana - Start Combat Movement Below 5 Yards (Phase 1)'),
 (1959309,19593,3,3,100,1,100,15,1000,1000,22,1,0,0,0,0,0,0,0,0,0,0,'Spellbinder Maryana - Set Phase 1 when Mana is above 15% (Phase 2)'),
 (1959310,19593,9,0,100,1,0,8,15000,18000,11,15091,0,1,0,0,0,0,0,0,0,0,'Spellbinder Maryana - Cast Blast Wave'),
@@ -20530,7 +20532,19 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (2574405,25744,8,0,100,2,32592,-1,0,0,41,0,0,0,0,0,0,0,0,0,0,0,'Dark Fiend - Despawn on Mass Dispel Hit'),
 (2577207,25772,1,0,100,2,3000,3000,0,0,38,0,0,0,0,0,0,0,0,0,0,0,'Void Sentinal - Send Combat Pulse on OOC Timer'),
 (1498901,14989,11,0,100,2,0,0,0,0,11,24320,0,0,0,0,0,0,0,0,0,0,'Poisonous Cloud - Cast Poisonous Blood on Spawned'),
-(1879701,18797,4,0,100,6,0,0,0,0,47,0,0,0,0,0,0,0,0,0,0,0,'Tortured skeleton - stand on aggro');
+(1879701,18797,4,0,100,6,0,0,0,0,47,0,0,0,0,0,0,0,0,0,0,0,'Tortured skeleton - stand on aggro'),
+(19228122,22461,1,0,100,0,0,0,0,0,21,0,0,0,0,0,0,0,0,0,0,0,'Fel Cannon MK1 - Prevent Combat Movement on Spawn'),
+(19228123,22461,9,0,100,3,0,40,2900,4900,11,36238,1,0,0,0,0,0,0,0,0,0,'Fel Cannon MK1 - Cast Fel Fireball in combat'),
+(1692502,16925,4,0,100,0,0,0,0,0,43,0,0,0,0,0,0,0,0,0,0,0,'Bonechewer Raider - Unmount on Aggro'),
+(1870601,18706,0,0,100,0,5000,5000,20000,20000,11,3149,0,0,0,0,0,0,0,0,0,0,'Bonechewer Riding Wolf - Furious Howl'),
+(1870602,18706,0,0,100,0,7000,7000,17000,17000,11,16460,1,0,0,0,0,0,0,0,0,0,'Bonechewer Riding Wolf - Festering Bite'),
+(1870603,18706,1,0,100,0,30000,30000,0,0,41,0,0,0,0,0,0,0,0,0,0,0,'Bonechewer Riding Wolf - Despawn after 30s to prevent abuse.'),
+(1696404,16964,6,0,100,0,0,0,0,0,32,21134,0,30,0,0,0,0,0,0,0,0,'Warlord Morkh - Summon Eye of the Citadel on Self at Death'),
+(2113401,21134,11,0,100,0,0,0,0,0,21,1,1,0,0,0,0,0,0,0,0,0,'Eye of the Citadel - Disable combat movement and melee attacks.'),
+(2113402,21134,1,0,100,0,3000,3000,0,0,1,-2000,0,0,0,0,0,0,0,0,0,0,'Eye of the Citadel - Say 1 after 3s'),
+(2113403,21134,1,0,100,0,6000,6000,0,0,1,-2001,0,0,0,0,0,0,0,0,0,0,'Eye of the Citadel - Say 2 after 6s'),
+(1944002,19440,4,0,100,0,0,0,0,0,1,-48,0,0,0,0,0,0,0,0,0,0,'Eye of Grillok - Emote on aggro'),
+(1944003,19440,0,0,100,0,5500,5500,0,0,39,30,0,0,0,0,0,0,0,0,0,0,'Eye of Grillok - Call for help 30 yards.');
 /*!40000 ALTER TABLE `creature_ai_scripts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -20543,4 +20557,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:34
+-- Dump completed on 2016-09-12 12:17:00

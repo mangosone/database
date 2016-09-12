@@ -7,7 +7,7 @@ TRUNCATE TABLE `npc_vendor_template`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `npc_vendor_template`;
 
 LOCK TABLES `npc_vendor_template` WRITE;
 /*!40000 ALTER TABLE `npc_vendor_template` DISABLE KEYS */;
-INSERT INTO `npc_vendor_template` (`entry`, `item`, `maxcount`, `incrtime`, `ExtendedCost`, `condition_id`) VALUES (1,16302,0,0,0,0),
+INSERT INTO `npc_vendor_template` (`entry`, `item`, `maxcount`, `incrtime`, `ExtendedCost`, `condition_id`) VALUES 
+(1,16302,0,0,0,0),
 (1,16316,0,0,0,0),
 (1,16317,0,0,0,0),
 (1,16318,0,0,0,0),
@@ -3380,4 +3381,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:45
+-- Dump completed on 2016-09-12 12:17:14

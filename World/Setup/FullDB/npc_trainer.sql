@@ -7,7 +7,7 @@ TRUNCATE TABLE `npc_trainer`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `npc_trainer`;
 
 LOCK TABLES `npc_trainer` WRITE;
 /*!40000 ALTER TABLE `npc_trainer` DISABLE KEYS */;
-INSERT INTO `npc_trainer` (`entry`, `spell`, `spellcost`, `reqskill`, `reqskillvalue`, `reqlevel`) VALUES (2485,3565,8000,0,0,30),
+INSERT INTO `npc_trainer` (`entry`, `spell`, `spellcost`, `reqskill`, `reqskillvalue`, `reqlevel`) VALUES 
+(2485,3565,8000,0,0,30),
 (2485,3562,2000,0,0,20),
 (2485,3561,2000,0,0,20),
 (2485,10059,15000,0,0,40),
@@ -958,4 +959,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:45
+-- Dump completed on 2016-09-12 12:17:14

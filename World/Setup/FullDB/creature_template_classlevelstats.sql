@@ -7,7 +7,7 @@ TRUNCATE TABLE `creature_template_classlevelstats`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `creature_template_classlevelstats`;
 
 LOCK TABLES `creature_template_classlevelstats` WRITE;
 /*!40000 ALTER TABLE `creature_template_classlevelstats` DISABLE KEYS */;
-INSERT INTO `creature_template_classlevelstats` (`Level`, `Class`, `BaseHealthExp0`, `BaseHealthExp1`, `BaseMana`, `BaseDamageExp0`, `BaseDamageExp1`, `BaseMeleeAttackPower`, `BaseRangedAttackPower`, `BaseArmor`) VALUES (73,8,3098,5311,7654,36.1353,100.617,143,37,6126),
+INSERT INTO `creature_template_classlevelstats` (`Level`, `Class`, `BaseHealthExp0`, `BaseHealthExp1`, `BaseMana`, `BaseDamageExp0`, `BaseDamageExp1`, `BaseMeleeAttackPower`, `BaseRangedAttackPower`, `BaseArmor`) VALUES 
+(73,8,3098,5311,7654,36.1353,100.617,143,37,6126),
 (70,8,2835,4890,7196,34.4369,88.3402,135,28,5404),
 (67,8,2610,4429,6749,32.736,75.9676,128,27,4710),
 (64,8,2399,4002,6299,31.0435,64.089,121,26,3977),
@@ -257,4 +258,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:38
+-- Dump completed on 2016-09-12 12:17:04

@@ -7,7 +7,7 @@ TRUNCATE TABLE `creature_ai_texts`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `creature_ai_texts`;
 
 LOCK TABLES `creature_ai_texts` WRITE;
 /*!40000 ALTER TABLE `creature_ai_texts` DISABLE KEYS */;
-INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES (-1310,'Welcome to flavor country!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'11058'),
+INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES 
+(-1310,'Welcome to flavor country!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'11058'),
 (-1309,'Do as I say, Fly!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'17994'),
 (-1308,'The Scarlet Crusade shall smite the wicked and drive evil from these lands!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Scarlet Monastery'),
 (-1307,'There is no escape for you.  The Crusade shall destroy all who carry the scourge\'s taint.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Scarlet Monastery'),
@@ -1033,7 +1034,9 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-1323,'It is you who have invaded our home. Gorefiend will avenge us!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'21788 21795'),
 (-1324,'We will never dissipate, mortal... Our fate is tied to Gorefiend...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'21788 21795'),
 (-1325,'We are bound here... eternally. It is the will of Gorefiend.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'21788 21795'),
-(-1326,'Gorefiend will have your head, interloper!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'21788 21795');
+(-1326,'Gorefiend will have your head, interloper!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'21788 21795'),
+(-2000,'How dare you trifle with my playthings!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,''),
+(-2001,'The orcs in my citadel will drink your blood and devour you!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'');
 /*!40000 ALTER TABLE `creature_ai_texts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1046,4 +1049,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:35
+-- Dump completed on 2016-09-12 12:17:00

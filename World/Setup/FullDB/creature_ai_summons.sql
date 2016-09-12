@@ -7,7 +7,7 @@ TRUNCATE TABLE `creature_ai_summons`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `creature_ai_summons`;
 
 LOCK TABLES `creature_ai_summons` WRITE;
 /*!40000 ALTER TABLE `creature_ai_summons` DISABLE KEYS */;
-INSERT INTO `creature_ai_summons` (`id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `comment`) VALUES (1,8074.84,-3840,690.061,4.6,180000,'10727'),
+INSERT INTO `creature_ai_summons` (`id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `comment`) VALUES 
+(1,8074.84,-3840,690.061,4.6,180000,'10727'),
 (2,-472.02,105.823,-94.6299,0.0301925,300000,'5721'),
 (3,-467.099,85.2944,-94.7318,3.95326,300000,'5720'),
 (4,-9967.55,-135.956,24.5909,0.170326,180000,'6846'),
@@ -50,7 +51,8 @@ INSERT INTO `creature_ai_summons` (`id`, `position_x`, `position_y`, `position_z
 (22,2540.95,4032.21,136.18,4.44,60000,'20287'),
 (23,2507.12,4010.69,133.87,5.99,60000,'20287'),
 (24,2547.05,3980.34,131.04,2.29,60000,'20287'),
-(25,-4542.21,1023.72,9.669,0.86,32000,'21867');
+(25,-4542.21,1023.72,9.669,0.86,32000,'21867'),
+(30,-1167.17,1916.35,80.4,5.8,60000,'211134 - EotC - Warlord Morkh');
 /*!40000 ALTER TABLE `creature_ai_summons` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -63,4 +65,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:35
+-- Dump completed on 2016-09-12 12:17:00

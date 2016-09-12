@@ -7,7 +7,7 @@ TRUNCATE TABLE `transports`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `transports`;
 
 LOCK TABLES `transports` WRITE;
 /*!40000 ALTER TABLE `transports` DISABLE KEYS */;
-INSERT INTO `transports` (`entry`, `name`, `period`) VALUES (20808,'Ratchet and Booty Bay',231236),
+INSERT INTO `transports` (`entry`, `name`, `period`) VALUES 
+(20808,'Ratchet and Booty Bay',231236),
 (164871,'Orgrimmar and Undercity',239334),
 (175080,'Grom\'Gol Base Camp and Orgrimmar',248990),
 (176231,'Menethil Harbor and Theramore Isle',230162),
@@ -47,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:50
+-- Dump completed on 2016-09-12 12:17:20

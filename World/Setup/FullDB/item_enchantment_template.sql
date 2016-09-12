@@ -7,7 +7,7 @@ TRUNCATE TABLE `item_enchantment_template`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `item_enchantment_template`;
 
 LOCK TABLES `item_enchantment_template` WRITE;
 /*!40000 ALTER TABLE `item_enchantment_template` DISABLE KEYS */;
-INSERT INTO `item_enchantment_template` (`entry`, `ench`, `chance`) VALUES (61,6,7.73),
+INSERT INTO `item_enchantment_template` (`entry`, `ench`, `chance`) VALUES 
+(61,6,7.73),
 (61,8,7.31),
 (61,9,8.02),
 (61,15,3.01),
@@ -28446,4 +28447,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:42
+-- Dump completed on 2016-09-12 12:17:11

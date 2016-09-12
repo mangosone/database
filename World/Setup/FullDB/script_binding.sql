@@ -7,7 +7,7 @@ TRUNCATE TABLE `script_binding`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `script_binding`;
 
 LOCK TABLES `script_binding` WRITE;
 /*!40000 ALTER TABLE `script_binding` DISABLE KEYS */;
-INSERT INTO `script_binding` (`type`, `ScriptName`, `bind`, `data`) VALUES (0,'guard_stormwind',68,0),
+INSERT INTO `script_binding` (`type`, `ScriptName`, `bind`, `data`) VALUES 
+(0,'guard_stormwind',68,0),
 (0,'npc_corporal_keeshan',349,0),
 (0,'npc_defias_traitor',467,0),
 (0,'npc_chicken_cluck',620,0),
@@ -1039,7 +1040,17 @@ INSERT INTO `script_binding` (`type`, `ScriptName`, `bind`, `data`) VALUES (0,'g
 (4,'spell_expose_rathorthorn_root',44935,0),
 (4,'spell_orb_of_murloc_control',45109,0),
 (0,'npc_tyrion',7766,0),
-(0,'npc_caretaker_dilandrus',16856,0);
+(0,'npc_caretaker_dilandrus',16856,0),
+(0,'npc_burster_worm',16844,0),
+(0,'npc_burster_worm',16857,0),
+(0,'npc_burster_worm',16968,0),
+(0,'npc_burster_worm',21380,0),
+(0,'npc_burster_worm',21849,0),
+(0,'npc_burster_worm',22038,0),
+(0,'npc_burster_worm',22466,0),
+(0,'npc_burster_worm',22482,0),
+(0,'npc_burster_worm',23285,0),
+(0,'npc_shaheen',19671,0);
 /*!40000 ALTER TABLE `script_binding` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1052,4 +1063,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:48
+-- Dump completed on 2016-09-12 12:17:18

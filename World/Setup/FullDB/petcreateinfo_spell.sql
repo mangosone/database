@@ -7,7 +7,7 @@ TRUNCATE TABLE `petcreateinfo_spell`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `petcreateinfo_spell`;
 
 LOCK TABLES `petcreateinfo_spell` WRITE;
 /*!40000 ALTER TABLE `petcreateinfo_spell` DISABLE KEYS */;
-INSERT INTO `petcreateinfo_spell` (`entry`, `Spell1`, `Spell2`, `Spell3`, `Spell4`) VALUES (416,3110,0,0,0),
+INSERT INTO `petcreateinfo_spell` (`entry`, `Spell1`, `Spell2`, `Spell3`, `Spell4`) VALUES 
+(416,3110,0,0,0),
 (417,19505,0,0,0),
 (510,31707,33395,0,0),
 (1860,3716,0,0,0),
@@ -46,4 +47,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:46
+-- Dump completed on 2016-09-12 12:17:15

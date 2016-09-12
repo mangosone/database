@@ -7,7 +7,7 @@ TRUNCATE TABLE `battleground_events`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `battleground_events`;
 
 LOCK TABLES `battleground_events` WRITE;
 /*!40000 ALTER TABLE `battleground_events` DISABLE KEYS */;
-INSERT INTO `battleground_events` (`map`, `event1`, `event2`, `description`) VALUES (30,20,2,'Frostwolf Grave - Alliance Defender Quest 2'),
+INSERT INTO `battleground_events` (`map`, `event1`, `event2`, `description`) VALUES 
+(30,20,2,'Frostwolf Grave - Alliance Defender Quest 2'),
 (30,20,1,'Frostwolf Grave - Alliance Defender Quest 1'),
 (30,20,0,'Frostwolf Grave - Alliance Defender Quest 0'),
 (30,19,7,'Iceblood Grave - Horde Defender Quest 3'),
@@ -229,4 +230,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:33
+-- Dump completed on 2016-09-12 12:16:57

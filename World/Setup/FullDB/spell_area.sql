@@ -7,7 +7,7 @@ TRUNCATE TABLE `spell_area`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `spell_area`;
 
 LOCK TABLES `spell_area` WRITE;
 /*!40000 ALTER TABLE `spell_area` DISABLE KEYS */;
-INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_start_active`, `quest_end`, `condition_id`, `aura_spell`, `racemask`, `gender`, `autocast`) VALUES (35480,2367,0,0,0,0,0,690,0,1),
+INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_start_active`, `quest_end`, `condition_id`, `aura_spell`, `racemask`, `gender`, `autocast`) VALUES 
+(35480,2367,0,0,0,0,0,690,0,1),
 (35481,2367,0,0,0,0,0,690,1,1),
 (35482,2367,0,0,0,0,0,1032,0,1),
 (35483,2367,0,0,0,0,0,1032,1,1),
@@ -110,7 +111,11 @@ INSERT INTO `spell_area` (`spell`, `area`, `quest_start`, `quest_start_active`, 
 (41611,4075,0,0,0,0,0,0,2,0),
 (45373,4075,0,0,0,0,0,0,2,0),
 (46837,4075,0,0,0,0,0,0,2,0),
-(46839,4075,0,0,0,0,0,0,2,0);
+(46839,4075,0,0,0,0,0,0,2,0),
+(30562,3457,0,0,0,0,0,0,2,0),
+(30557,3457,0,0,0,0,0,0,2,0),
+(30550,3457,0,0,0,0,0,0,2,0),
+(30567,3457,0,0,0,0,0,0,2,0);
 /*!40000 ALTER TABLE `spell_area` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -123,4 +128,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:49
+-- Dump completed on 2016-09-12 12:17:19

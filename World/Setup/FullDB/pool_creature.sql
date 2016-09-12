@@ -7,7 +7,7 @@ TRUNCATE TABLE `pool_creature`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `pool_creature`;
 
 LOCK TABLES `pool_creature` WRITE;
 /*!40000 ALTER TABLE `pool_creature` DISABLE KEYS */;
-INSERT INTO `pool_creature` (`guid`, `pool_entry`, `chance`, `description`) VALUES (80582,12265,40,'Kobold Tunneler (Fargodeep Mine)'),
+INSERT INTO `pool_creature` (`guid`, `pool_entry`, `chance`, `description`) VALUES 
+(80582,12265,40,'Kobold Tunneler (Fargodeep Mine)'),
 (80584,12265,25,'Kobold Tunneler (Fargodeep Mine)'),
 (80585,12265,9,'Kobold Tunneler (Fargodeep Mine)'),
 (80586,12265,12,'Kobold Tunneler (Fargodeep Mine)'),
@@ -74,4 +75,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:46
+-- Dump completed on 2016-09-12 12:17:16

@@ -7,7 +7,7 @@ TRUNCATE TABLE `creature_linking`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,13 +26,15 @@ TRUNCATE TABLE `creature_linking`;
 
 LOCK TABLES `creature_linking` WRITE;
 /*!40000 ALTER TABLE `creature_linking` DISABLE KEYS */;
-INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES (57507,57506,515),
+INSERT INTO `creature_linking` (`guid`, `master_guid`, `flag`) VALUES 
+(57507,57506,515),
 (57527,57528,515),
 (57594,57595,515),
 (57595,57596,515),
 (57596,57597,515),
 (79345,79337,1167),
-(79346,79337,1167);
+(79346,79337,1167),
+(63011,63012,3);
 /*!40000 ALTER TABLE `creature_linking` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -45,4 +47,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:35
+-- Dump completed on 2016-09-12 12:17:01

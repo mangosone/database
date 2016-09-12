@@ -7,7 +7,7 @@ TRUNCATE TABLE `npc_gossip`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `npc_gossip`;
 
 LOCK TABLES `npc_gossip` WRITE;
 /*!40000 ALTER TABLE `npc_gossip` DISABLE KEYS */;
-INSERT INTO `npc_gossip` (`npc_guid`, `textid`) VALUES (2,2282),
+INSERT INTO `npc_gossip` (`npc_guid`, `textid`) VALUES 
+(2,2282),
 (9,2493),
 (29,5054),
 (31,5031),
@@ -2546,4 +2547,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:45
+-- Dump completed on 2016-09-12 12:17:13

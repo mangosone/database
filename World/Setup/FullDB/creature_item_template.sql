@@ -7,7 +7,7 @@ TRUNCATE TABLE `creature_item_template`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `creature_item_template`;
 
 LOCK TABLES `creature_item_template` WRITE;
 /*!40000 ALTER TABLE `creature_item_template` DISABLE KEYS */;
-INSERT INTO `creature_item_template` (`entry`, `class`, `subclass`, `material`, `displayid`, `inventory_type`, `sheath_type`) VALUES (25,2,7,1,1542,21,3),
+INSERT INTO `creature_item_template` (`entry`, `class`, `subclass`, `material`, `displayid`, `inventory_type`, `sheath_type`) VALUES 
+(25,2,7,1,1542,21,3),
 (35,2,10,2,472,17,2),
 (36,2,4,2,5194,21,3),
 (37,2,0,1,14029,21,3),
@@ -3662,4 +3663,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:35
+-- Dump completed on 2016-09-12 12:17:00

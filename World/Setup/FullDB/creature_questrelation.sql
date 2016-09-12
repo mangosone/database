@@ -7,7 +7,7 @@ TRUNCATE TABLE `creature_questrelation`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `creature_questrelation`;
 
 LOCK TABLES `creature_questrelation` WRITE;
 /*!40000 ALTER TABLE `creature_questrelation` DISABLE KEYS */;
-INSERT INTO `creature_questrelation` (`id`, `quest`) VALUES (196,33),
+INSERT INTO `creature_questrelation` (`id`, `quest`) VALUES 
+(196,33),
 (197,7),
 (197,15),
 (197,21),
@@ -2292,6 +2293,7 @@ INSERT INTO `creature_questrelation` (`id`, `quest`) VALUES (196,33),
 (9562,4183),
 (9562,4701),
 (9563,4866),
+(9563,27469),
 (9565,4764),
 (9565,4765),
 (9598,4261),
@@ -5482,7 +5484,8 @@ INSERT INTO `creature_questrelation` (`id`, `quest`) VALUES (196,33),
 (27215,12022),
 (27216,12191),
 (27584,12318),
-(28126,12515);
+(28126,12515),
+(56899,27469);
 /*!40000 ALTER TABLE `creature_questrelation` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -5495,4 +5498,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:37
+-- Dump completed on 2016-09-12 12:17:03

@@ -7,7 +7,7 @@ TRUNCATE TABLE `player_xp_for_level`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `player_xp_for_level`;
 
 LOCK TABLES `player_xp_for_level` WRITE;
 /*!40000 ALTER TABLE `player_xp_for_level` DISABLE KEYS */;
-INSERT INTO `player_xp_for_level` (`lvl`, `xp_for_next_level`) VALUES (1,400),
+INSERT INTO `player_xp_for_level` (`lvl`, `xp_for_next_level`) VALUES 
+(1,400),
 (2,900),
 (3,1400),
 (4,2100),
@@ -107,4 +108,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:46
+-- Dump completed on 2016-09-12 12:17:15

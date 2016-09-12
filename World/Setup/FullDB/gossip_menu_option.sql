@@ -7,7 +7,7 @@ TRUNCATE TABLE `gossip_menu_option`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `gossip_menu_option`;
 
 LOCK TABLES `gossip_menu_option` WRITE;
 /*!40000 ALTER TABLE `gossip_menu_option` DISABLE KEYS */;
-INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `condition_id`) VALUES (0,0,0,'GOSSIP_OPTION_QUESTGIVER',2,2,0,0,0,0,0,NULL,0),
+INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`, `option_id`, `npc_option_npcflag`, `action_menu_id`, `action_poi_id`, `action_script_id`, `box_coded`, `box_money`, `box_text`, `condition_id`) VALUES 
+(0,0,0,'GOSSIP_OPTION_QUESTGIVER',2,2,0,0,0,0,0,NULL,0),
 (0,1,1,'I want to browse your goods.',3,128,0,0,0,0,0,NULL,0),
 (0,2,2,'I need a ride.',4,8192,0,0,0,0,0,NULL,0),
 (0,3,3,'Train me.',5,16,0,0,0,0,0,NULL,0),
@@ -1526,7 +1527,7 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`,
 (7810,1,1,'Let me browse your goods.',3,128,0,0,0,0,0,'',0),
 (7811,0,6,'I would like to check my deposit box.',9,131072,0,0,0,0,0,'',0),
 (7815,0,3,'Train me.',5,16,0,0,0,0,0,'',0),
-(7815,1,1,NULL,3,128,0,0,0,0,0,NULL,0),
+(7815,1,1,'Let me browse your goods.',3,128,0,0,0,0,0,NULL,0),
 (7816,0,3,'I would like to train.',5,16,0,0,0,0,0,'',0),
 (7816,1,1,'Let me browse your goods.',3,128,0,0,0,0,0,'',0),
 (7817,0,3,'I would like to train.',5,16,0,0,0,0,0,'',0),
@@ -1581,9 +1582,8 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`,
 (7967,2,0,'Send me to the Abyssal Shelf!',1,1,-1,0,796701,0,0,'',0),
 (7967,3,0,'I\'m on a bombing mission for Forward Commander To\'arch. I need a wyvern destroyer!',1,1,-1,0,796703,0,0,'',0),
 (7967,4,0,'Lend me a Windrider. I\'m going to Spinebreaker Post!',1,1,-1,0,796704,0,0,'',0),
-(7970,2,0,'Send me to Shatter Point!',1,1,-1,0,797002,0,0,'',0),
-(7970,3,0,'I\'m on a bombing mission for Forward Commander Kingston.  I need a gryphon destroyer!',1,1,-1,0,797003,0,0,'',0),
-(7970,4,0,'Send me to Shatter Point!',1,1,-1,0,797002,0,0,'',0),
+(7970,1,0,'Send me to Shatter Point!',1,1,-1,0,797002,0,0,'',1736),
+(7970,0,0,'I\'m on a bombing mission for Forward Commander Kingston.  I need a gryphon destroyer!',1,1,-1,0,797003,0,0,'',1735),
 (7984,0,0,'Read on, if you dare...',1,1,7985,0,0,0,0,'',0),
 (7985,0,0,'Read on, if you dare...',1,1,7986,0,0,0,0,'',0),
 (7986,0,0,'Read on, if you dare...',1,1,7987,0,0,0,0,'',0),
@@ -1760,7 +1760,7 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`,
 (8394,0,0,'I\'m listening.',1,1,8393,0,0,0,0,'',0),
 (8395,0,0,'Interesting.',1,1,8396,0,0,0,0,'',0),
 (8396,0,0,'That\'s quite a story.',1,1,8398,0,8396,0,0,'',0),
-(8397,0,0,'I am listening, dragon.',1,1,8499,0,0,0,0,'',0),
+(8397,0,0,'I am listening, dragon.',1,1,8499,0,0,0,0,'',1737),
 (8398,0,0,'There was something else I wanted to ask you, Altruis.',1,1,7719,0,0,0,0,'',0),
 (8403,0,0,'Alchemy',1,1,8411,342,0,0,0,'',0),
 (8403,1,0,'Blacksmithing',1,1,8412,343,0,0,0,'',0),
@@ -2643,4 +2643,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:42
+-- Dump completed on 2016-09-12 12:17:10

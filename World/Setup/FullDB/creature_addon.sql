@@ -7,7 +7,7 @@ TRUNCATE TABLE `creature_addon`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `creature_addon`;
 
 LOCK TABLES `creature_addon` WRITE;
 /*!40000 ALTER TABLE `creature_addon` DISABLE KEYS */;
-INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (1,0,0,1,16,0,0,NULL),
+INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES 
+(1,0,0,1,16,0,0,NULL),
 (2,0,0,1,16,0,0,NULL),
 (3,0,0,1,16,0,0,NULL),
 (4,0,0,1,16,0,0,NULL),
@@ -38751,7 +38752,8 @@ INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_fl
 (44041,0,0,1,16,0,0,NULL),
 (44042,0,0,1,16,0,0,NULL),
 (44043,0,0,1,16,0,0,NULL);
-INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (44044,0,0,1,16,0,0,NULL),
+INSERT INTO `creature_addon` (`guid`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES 
+(44044,0,0,1,16,0,0,NULL),
 (44045,0,0,1,16,0,0,NULL),
 (44047,0,0,1,16,0,0,NULL),
 (44048,0,0,1,16,0,0,NULL),
@@ -57895,4 +57897,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:34
+-- Dump completed on 2016-09-12 12:16:59

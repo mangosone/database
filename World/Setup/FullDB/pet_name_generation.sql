@@ -7,7 +7,7 @@ TRUNCATE TABLE `pet_name_generation`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `pet_name_generation`;
 
 LOCK TABLES `pet_name_generation` WRITE;
 /*!40000 ALTER TABLE `pet_name_generation` DISABLE KEYS */;
-INSERT INTO `pet_name_generation` (`id`, `word`, `entry`, `half`) VALUES (1,'Aba',416,0),
+INSERT INTO `pet_name_generation` (`id`, `word`, `entry`, `half`) VALUES 
+(1,'Aba',416,0),
 (2,'Az',416,0),
 (3,'Bel',416,0),
 (4,'Biz',416,0),
@@ -298,4 +299,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:46
+-- Dump completed on 2016-09-12 12:17:14

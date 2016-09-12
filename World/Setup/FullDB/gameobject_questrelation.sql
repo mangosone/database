@@ -7,7 +7,7 @@ TRUNCATE TABLE `gameobject_questrelation`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `gameobject_questrelation`;
 
 LOCK TABLES `gameobject_questrelation` WRITE;
 /*!40000 ALTER TABLE `gameobject_questrelation` DISABLE KEYS */;
-INSERT INTO `gameobject_questrelation` (`id`, `quest`) VALUES (31,248),
+INSERT INTO `gameobject_questrelation` (`id`, `quest`) VALUES 
+(31,248),
 (31,249),
 (34,140),
 (35,138),
@@ -318,4 +319,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:41
+-- Dump completed on 2016-09-12 12:17:10

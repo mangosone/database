@@ -7,7 +7,7 @@ TRUNCATE TABLE `game_event_mail`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `game_event_mail`;
 
 LOCK TABLES `game_event_mail` WRITE;
 /*!40000 ALTER TABLE `game_event_mail` DISABLE KEYS */;
-INSERT INTO `game_event_mail` (`event`, `raceMask`, `quest`, `mailTemplateId`, `senderEntry`) VALUES (45,1101,12278,197,27487),
+INSERT INTO `game_event_mail` (`event`, `raceMask`, `quest`, `mailTemplateId`, `senderEntry`) VALUES 
+(45,1101,12278,197,27487),
 (45,690,12306,197,27487),
 (46,1101,12278,198,27487),
 (46,690,12306,198,27487),
@@ -62,4 +63,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:40
+-- Dump completed on 2016-09-12 12:17:08

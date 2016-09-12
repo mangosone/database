@@ -7,7 +7,7 @@ TRUNCATE TABLE `areatrigger_teleport`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `areatrigger_teleport`;
 
 LOCK TABLES `areatrigger_teleport` WRITE;
 /*!40000 ALTER TABLE `areatrigger_teleport` DISABLE KEYS */;
-INSERT INTO `areatrigger_teleport` (`id`, `name`, `required_level`, `required_item`, `required_item2`, `heroic_key`, `heroic_key2`, `required_quest_done`, `required_quest_done_heroic`, `target_map`, `target_position_x`, `target_position_y`, `target_position_z`, `target_orientation`) VALUES (45,'Scarlet Monastery - Graveyard (Entrance)',20,0,0,0,0,0,0,189,1688.99,1053.48,18.6775,0.00117),
+INSERT INTO `areatrigger_teleport` (`id`, `name`, `required_level`, `required_item`, `required_item2`, `heroic_key`, `heroic_key2`, `required_quest_done`, `required_quest_done_heroic`, `target_map`, `target_position_x`, `target_position_y`, `target_position_z`, `target_orientation`) VALUES 
+(45,'Scarlet Monastery - Graveyard (Entrance)',20,0,0,0,0,0,0,189,1688.99,1053.48,18.6775,0.00117),
 (78,'DeadMines Entrance',10,0,0,0,0,0,0,36,-16.4,-383.07,61.78,1.86),
 (101,'Stormwind Stockades Entrance',15,0,0,0,0,0,0,34,54.23,0.28,-18.34,6.26),
 (107,'Stormwind Vault Entrance',0,0,0,0,0,0,0,35,-0.91,40.57,-24.23,0),
@@ -186,7 +187,9 @@ INSERT INTO `areatrigger_teleport` (`id`, `name`, `required_level`, `required_it
 (4885,'Magisters\' Terrace (Exit)',0,0,0,0,0,0,0,530,12884.6,-7336.17,65.48,1.09),
 (4887,'Magisters\' Terrace (Entrance)',70,0,0,0,0,0,0,585,7.09,-0.45,-2.8,0.05),
 (4889,'Sunwell Plateau (Entrance)',70,0,0,0,0,0,0,580,1790.65,925.67,15.15,3.1),
-(4891,'Sunwell Plateau (Exit)',0,0,0,0,0,0,0,530,12560.8,-6774.59,15.08,6.25);
+(4891,'Sunwell Plateau (Exit)',0,0,0,0,0,0,0,530,12560.8,-6774.59,15.08,6.25),
+(4612,'The Botanica',0,0,0,0,0,0,0,530,3407.11,1488.48,182.838,2.50112),
+(4614,'The Mechanar',0,0,0,0,0,0,0,530,2869.89,1552.76,252.159,0.733993);
 /*!40000 ALTER TABLE `areatrigger_teleport` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -199,4 +202,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:33
+-- Dump completed on 2016-09-12 12:16:57

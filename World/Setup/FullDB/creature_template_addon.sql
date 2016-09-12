@@ -7,7 +7,7 @@ TRUNCATE TABLE `creature_template_addon`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `creature_template_addon`;
 
 LOCK TABLES `creature_template_addon` WRITE;
 /*!40000 ALTER TABLE `creature_template_addon` DISABLE KEYS */;
-INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES (3,0,0,1,16,0,0,NULL),
+INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`, `b2_1_flags`, `emote`, `moveflags`, `auras`) VALUES 
+(3,0,0,1,16,0,0,NULL),
 (6,0,0,1,16,0,0,NULL),
 (30,0,0,1,16,0,0,NULL),
 (36,0,0,1,16,0,0,NULL),
@@ -8167,7 +8168,7 @@ INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`
 (19149,0,0,1,16,0,0,NULL),
 (19150,0,0,1,16,0,0,NULL),
 (19151,0,1,1,16,0,0,NULL),
-(19152,0,0,1,16,0,0,NULL),
+(19152,0,0,1,16,0,1024,NULL),
 (19153,0,0,1,16,0,0,NULL),
 (19154,0,3,1,16,0,0,NULL),
 (19155,0,0,1,16,0,0,NULL),
@@ -10226,7 +10227,8 @@ INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`
 (28209,0,0,1,0,423,0,NULL),
 (28210,0,0,1,0,423,0,NULL),
 (28569,0,0,0,0,69,0,NULL),
-(16208,0,7,0,0,0,0,NULL);
+(16208,0,7,0,0,0,0,NULL),
+(21694,0,0,0,0,0,0,'18950');
 /*!40000 ALTER TABLE `creature_template_addon` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -10239,4 +10241,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:38
+-- Dump completed on 2016-09-12 12:17:04

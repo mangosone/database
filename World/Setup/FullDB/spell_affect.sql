@@ -7,7 +7,7 @@ TRUNCATE TABLE `spell_affect`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `spell_affect`;
 
 LOCK TABLES `spell_affect` WRITE;
 /*!40000 ALTER TABLE `spell_affect` DISABLE KEYS */;
-INSERT INTO `spell_affect` (`entry`, `effectId`, `SpellFamilyMask`) VALUES (5420,2,17669763891408),
+INSERT INTO `spell_affect` (`entry`, `effectId`, `SpellFamilyMask`) VALUES 
+(5420,2,17669763891408),
 (8875,1,4398046511104),
 (11069,0,1),
 (11070,0,32),
@@ -1239,4 +1240,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:49
+-- Dump completed on 2016-09-12 12:17:19

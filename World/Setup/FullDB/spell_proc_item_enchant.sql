@@ -7,7 +7,7 @@ TRUNCATE TABLE `spell_proc_item_enchant`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `spell_proc_item_enchant`;
 
 LOCK TABLES `spell_proc_item_enchant` WRITE;
 /*!40000 ALTER TABLE `spell_proc_item_enchant` DISABLE KEYS */;
-INSERT INTO `spell_proc_item_enchant` (`entry`, `ppmRate`) VALUES (8034,9),
+INSERT INTO `spell_proc_item_enchant` (`entry`, `ppmRate`) VALUES 
+(8034,9),
 (13897,6),
 (20004,6),
 (20005,1.6);
@@ -42,4 +43,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:50
+-- Dump completed on 2016-09-12 12:17:20

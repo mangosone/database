@@ -7,7 +7,7 @@ TRUNCATE TABLE `reputation_reward_rate`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `reputation_reward_rate`;
 
 LOCK TABLES `reputation_reward_rate` WRITE;
 /*!40000 ALTER TABLE `reputation_reward_rate` DISABLE KEYS */;
-INSERT INTO `reputation_reward_rate` (`faction`, `quest_rate`, `creature_rate`, `spell_rate`) VALUES (529,2,1,2),
+INSERT INTO `reputation_reward_rate` (`faction`, `quest_rate`, `creature_rate`, `spell_rate`) VALUES 
+(529,2,1,2),
 (576,2,1,2),
 (609,2,1,2);
 /*!40000 ALTER TABLE `reputation_reward_rate` ENABLE KEYS */;
@@ -41,4 +42,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:48
+-- Dump completed on 2016-09-12 12:17:18

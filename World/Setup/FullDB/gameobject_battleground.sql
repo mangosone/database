@@ -7,7 +7,7 @@ TRUNCATE TABLE `gameobject_battleground`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `gameobject_battleground`;
 
 LOCK TABLES `gameobject_battleground` WRITE;
 /*!40000 ALTER TABLE `gameobject_battleground` DISABLE KEYS */;
-INSERT INTO `gameobject_battleground` (`guid`, `event1`, `event2`) VALUES (90000,0,0),
+INSERT INTO `gameobject_battleground` (`guid`, `event1`, `event2`) VALUES 
+(90000,0,0),
 (90001,1,0),
 (90008,254,0),
 (90009,254,0),
@@ -366,4 +367,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:41
+-- Dump completed on 2016-09-12 12:17:09

@@ -7,7 +7,7 @@ TRUNCATE TABLE `gossip_menu`;
 --
 -- Host:                Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.34
+-- Server version	5.6.25-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -26,7 +26,8 @@ TRUNCATE TABLE `gossip_menu`;
 
 LOCK TABLES `gossip_menu` WRITE;
 /*!40000 ALTER TABLE `gossip_menu` DISABLE KEYS */;
-INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES (21,518,0,0),
+INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALUES 
+(21,518,0,0),
 (21,519,0,0),
 (22,520,0,0),
 (23,523,0,0),
@@ -2169,7 +2170,7 @@ INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALU
 (8430,10533,0,0),
 (8434,9546,0,0),
 (8441,10546,0,0),
-(8441,10884,0,0),
+(8173,10120,0,0),
 (8451,10024,0,0),
 (8452,10559,0,0),
 (8453,10560,0,0),
@@ -3504,7 +3505,21 @@ INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALU
 (7185,8461,0,0),
 (7186,8463,0,873),
 (7177,8457,0,0),
-(7176,8456,0,873);
+(7176,8456,0,873),
+(7335,8719,0,0),
+(7958,9777,0,0),
+(8505,10636,0,0),
+(7348,8767,0,0),
+(8495,10610,0,0),
+(8269,10293,0,0),
+(8686,10934,0,0),
+(7825,9574,0,0),
+(7333,8717,0,0),
+(7334,8718,0,0),
+(8176,10124,0,0),
+(8177,10125,0,0),
+(8174,10122,0,0),
+(8178,10126,0,0);
 /*!40000 ALTER TABLE `gossip_menu` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -3517,4 +3532,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-13  0:50:42
+-- Dump completed on 2016-09-12 12:17:10
