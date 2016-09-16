@@ -1,8 +1,8 @@
 #!/bin/sh
 ##############################################################################
-# This utility assist you in setting up your mangos database.				 #
-# This is a port of InstallDatabases.bat written by Antz for Windows		 #
-#																			 #
+# This utility assist you in setting up your mangos database.                #
+# This is a port of InstallDatabases.bat written by Antz for Windows         #
+#                                                                            #
 ##############################################################################
 
 RELEASE="Rel21"
@@ -28,8 +28,8 @@ svr_def="localhost"
 user_def="mangos"
 pass_def=""
 port_def="3306"
-wdb_def="mangos0"
-cdb_def="character0"
+wdb_def="mangos1"
+cdb_def="character1"
 rdb_def="realmd"
 
 printHelp()
