@@ -5,7 +5,7 @@ TRUNCATE TABLE `npc_text`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos1
+-- Host: localhost    Database: mangos1
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -5902,4 +5902,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12 12:17:14
+-- Dump completed on 2016-12-12 10:57:39

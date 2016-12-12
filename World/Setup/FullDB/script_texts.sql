@@ -5,7 +5,7 @@ TRUNCATE TABLE `script_texts`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos1
+-- Host: localhost    Database: mangos1
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -2473,7 +2473,10 @@ INSERT INTO `script_texts` (`entry`, `content_default`, `content_loc1`, `content
 (-1557032,'%s checks to make sure his body is intact.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'sha\'heen EMOTE_TELEPORT'),
 (-1557033,'You made it! Well done, $r. Now if you\'ll excuse me, I have to get the rest of our crew inside.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'sha\'heen SAY_SPAWN'),
 (-1557034,'%s expertly manipulates the control panel.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,28,'sha\'heen EMOTE_PANEL'),
-(-1557035,'Let\'s not waste any time! Take anything that isn\'t nailed down to the floor and teleport directly to Stormspire! Chop chop!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'sha\'heen SAY_ESCORT_READY');
+(-1557035,'Let\'s not waste any time! Take anything that isn\'t nailed down to the floor and teleport directly to Stormspire! Chop chop!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'sha\'heen SAY_ESCORT_READY'),
+(-1000963,'%s looks at you for a moment, then motions for you to follow.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'cenarion sparrowhawk EMOTE_FOLLOW'),
+(-1000964,'%s surveys the ground for the buried raven stones.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'cenarion sparrowhawk EMOTE_SURVEY'),
+(-1001147,'Look out! The $N attacks!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'stinky ignatz SAY_AGGRO_4');
 /*!40000 ALTER TABLE `script_texts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -2486,4 +2489,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12 12:17:18
+-- Dump completed on 2016-12-12 10:57:45

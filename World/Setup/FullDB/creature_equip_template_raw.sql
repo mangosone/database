@@ -5,7 +5,7 @@ TRUNCATE TABLE `creature_equip_template_raw`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos1
+-- Host: localhost    Database: mangos1
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -603,7 +603,6 @@ INSERT INTO `creature_equip_template_raw` (`entry`, `equipmodel1`, `equipmodel2`
 (1102,22893,0,0,33488898,0,0,785,0,0),
 (1103,22893,0,0,218169346,0,0,3,0,0),
 (1104,22893,0,0,285278210,0,0,3,0,0),
-(1105,22893,0,36600,33488898,0,50266626,781,0,15),
 (1106,22893,22893,0,218169346,218169346,0,3,3,0),
 (1107,22893,23977,0,33488898,33490436,0,781,1038,0),
 (1108,22906,0,0,33490946,0,0,273,0,0),
@@ -1613,4 +1612,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12 12:17:00
+-- Dump completed on 2016-12-12 10:57:23

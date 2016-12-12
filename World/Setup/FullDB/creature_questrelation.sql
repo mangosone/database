@@ -5,7 +5,7 @@ TRUNCATE TABLE `creature_questrelation`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos1
+-- Host: localhost    Database: mangos1
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -2293,7 +2293,6 @@ INSERT INTO `creature_questrelation` (`id`, `quest`) VALUES
 (9562,4183),
 (9562,4701),
 (9563,4866),
-(9563,27469),
 (9565,4764),
 (9565,4765),
 (9598,4261),
@@ -5484,8 +5483,7 @@ INSERT INTO `creature_questrelation` (`id`, `quest`) VALUES
 (27215,12022),
 (27216,12191),
 (27584,12318),
-(28126,12515),
-(56899,27469);
+(28126,12515);
 /*!40000 ALTER TABLE `creature_questrelation` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -5498,4 +5496,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12 12:17:03
+-- Dump completed on 2016-12-12 10:57:26

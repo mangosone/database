@@ -5,7 +5,7 @@ TRUNCATE TABLE `mangos_string`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host:                Database: mangos1
+-- Host: localhost    Database: mangos1
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -880,7 +880,9 @@ INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `conten
 (1515,'= Shown %u tickets out of total %u from online players.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1516,'ID %u from GUID %u (%s), changed %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1517,'= Shown %u tickets of total %u.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-(1518,'Informing you about arriving tickets is %s.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+(1518,'Informing you about arriving tickets is %s.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+(714,'This Battleground is disabled by the server administration.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+(747,'This Instance is disabled by the server administration.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `mangos_string` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -893,4 +895,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-09-12 12:17:13
+-- Dump completed on 2016-12-12 10:57:39
