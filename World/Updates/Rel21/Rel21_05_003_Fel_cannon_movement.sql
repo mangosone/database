@@ -26,13 +26,13 @@ BEGIN
 
     -- Expected Values
     SET @cOldVersion = '21'; 
-    SET @cOldStructure = '04'; 
-    SET @cOldContent = '011';
+    SET @cOldStructure = '05'; 
+    SET @cOldContent = '002';
 
     -- New Values
     SET @cNewVersion = '21';
-    SET @cNewStructure = '04';
-    SET @cNewContent = '012';
+    SET @cNewStructure = '05';
+    SET @cNewContent = '003';
                             -- DESCRIPTION IS 30 Characters MAX    
     SET @cNewDescription = 'Fel_cannon_movement';
 
