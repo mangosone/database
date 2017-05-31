@@ -3906,7 +3906,7 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (327310,3273,2,7,100,0,15,0,0,0,21,1,0,0,25,0,0,0,1,-47,0,0,'Kolkar Stormer - Start Combat Movement and Flee at 15% HP (Phase 3)'),
 (327311,3273,7,0,100,0,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,'Kolkar Stormer - Set Phase to 0 on Evade'),
 (327401,3274,4,0,100,0,0,0,0,0,11,9128,0,0,0,0,0,0,0,0,0,0,'Kolkar Pack Runner - Cast Battle Shout on Aggro'),
-(327402,3274,6,0,3,0,0,0,0,0,1,-769,0,0,32,3395,1,8,0,0,0,0,'Kolkar Pack Runner - Chance Say and Summon Verog the Dervish on Death'),
+(327402,3274,6,0,20,0,0,0,0,0,1,-769,0,0,32,3395,1,8,0,0,0,0,'Kolkar Pack Runner - Chance Say and Summon Verog the Dervish on Death'),
 (327501,3275,4,0,100,0,0,0,0,0,11,6268,0,1,0,0,0,0,0,0,0,0,'Kolkar Marauder - Cast Charge on Aggro'),
 (327502,3275,0,0,100,1,5000,11000,7000,12000,11,11976,1,0,0,0,0,0,0,0,0,0,'Kolkar Marauder - Cast Strike'),
 (327701,3277,4,0,75,0,0,0,0,0,1,-494,0,0,0,0,0,0,0,0,0,0,'Witchwing Roguefeather - Say on Aggro'),
@@ -3959,7 +3959,7 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (339601,3396,2,0,70,1,60,0,7500,7500,11,6958,1,0,0,0,0,0,0,0,0,0,'Hezrul Bloodmark - Cast Blood Leech When Below 60% HP'),
 (339701,3397,0,0,100,1,35000,35000,10000,10000,11,6742,0,0,0,0,0,0,0,0,0,0,'Kolkar Bloodcharger - Cast Bloodlust'),
 (339702,3397,0,0,70,1,20000,20000,5000,5000,11,172,1,0,0,0,0,0,0,0,0,0,'Kolkar Bloodcharger - Cast Corruption'),
-(339703,3397,6,0,3,0,0,0,0,0,1,-769,0,0,32,3395,1,8,0,0,0,0,'Kolkar Bloodcharger - Chance Say and Summon Verog the Dervish on Death'),
+(339703,3397,6,0,20,0,0,0,0,0,1,-769,0,0,32,3395,1,8,0,0,0,0,'Kolkar Bloodcharger - Chance Say and Summon Verog the Dervish on Death'),
 (341101,3411,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Denni\'ka - Flee at 15% HP'),
 (341601,3416,0,0,60,0,0,0,14000,14000,11,6598,0,0,0,0,0,0,0,0,0,0,'Savannah Matriarch - Cast Savannah Cub'),
 (341701,3417,0,0,100,1,200,1400,2700,8900,11,5113,0,0,0,0,0,0,0,0,0,0,'Living Flame - Cast Living Flames'),
@@ -14911,8 +14911,8 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1769416,17694,7,0,100,6,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,'Shadowmoon Darkcaster - Set Phase to 0 on Evade'),
 (1769501,17695,1,0,100,6,1000,1000,0,0,11,30991,0,0,0,0,0,0,0,0,0,0,'Shattered Hand Assassin - Cast Stealth on Spawn'),
 (1769502,17695,0,0,100,7,2000,4000,4500,6500,11,30992,1,0,0,0,0,0,0,0,0,0,'Shattered Hand Assassin - Cast Backstab'),
-(1770201,17702,0,0,100,1,3000,5000,11000,15000,11,20753,0,1,0,0,0,0,0,0,0,0,'High Chief Bristlelimb - Cast Demoralizing Roar'),
-(1770202,17702,9,0,100,1,0,5,5000,8000,11,15793,1,0,0,0,0,0,0,0,0,0,'High Chief Bristlelimb - Cast Maul'),
+(1770201,17702,11,0,100,0,0,0,0,0,1,-1418,0,0,0,0,0,0,0,0,0,0,'High Chief Bristlelimb - Yell at Spawn'),
+(1732003,17320,6,0,8,0,0,0,0,0,32,17702,0,31,0,0,0,0,0,0,0,0,'Bristlelimb Shaman - chance to summon High Chief Bristlelimb on Death'),
 (1770401,17704,0,0,100,1,3000,5000,11000,15000,11,9128,0,1,0,0,0,0,0,0,0,0,'Hand of Argus Swordsman - Cast Battle Shout'),
 (1770402,17704,9,0,100,1,0,5,5000,7000,11,11976,1,0,0,0,0,0,0,0,0,0,'Hand of Argus Swordsman - Cast Strike'),
 (1771301,17713,1,0,100,0,0,0,0,0,21,0,0,0,22,0,0,0,0,0,0,0,'Bloodcursed Naga - Prevent Combat Movement and Set Phase to 0 on Spawn'),
@@ -20272,7 +20272,7 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (323802,3238,9,0,100,1,0,5,9000,15000,11,6730,1,1,0,0,0,0,0,0,0,0,'Stormhide - Cast Head Butt'),
 (325301,3253,0,0,100,1,12000,18000,25000,35000,11,7278,0,0,0,0,0,0,0,0,0,0,'Silithid Harvester - Summon Harvester Swarm'),
 (327503,3275,0,0,100,1,7000,15000,9000,14000,11,8014,4,33,0,0,0,0,0,0,0,0,'Kolkar Marauder - Cast Tetanus'),
-(327504,3275,6,0,3,0,0,0,0,0,1,-769,0,0,32,3395,1,8,0,0,0,0,'Kolkar Marauder - Chance Say and Summon Verog the Dervish on Death'),
+(327504,3275,6,0,20,0,0,0,0,0,1,-769,0,0,32,3395,1,8,0,0,0,0,'Kolkar Marauder - Chance Say and Summon Verog the Dervish on Death'),
 (328201,3282,1,0,100,0,0,0,0,0,21,0,0,0,20,0,0,0,22,1,0,0,'Venture Co Mercenary - Prevent Combat Movement and Prevent Melee and Set Phase 1 on Spawn'),
 (328202,3282,9,1,100,1,5,30,2300,3900,11,6660,1,0,40,2,0,0,0,0,0,0,'Venture Co Mercenary - Cast Shoot and Set Ranged Weapon Model (Phase 1)'),
 (328203,3282,9,1,100,1,30,80,0,0,21,1,1,0,20,1,0,0,0,0,0,0,'Venture Co Mercenary - Start Combat Movement and Start Melee at 30 Yards (Phase 1)'),
@@ -20533,8 +20533,8 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (2577207,25772,1,0,100,2,3000,3000,0,0,38,0,0,0,0,0,0,0,0,0,0,0,'Void Sentinal - Send Combat Pulse on OOC Timer'),
 (1498901,14989,11,0,100,2,0,0,0,0,11,24320,0,0,0,0,0,0,0,0,0,0,'Poisonous Cloud - Cast Poisonous Blood on Spawned'),
 (1879701,18797,4,0,100,6,0,0,0,0,47,0,0,0,0,0,0,0,0,0,0,0,'Tortured skeleton - stand on aggro'),
-(19228122,22461,1,0,100,0,0,0,0,0,21,0,0,0,0,0,0,0,0,0,0,0,'Fel Cannon MK1 - Prevent Combat Movement on Spawn'),
-(19228123,22461,9,0,100,3,0,40,2900,4900,11,36238,1,0,0,0,0,0,0,0,0,0,'Fel Cannon MK1 - Cast Fel Fireball in combat'),
+(2123301,21233,1,0,100,0,0,0,0,0,21,0,0,0,0,0,0,0,0,0,0,0,'Fel Cannon MK1 - Prevent Combat Movement on Spawn'),
+(2123300,21233,9,0,100,3,0,40,2900,4900,11,36238,1,0,0,0,0,0,0,0,0,0,'Fel Cannon MK1 - Cast Fel Fireball in combat'),
 (1692502,16925,4,0,100,0,0,0,0,0,43,0,0,0,0,0,0,0,0,0,0,0,'Bonechewer Raider - Unmount on Aggro'),
 (1870601,18706,0,0,100,0,5000,5000,20000,20000,11,3149,0,0,0,0,0,0,0,0,0,0,'Bonechewer Riding Wolf - Furious Howl'),
 (1870602,18706,0,0,100,0,7000,7000,17000,17000,11,16460,1,0,0,0,0,0,0,0,0,0,'Bonechewer Riding Wolf - Festering Bite'),
@@ -20544,7 +20544,14 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (2113402,21134,1,0,100,0,3000,3000,0,0,1,-2000,0,0,0,0,0,0,0,0,0,0,'Eye of the Citadel - Say 1 after 3s'),
 (2113403,21134,1,0,100,0,6000,6000,0,0,1,-2001,0,0,0,0,0,0,0,0,0,0,'Eye of the Citadel - Say 2 after 6s'),
 (1944002,19440,4,0,100,0,0,0,0,0,1,-48,0,0,0,0,0,0,0,0,0,0,'Eye of Grillok - Emote on aggro'),
-(1944003,19440,0,0,100,0,5500,5500,0,0,39,30,0,0,0,0,0,0,0,0,0,0,'Eye of Grillok - Call for help 30 yards.');
+(1944003,19440,0,0,100,0,5500,5500,0,0,39,30,0,0,0,0,0,0,0,0,0,0,'Eye of Grillok - Call for help 30 yards.'),
+(2246100,22461,9,0,100,3,0,40,2900,4900,11,36238,1,0,0,0,0,0,0,0,0,0,'Fel Cannon MK1 - Cast Fel Fireball in combat'),
+(2246101,22461,1,0,100,0,0,0,0,0,21,0,0,0,0,0,0,0,0,0,0,0,'Fel Cannon MK1 - Prevent Combat Movement on Spawn'),
+(1770202,17702,0,0,100,1,3000,5000,11000,15000,11,20753,0,1,0,0,0,0,0,0,0,0,'High Chief Bristlelimb - Cast Demoralizing Roar'),
+(1770203,17702,9,0,100,1,0,5,5000,8000,11,15793,1,0,0,0,0,0,0,0,0,0,'High Chief Bristlelimb - Cast Maul'),
+(1755101,17551,8,0,100,1,139,-1,0,0,33,17551,6,0,0,0,0,0,0,0,0,0,'Tavara - Quest Credit on Spellhit (Quest: 9586)'),
+(1755102,17551,8,0,100,1,2052,-1,0,0,33,17551,6,0,0,0,0,0,0,0,0,0,'Tavara - Quest Credit on Spellhit (Quest: 9586)'),
+(1755103,17551,8,0,100,1,28880,-1,0,0,33,17551,6,0,0,0,0,0,0,0,0,0,'Tavara - Quest Credit on Spellhit (Quest: 9586)');
 /*!40000 ALTER TABLE `creature_ai_scripts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -20557,4 +20564,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-12 10:57:22
+-- Dump completed on 2017-05-30 23:24:55

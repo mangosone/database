@@ -1509,7 +1509,7 @@ INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALU
 (7368,8823,0,0),
 (7368,8804,0,0),
 (7370,8806,0,0),
-(7370,9040,0,0),
+(7370,9040,7370,1058),
 (7374,8812,0,0),
 (7376,8826,0,0),
 (7376,8827,0,0),
@@ -1540,7 +1540,7 @@ INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALU
 (7398,8893,0,0),
 (7399,8864,0,0),
 (7399,8865,0,0),
-(7399,9038,0,0),
+(7399,9038,7370,1058),
 (7400,8867,0,0),
 (7400,8868,0,0),
 (7401,8872,0,0),
@@ -1570,7 +1570,7 @@ INSERT INTO `gossip_menu` (`entry`, `text_id`, `script_id`, `condition_id`) VALU
 (7432,8994,0,0),
 (7433,8996,0,0),
 (7434,8997,0,0),
-(7434,9039,0,0),
+(7434,9039,7370,1058),
 (7435,9003,0,0),
 (7438,9186,0,0),
 (7440,9008,0,0),
@@ -3532,4 +3532,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-12 10:57:35
+-- Dump completed on 2017-05-30 23:25:04

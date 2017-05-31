@@ -1060,8 +1060,11 @@ INSERT INTO `script_binding` (`type`, `ScriptName`, `bind`, `data`) VALUES
 (0,'npc_spectral_tutor',10498,0),
 (0,'npc_cork_gizelton',11625,0),
 (0,'npc_rigger_gizelton',11626,0),
-(1,'go_bar_beer_keg',164911,0),
-(0,'boss_plugger_spazzring',9499,0);
+(1,'go_bar_ale_mug',165738,0),
+(0,'boss_plugger_spazzring',9499,0),
+(3,'at_shadowforge_bridge',1786,0),
+(1,'go_bar_ale_mug',165739,0),
+(1,'go_bar_beer_keg',164911,0);
 /*!40000 ALTER TABLE `script_binding` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1074,4 +1077,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-12 10:57:45
+-- Dump completed on 2017-05-30 23:25:12

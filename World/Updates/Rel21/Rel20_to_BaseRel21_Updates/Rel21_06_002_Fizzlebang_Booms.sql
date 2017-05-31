@@ -26,18 +26,18 @@ BEGIN
 
     -- Expected Values
     SET @cOldVersion = '21'; 
-    SET @cOldStructure = '03'; 
-    SET @cOldContent = '021';
+    SET @cOldStructure = '06'; 
+    SET @cOldContent = '001';
 
     -- New Values
     SET @cNewVersion = '21';
-    SET @cNewStructure = '03';
-    SET @cNewContent = '022';
+    SET @cNewStructure = '06';
+    SET @cNewContent = '002';
                             -- DESCRIPTION IS 30 Characters MAX    
-    SET @cNewDescription = 'felironchest_ramparts';
+    SET @cNewDescription = 'Fizzlebang_Booms';
 
                         -- COMMENT is 150 Characters MAX
-    SET @cNewComment = 'felironchest_ramparts';
+    SET @cNewComment = 'Fizzlebang_Booms';
 
     -- Evaluate all settings
     SET @cCurResult := (SELECT description FROM db_version ORDER BY `version` DESC, STRUCTURE DESC, CONTENT DESC LIMIT 0,1);
@@ -57,15 +57,10 @@ BEGIN
         -- -- PLACE UPDATE SQL BELOW -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 
-    -- Last boss in ramparts, loot chest in wrong location #22
--- https://github.com/antisocial89/RealTBC_Issue_tracker/issues/22
-
-DELETE FROM gameobject WHERE id='185168' or id='185169';
-
-insert into `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) values('20496','185168','543','1','-1429.13','1770.9','82','5.33003','0','0','0.458741','-0.88857','600','100','1');
-
-insert into `gameobject` (`guid`, `id`, `map`, `spawnMask`, `position_x`, `position_y`, `position_z`, `orientation`, `rotation0`, `rotation1`, `rotation2`, `rotation3`, `spawntimesecs`, `animprogress`, `state`) values('20499','185169','543','2','-1429.13','1770.9','82','5.33003','0','0','0.458741','-0.88857','600','100','1');
-
+-- Added Fizzlebang Booms spawn location
+-- Zero
+SET @GUID := (SELECT MAX(guid) FROM `creature`);
+insert into `creature` (`guid`, `id`, `map`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `DeathState`, `MovementType`) values(@GUID+1,'5569','0','0','0','-4850.7','-1295.24','501.951','1.39626','180','0','0','2471','0','0','0');
     
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -

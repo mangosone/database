@@ -28,7 +28,8 @@ LOCK TABLES `pool_gameobject_template` WRITE;
 /*!40000 ALTER TABLE `pool_gameobject_template` DISABLE KEYS */;
 INSERT INTO `pool_gameobject_template` (`id`, `pool_entry`, `chance`, `description`) VALUES 
 (180654,1801,0,'Hardpacked Snowdrift (180654)'),
-(185939,1800,0,'Nethermine Cargo (185939)');
+(185939,1800,0,'Nethermine Cargo (185939)'),
+(181891,25536,0,'Blood Mushroom - 181891');
 /*!40000 ALTER TABLE `pool_gameobject_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -41,4 +42,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-12 10:57:43
+-- Dump completed on 2017-05-30 23:25:11

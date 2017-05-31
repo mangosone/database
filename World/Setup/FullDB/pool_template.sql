@@ -6153,7 +6153,8 @@ INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (12262,1,'Shadowmoon Valley mineral, node 126'),
 (12263,1,'Shadowmoon Valley mineral, node 127'),
 (12264,1,'Shadowmoon Valley mineral, node 128'),
-(12265,18,'Master Creature Pool - Fargodeep Mine (Inner Section)');
+(12265,18,'Master Creature Pool - Fargodeep Mine (Inner Section)'),
+(25536,10,'Blood Mushroom');
 /*!40000 ALTER TABLE `pool_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -6166,4 +6167,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-12 10:57:43
+-- Dump completed on 2017-05-30 23:25:11

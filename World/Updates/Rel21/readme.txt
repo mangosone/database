@@ -1,6 +1,6 @@
 If your database is a version prior to:
 
-Rel21_04_09 Object_181011_hight_fix
+Rel21_07_018_Silvermyst_Isle_correction
 
 You need to run the appriopriate updates in folder:
 

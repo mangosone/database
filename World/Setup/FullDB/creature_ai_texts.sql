@@ -1036,7 +1036,8 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-1325,'We are bound here... eternally. It is the will of Gorefiend.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'21788 21795'),
 (-1326,'Gorefiend will have your head, interloper!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'21788 21795'),
 (-2000,'How dare you trifle with my playthings!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,''),
-(-2001,'The orcs in my citadel will drink your blood and devour you!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'');
+(-2001,'The orcs in my citadel will drink your blood and devour you!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,''),
+(-1418,'Face the wrath of Bristlelimb!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'17702');
 /*!40000 ALTER TABLE `creature_ai_texts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1049,4 +1050,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-12 10:57:23
+-- Dump completed on 2017-05-30 23:24:55

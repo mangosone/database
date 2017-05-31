@@ -643,6 +643,7 @@ CREATE TABLE `creature_template` (
   `KillCredit1` int(11) unsigned NOT NULL DEFAULT '0',
   `KillCredit2` int(11) unsigned NOT NULL DEFAULT '0',
   `MechanicImmuneMask` int(10) unsigned NOT NULL DEFAULT '0',
+  `SchoolImmuneMask` int(10) unsigned NOT NULL DEFAULT '0',
   `ResistanceHoly` smallint(5) NOT NULL DEFAULT '0',
   `ResistanceFire` smallint(5) NOT NULL DEFAULT '0',
   `ResistanceNature` smallint(5) NOT NULL DEFAULT '0',
