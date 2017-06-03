@@ -776,6 +776,38 @@ CREATE TABLE `db_script_string` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+--
+-- Table structure for table `db_scripts`
+--
+
+DROP TABLE IF EXISTS `db_scripts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `db_scripts` (
+  `script_guid` MEDIUMINT(8) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `script_type` SMALLINT(2) UNSIGNED NOT NULL DEFAULT '0',
+  `id` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0',
+  `delay` INT(10) UNSIGNED NOT NULL DEFAULT '0',
+  `command` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0',
+  `datalong` MEDIUMINT(8) UNSIGNED NOT NULL DEFAULT '0',
+  `datalong2` INT(10) UNSIGNED NOT NULL DEFAULT '0',
+  `buddy_entry` INT(10) UNSIGNED NOT NULL DEFAULT '0',
+  `search_radius` INT(10) UNSIGNED NOT NULL DEFAULT '0',
+  `data_flags` TINYINT(3) UNSIGNED NOT NULL DEFAULT '0',
+  `dataint` INT(11) NOT NULL DEFAULT '0',
+  `dataint2` INT(11) NOT NULL DEFAULT '0',
+  `dataint3` INT(11) NOT NULL DEFAULT '0',
+  `dataint4` INT(11) NOT NULL DEFAULT '0',
+  `x` FLOAT NOT NULL DEFAULT '0',
+  `y` FLOAT NOT NULL DEFAULT '0',
+  `z` FLOAT NOT NULL DEFAULT '0',
+  `o` FLOAT NOT NULL DEFAULT '0',
+  `comments` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`script_guid`)
+) ENGINE=MYISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+
 /*Table structure for table `dbdocsfields` */
 
 DROP TABLE IF EXISTS `dbdocsfields`;
