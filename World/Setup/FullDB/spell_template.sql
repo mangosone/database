@@ -52,7 +52,8 @@ INSERT INTO `spell_template` (`id`, `proc_flags`, `proc_chance`, `duration_index
 (37264,0,101,21,28,18,7,0,21729,64,0,'Power Converters: Summon Electromental (from cata)'),
 (37278,0,101,21,28,18,1,0,21737,64,0,'Power Converters: Summon Mini-Electromental (from cata)'),
 (37365,0,101,21,28,18,1,0,21757,64,0,'Power Converters: Summon Big Flavor Electromental (from cata)'),
-(21883,384,101,225,76,22,0,0,178904,0,0,'Summon Healed Celebrian Vine');
+(21883,384,101,225,76,22,0,0,178904,0,0,'Summon Healed Celebrian Vine'),
+(38096,0,101,21,6,38,0,4,0,0,0,'[DND]Destroy Sun Gate Portal Controller');
 /*!40000 ALTER TABLE `spell_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -65,4 +66,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-12 10:57:47
+-- Dump completed on 2017-09-06 21:57:52

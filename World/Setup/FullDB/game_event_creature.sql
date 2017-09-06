@@ -431,8 +431,8 @@ INSERT INTO `game_event_creature` (`guid`, `event`) VALUES
 (86848,12),
 (86849,12),
 (86850,12),
-(86851,12),
 (86852,12),
+(86851,12),
 (86853,12),
 (86857,12),
 (86858,12),
@@ -714,10 +714,10 @@ INSERT INTO `game_event_creature` (`guid`, `event`) VALUES
 (91564,7),
 (91565,7),
 (91566,7),
-(91567,7),
-(91568,7),
-(91569,7),
-(91570,7),
+(84424,2),
+(84423,2),
+(84419,2),
+(84418,2),
 (91571,7),
 (91572,7),
 (91573,7),
@@ -2884,7 +2884,11 @@ INSERT INTO `game_event_creature` (`guid`, `event`) VALUES
 (98392,65),
 (98393,65),
 (98394,65),
-(98395,64);
+(98395,64),
+(91567,7),
+(91568,7),
+(91569,7),
+(91570,7);
 /*!40000 ALTER TABLE `game_event_creature` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -2897,4 +2901,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-12 10:57:31
+-- Dump completed on 2017-09-06 20:18:19

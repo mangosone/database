@@ -14599,10 +14599,10 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1737112,17371,0,0,100,5,1100,7800,14800,30100,11,37113,4,33,0,0,0,0,0,0,0,0,'Shadowmoon Warlock (Heroic) - Cast Corruption'),
 (1737113,17371,0,0,100,7,6600,10700,14900,14900,11,13338,4,33,0,0,0,0,0,0,0,0,'Shadowmoon Warlock - Cast Curse of Tongues'),
 (1737114,17371,7,0,100,6,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,'Shadowmoon Warlock - Set Phase to 0 on Evade'),
-(1737901,17379,11,0,100,0,0,0,0,0,11,25035,0,1,0,0,0,0,0,0,0,0,'Stillpine Ancestor Akida - Cast Elemental Spawn-in on Spawn'),
-(1739101,17391,11,0,100,0,0,0,0,0,11,25035,0,1,0,0,0,0,0,0,0,0,'Stillpine Ancestor Coo - Cast Elemental Spawn-in on Spawn'),
+(1737901,17379,11,0,100,0,0,0,0,0,11,25035,0,1,3,0,16995,0,0,0,0,0,'Stillpine Ancestor Akida - Cast Elemental Spawn-in and set correct modelid on Spawn'),
+(1739101,17391,11,0,100,0,0,0,0,0,11,25035,0,1,3,0,16995,0,0,0,0,0,'Stillpine Ancestor Coo - Cast Elemental Spawn-in ans set correct modelid on Spawn'),
 (1739201,17392,11,0,100,0,0,0,0,0,11,25035,0,1,0,0,0,0,0,0,0,0,'Stillpine Ancestor Tikti - Cast Elemental Spawn-in on Spawn'),
-(1739301,17393,11,0,100,0,0,0,0,0,11,25035,0,1,0,0,0,0,0,0,0,0,'Stillpine Ancestor Yor - Cast Elemental Spawn-in on Spawn'),
+(1739301,17393,11,0,100,0,0,0,0,0,11,25035,0,1,3,0,17002,0,0,0,0,0,'Stillpine Ancestor Yor - Cast Elemental Spawn-in and set correct modelid on Spawn'),
 (1739501,17395,1,0,100,6,0,0,0,0,21,0,0,0,0,0,0,0,0,0,0,0,'Shadowmoon Summoner - Prevent Combat Movement on Spawn'),
 (1739502,17395,0,0,100,6,1000,5000,0,0,11,30853,0,1,0,0,0,0,0,0,0,0,'Shadowmoon Summoner - Summon Seductress'),
 (1739503,17395,0,0,100,6,10500,13000,0,0,11,30851,0,1,0,0,0,0,0,0,0,0,'Shadowmoon Summoner - Summon Felhound Manastalker'),
@@ -20551,7 +20551,10 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1770203,17702,9,0,100,1,0,5,5000,8000,11,15793,1,0,0,0,0,0,0,0,0,0,'High Chief Bristlelimb - Cast Maul'),
 (1755101,17551,8,0,100,1,139,-1,0,0,33,17551,6,0,0,0,0,0,0,0,0,0,'Tavara - Quest Credit on Spellhit (Quest: 9586)'),
 (1755102,17551,8,0,100,1,2052,-1,0,0,33,17551,6,0,0,0,0,0,0,0,0,0,'Tavara - Quest Credit on Spellhit (Quest: 9586)'),
-(1755103,17551,8,0,100,1,28880,-1,0,0,33,17551,6,0,0,0,0,0,0,0,0,0,'Tavara - Quest Credit on Spellhit (Quest: 9586)');
+(1755103,17551,8,0,100,1,28880,-1,0,0,33,17551,6,0,0,0,0,0,0,0,0,0,'Tavara - Quest Credit on Spellhit (Quest: 9586)'),
+(1741001,17410,11,0,100,0,0,0,0,0,11,25035,0,1,3,0,17109,0,0,0,0,0,'Stillpine Ancestor Vark - Cast Elemental Spawn-in and set correct modelid on Spawn'),
+(2022701,20227,30,0,100,1,5,16516,0,0,18,256,10,0,0,0,0,0,0,0,0,0,'Apprentice Meledor - change targets unitFlag on Receive AI Event'),
+(19228122,27946,0,0,100,1,4000,7000,6000,9000,11,37985,0,0,0,0,0,0,0,0,0,0,'Silvermoon Dragonhawk - Cast Fire Breath');
 /*!40000 ALTER TABLE `creature_ai_scripts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -20564,4 +20567,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-30 23:24:55
+-- Dump completed on 2017-09-06 20:18:12

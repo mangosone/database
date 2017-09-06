@@ -27,6 +27,10 @@ TRUNCATE TABLE `pool_creature`;
 LOCK TABLES `pool_creature` WRITE;
 /*!40000 ALTER TABLE `pool_creature` DISABLE KEYS */;
 INSERT INTO `pool_creature` (`guid`, `pool_entry`, `chance`, `description`) VALUES 
+(63724,25526,0,'Blood Watch - Defender Ursi'),
+(63725,25525,0,'Blood Watch - Defender Kranos'),
+(63726,25527,0,'Blood Watch - Defender Sorli'),
+(63727,25524,0,'Blood Watch - Defender Auston'),
 (80582,12265,40,'Kobold Tunneler (Fargodeep Mine)'),
 (80584,12265,25,'Kobold Tunneler (Fargodeep Mine)'),
 (80585,12265,9,'Kobold Tunneler (Fargodeep Mine)'),
@@ -62,7 +66,11 @@ INSERT INTO `pool_creature` (`guid`, `pool_entry`, `chance`, `description`) VALU
 (80640,12265,11,'Kobold Tunneler (Fargodeep Mine)'),
 (80645,12265,12,'Kobold Tunneler (Fargodeep Mine)'),
 (80649,12265,32,'Kobold Tunneler (Fargodeep Mine)'),
-(80650,12265,34,'Kobold Tunneler (Fargodeep Mine)');
+(80650,12265,34,'Kobold Tunneler (Fargodeep Mine)'),
+(84395,25527,0,'Blood Watch - Defender Zaibah'),
+(84396,25526,0,'Blood Watch - Defender Ashoon'),
+(84397,25525,0,'Blood Watch - Defender Kadithuul'),
+(84428,25524,0,'Blood Watch - Defender Katroi');
 /*!40000 ALTER TABLE `pool_creature` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -75,4 +83,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-12 10:57:42
+-- Dump completed on 2017-09-06 20:18:27

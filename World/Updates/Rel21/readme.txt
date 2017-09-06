@@ -1,6 +1,6 @@
 If your database is a version prior to:
 
-Rel21_07_018_Silvermyst_Isle_correction
+Rel21_08_012_Commands_update
 
 You need to run the appriopriate updates in folder:
 

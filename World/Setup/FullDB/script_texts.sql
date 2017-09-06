@@ -2476,7 +2476,8 @@ INSERT INTO `script_texts` (`entry`, `content_default`, `content_loc1`, `content
 (-1557035,'Let\'s not waste any time! Take anything that isn\'t nailed down to the floor and teleport directly to Stormspire! Chop chop!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'sha\'heen SAY_ESCORT_READY'),
 (-1000963,'%s looks at you for a moment, then motions for you to follow.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'cenarion sparrowhawk EMOTE_FOLLOW'),
 (-1000964,'%s surveys the ground for the buried raven stones.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'cenarion sparrowhawk EMOTE_SURVEY'),
-(-1001147,'Look out! The $N attacks!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'stinky ignatz SAY_AGGRO_4');
+(-1001147,'Look out! The $N attacks!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'stinky ignatz SAY_AGGRO_4'),
+(-1999926,'Overlord Wyrmthalak calls for help!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,3,0,0,'9568');
 /*!40000 ALTER TABLE `script_texts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -2489,4 +2490,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-12 10:57:45
+-- Dump completed on 2017-09-06 20:18:30

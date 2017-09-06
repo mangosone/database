@@ -275,7 +275,10 @@ INSERT INTO `creature_equip_template` (`entry`, `equipentry1`, `equipentry2`, `e
 (5256,14882,20417,5261),
 (5257,1904,0,2551),
 (5258,10617,12861,0),
-(1105,2530,0,18835);
+(1105,2530,0,18835),
+(2,1903,0,0),
+(7,1906,0,0),
+(306,789,0,0);
 /*!40000 ALTER TABLE `creature_equip_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -288,4 +291,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-12 10:57:23
+-- Dump completed on 2017-09-06 20:18:12
