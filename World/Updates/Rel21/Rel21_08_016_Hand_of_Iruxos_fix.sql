@@ -57,9 +57,9 @@ BEGIN
         -- -- PLACE UPDATE SQL BELOW -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 
-    DELETE FROM `db_scripts` WHERE datalong= 11876 AND id = 176581;
+	DELETE FROM `db_scripts` WHERE datalong= 11876 AND id = 176581;
 	INSERT INTO `db_scripts` (`script_type`, `id`, `command`, `datalong`, `datalong2`, `comments`) VALUES (7, 176581, 10, 11876, 30000, 'Demon Spirit');
-	UPDATE `mangos_1`.`gameobject_template` SET `data5` = 1 WHERE `entry` = 176581;
+	UPDATE `gameobject_template` SET `data5` = 1 WHERE `entry` = 176581;
     
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
