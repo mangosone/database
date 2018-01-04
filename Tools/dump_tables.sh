@@ -46,15 +46,8 @@ creature_template_addon \
 creature_template_classlevelstats \
 creature_template_spells \
 db_script_string \
+db_scripts \
 db_version \
-dbscripts_on_creature_movement \
-dbscripts_on_event \
-dbscripts_on_go_use \
-dbscripts_on_go_template_use \
-dbscripts_on_gossip \
-dbscripts_on_quest_end \
-dbscripts_on_quest_start \
-dbscripts_on_spell \
 disenchant_loot_template \
 exploration_basexp \
 fishing_loot_template \
@@ -122,10 +115,9 @@ reference_loot_template \
 reputation_reward_rate \
 reputation_spillover_template \
 reserved_name \
+script_binding \
 script_texts \
 script_waypoint \
-scripted_areatrigger \
-scripted_event \
 skill_discovery_template \
 skill_extra_item_template \
 skill_fishing_base_level \
@@ -144,14 +136,13 @@ spell_target_position \
 spell_template \
 spell_threat \
 transports \
-world_template \
 ; do
 
 echo "Dumping ${i}/128 ${TABLE}..."
 
 echo "--
--- Copyright (C) 2005-2015 MaNGOS <http://getmangos.eu/>
--- Copyright (C) 2009-2015 MaNGOSZero <https://github.com/mangosone>
+-- Copyright (C) 2005-2017 MaNGOS <http://getmangos.eu/>
+-- Copyright (C) 2009-2015 MaNGOSOne <https://github.com/mangosone>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
