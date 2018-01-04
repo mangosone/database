@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# if this does not run in Linux, then run the removeCR.sh file - edit its script with the name of this file
+
 USERNAME=
 PASSWORD=
 DDUMPDIR=./mangos
@@ -142,7 +144,7 @@ echo "Dumping ${i}/128 ${TABLE}..."
 
 echo "--
 -- Copyright (C) 2005-2017 MaNGOS <http://getmangos.eu/>
--- Copyright (C) 2009-2015 MaNGOSOne <https://github.com/mangosone>
+-- Copyright (C) 2009-2017 MaNGOSOne <https://github.com/mangosone>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
