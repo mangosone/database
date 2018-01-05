@@ -86,7 +86,6 @@ locales_quest \
 mail_level_reward \
 mail_loot_template \
 mangos_string \
-npc_gossip \
 npc_text \
 npc_trainer \
 npc_trainer_template \
