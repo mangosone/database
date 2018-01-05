@@ -129,6 +129,7 @@ spell_bonus_data \
 spell_chain \
 spell_elixir \
 spell_learn_spell \
+spell_linked \
 spell_pet_auras \
 spell_proc_event \
 spell_proc_item_enchant \

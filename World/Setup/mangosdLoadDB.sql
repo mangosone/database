@@ -2997,6 +2997,23 @@ CREATE TABLE `spell_learn_spell` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Table structure for table `spell_linked`
+--
+
+DROP TABLE IF EXISTS `spell_linked`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `spell_linked` (
+  `entry` INT(10) UNSIGNED NOT NULL COMMENT 'Spell entry',
+  `linked_entry` INT(10) UNSIGNED NOT NULL COMMENT 'Linked spell entry',
+  `type` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'Type of link',
+  `effect_mask` INT(10) UNSIGNED NOT NULL DEFAULT '0' COMMENT 'mask of effect (NY)',
+  `comment` VARCHAR(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`entry`,`linked_entry`,`type`)
+) ENGINE=MYISAM DEFAULT CHARSET=utf8 PACK_KEYS=0 COMMENT='Linked spells storage';
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
 -- Table structure for table `spell_pet_auras`
 --
 
