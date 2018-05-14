@@ -70,7 +70,7 @@ BEGIN
 	UPDATE `gossip_menu_option` SET `condition_id` = 383 WHERE `menu_id` = 7719 AND `id` = 1;
 	UPDATE `db_scripts` SET `delay` = 1 WHERE `script_guid` = 177;
 	UPDATE `quest_template` SET `StartScript` = 9991 WHERE `entry` = 9991;
-    
+    UPDATE `gossip_menu_option` SET `action_script_id` = 0 WHERE `menu_id` = 7715 AND `id` = 0;
     
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL ABOVE -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
