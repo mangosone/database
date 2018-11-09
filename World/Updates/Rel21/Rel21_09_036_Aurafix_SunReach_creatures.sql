@@ -31,7 +31,7 @@ BEGIN
 
     -- New Values
     SET @cNewVersion = '21';
-    SET @cNewStructure = '07';
+    SET @cNewStructure = '09';
     SET @cNewContent = '036';
                             -- DESCRIPTION IS 30 Characters MAX    
     SET @cNewDescription = 'SunReach NPC update';
