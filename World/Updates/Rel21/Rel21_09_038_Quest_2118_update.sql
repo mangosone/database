@@ -57,7 +57,7 @@ BEGIN
         -- -- PLACE UPDATE SQL BELOW -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 	-- Remove required spell that would prevent quest credit.
-    UPDATE `quest_template` SET `ReqSpellCast1` = 0 WHERE `entry` = 211;
+    UPDATE `quest_template` SET `ReqSpellCast1` = 0 WHERE `entry` = 2118;
     
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
