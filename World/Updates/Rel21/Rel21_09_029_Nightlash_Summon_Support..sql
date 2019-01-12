@@ -59,7 +59,7 @@ BEGIN
 
     SET @summonid := (SELECT MAX(id) FROM `creature_ai_summons`);
 	-- Remove current Nightlash placeholder.
-	DELETE FROM `creature_ai_summons` WHERE `comment` = 1983;
+	DELETE FROM `creature_ai_summons` WHERE `comment` = '1983';
 	-- Added script summon location.
 	INSERT INTO `creature_ai_summons` (`id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `comment`) VALUES(@summonid+1,1073.84,1543.37,28.6752,0.174533,300000,1983);
 	-- Added 10% chance to summon Nightlash. 
