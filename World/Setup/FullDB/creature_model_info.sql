@@ -4432,7 +4432,7 @@ INSERT INTO `creature_model_info` (`modelid`, `bounding_radius`, `combat_reach`,
 (5443,0.369495,1.81125,0,0,0),
 (5444,0.208,1.5,1,0,0),
 (5445,0.347,1.5,0,0,0),
-(5446,0.208,1.5,2,0,0),
+(5446,0.208,1.5,1,0,0),
 (5447,2,2.56,0,0,0),
 (5448,0.25,0.5,2,0,0),
 (5449,0.383,1.5,0,0,0),
@@ -17040,4 +17040,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-12 10:57:25
+-- Dump completed on 2019-01-14 22:26:20

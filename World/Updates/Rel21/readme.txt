@@ -1,6 +1,6 @@
 If your database is a version prior to:
 
-Rel21_08_012_Commands_update
+Rel21_11_002_Add_Field_Comments_pt2
 
 You need to run the appriopriate updates in folder:
 

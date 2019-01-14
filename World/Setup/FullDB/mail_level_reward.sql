@@ -5,7 +5,7 @@ TRUNCATE TABLE `mail_level_reward`;
 -- ---------------------------------------- 
 -- MySQL dump 10.13  Distrib 5.5.37, for Win32 (x86)
 --
--- Host: localhost    Database: mangos1
+-- Host: 192.168.1.3    Database: mangos1
 -- ------------------------------------------------------
 -- Server version	5.6.25-log
 
@@ -13,7 +13,7 @@ TRUNCATE TABLE `mail_level_reward`;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@SESSION.TIME_ZONE */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
@@ -26,17 +26,7 @@ TRUNCATE TABLE `mail_level_reward`;
 
 LOCK TABLES `mail_level_reward` WRITE;
 /*!40000 ALTER TABLE `mail_level_reward` DISABLE KEYS */;
-INSERT INTO `mail_level_reward` (`level`, `raceMask`, `mailTemplateId`, `senderEntry`) VALUES 
-(30,16,233,4773),
-(30,512,232,16280),
-(30,2,231,4752),
-(30,128,230,7953),
-(30,32,229,3690),
-(30,64,228,7954),
-(30,1024,227,20914),
-(30,4,226,4772),
-(30,8,225,4753),
-(30,1,224,4732);
+INSERT INTO `mail_level_reward` (`level`, `raceMask`, `mailTemplateId`, `senderEntry`) VALUES (30,16,233,4773),(30,512,232,16280),(30,2,231,4752),(30,128,230,7953),(30,32,229,3690),(30,64,228,7954),(30,1024,227,20914),(30,4,226,4772),(30,8,225,4753),(30,1,224,4732);
 /*!40000 ALTER TABLE `mail_level_reward` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +39,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-12 10:57:38
+-- Dump completed on 2019-01-14 22:26:36

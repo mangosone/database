@@ -343,7 +343,8 @@ INSERT INTO `command` (`name`, `security`, `help`) VALUES
 ('ticket surveyclose',2,'Syntax: .ticket surveyclose (#ID|$name)\nClosing the ticket with the user survey.'),
 ('gobject anim',2,'Usage: gobject anim #guid #id\nIf id<0, GO with lowGUID #guid performs despawn animation, else custom animation.'),
 ('gobject lootstate',2,'Usage: gobject lootstate #guid #id\nIf id<0, get the LootState for GO with lowGUID #guid, else set it to #id.'),
-('gobject state',2,'Usage: gobject state #guid #id\nIf id<0, get the GOState for GO with lowGUID #guid, else set it to #id.');
+('gobject state',2,'Usage: gobject state #guid #id\nIf id<0, get the GOState for GO with lowGUID #guid, else set it to #id.'),
+('debug recv',3,'Syntax: .debug recv\nYou send the opcode described in the server-side ropcode.txt file.');
 /*!40000 ALTER TABLE `command` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -356,4 +357,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-06 20:18:10
+-- Dump completed on 2019-01-14 22:26:15

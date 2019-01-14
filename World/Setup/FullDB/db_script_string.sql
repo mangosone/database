@@ -530,7 +530,23 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000000830,'He thinks he\'s so damned important. Always pushing me around... I\'ll show him. I\'ll show all of them!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000000831,'If only I could get back to the mushroom thicket. I have not seen such a mature cluster in my lifetime!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
 (2000005546,'My sword Archeus served me well in life, but as at last my spirit may pass from the unhappy existence, I need it no longer.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
-(2000005547,'I shall cling to the love of my daughter and hope that I will find forgiveness under the Light for my sins.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL);
+(2000005547,'I shall cling to the love of my daughter and hope that I will find forgiveness under the Light for my sins.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000310,'Grek try!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000311,'This oil no good for Grek! What Grek look like to you, some weakling in robes?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000005460,'If you want the key, you\'ll have to catch me!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000005461,'Chase me if you dare! I run without a care!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000005462,'Why would you ever want to harm me!? Come. Friends we can be!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000005463,'DIE?! You make Pusillin cry!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000005464,'Say hello to my little friends!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000005548,'By the seven Ata\'mal crystals!  Others have survived the crash!  Zhanaa, is that you?  It is so good to see you again!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000005549,'And who do we have here?  No doubt th... crzzzk ...ade this communication possible?  I give you greetings fro... psshzzzk... Azure Watch.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000005550,'Judging by your signal, we put you... ust southeast of the larger part of the island we crashed onto.  Cross the Crystalbrook River to ge... kshhhhk zzzt. Sorry, there\'s a lot of stat...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000005551,'This is great news!  Your efforts have indeed saved us, $N!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,NULL),
+(2000000488,'%s reads from the book of the dead.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,NULL),
+(2000000489,'Shane Dabiri, Lee, Alex T., Rob F., J. A. B.,  A. Mayberry!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,8,15,NULL),
+(2000000490,'Jeffrey Kaplan! Tom Chilton! Rob Pardo!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,8,15,NULL),
+(2000000491,'Justin Thavirat! Roman Kenney! Our entire awesome art and animation team!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,8,15,NULL),
+(2000000492,'Kevin Jordan and Jonathan LeCraft!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,8,15,NULL);
 /*!40000 ALTER TABLE `db_script_string` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -543,4 +559,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-06 20:18:17
+-- Dump completed on 2019-01-14 22:26:24

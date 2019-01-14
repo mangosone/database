@@ -57,9 +57,9 @@ INSERT INTO `battlemaster_entry` (`entry`, `bg_template`) VALUES
 (16711,3),
 (17506,1),
 (17507,2),
-(18895,6),
+(18895,4),
 (19855,3),
-(19858,6),
+(19858,5),
 (19859,6),
 (19905,3),
 (19906,1),
@@ -110,4 +110,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-12 10:57:20
+-- Dump completed on 2019-01-14 22:26:14

@@ -49,9 +49,6 @@ INSERT INTO `game_event_creature` (`guid`, `event`) VALUES
 (10999,12),
 (11000,12),
 (11001,12),
-(11002,12),
-(11003,12),
-(11004,12),
 (11005,12),
 (11006,12),
 (11007,12),
@@ -426,7 +423,6 @@ INSERT INTO `game_event_creature` (`guid`, `event`) VALUES
 (86716,1),
 (86723,21),
 (86731,26),
-(86846,12),
 (86847,12),
 (86848,12),
 (86849,12),
@@ -2901,4 +2897,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-06 20:18:19
+-- Dump completed on 2019-01-14 22:26:26
