@@ -1037,7 +1037,8 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-1326,'Gorefiend will have your head, interloper!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'21788 21795'),
 (-2000,'How dare you trifle with my playthings!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,''),
 (-2001,'The orcs in my citadel will drink your blood and devour you!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,''),
-(-1418,'Face the wrath of Bristlelimb!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'17702');
+(-1418,'Face the wrath of Bristlelimb!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'17702'),
+(-2002,'%s raises his shield in a vigorous defense!','0','0','0','0','0','0','0','0',0,2,0,0,'Coilskar Sorceress');
 /*!40000 ALTER TABLE `creature_ai_texts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1050,4 +1051,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-01-14 22:26:17
+-- Dump completed on 2019-08-17  0:41:16

@@ -142,7 +142,13 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `commen
 (1048,9,9595,0,NULL),
 (1092,9,2118,0,NULL),
 (1093,24,7586,1,NULL),
-(1094,-1,1092,1093,NULL);
+(1094,-1,1092,1093,NULL),
+(114,8,975,0,''),
+(229,24,12384,1,''),
+(724,-1,229,114,'completed quest 975 and not have item 12384'),
+(804,9,5247,0,'Used in gossip_menu_option 4743'),
+(805,8,5245,0,'Used in gossip_menu | text_id 4743 | 5817'),
+(1740,9,10368,0,'Control gossip option for quest.');
 /*!40000 ALTER TABLE `conditions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -155,4 +161,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-01-14 22:26:15
+-- Dump completed on 2019-08-17  0:41:14

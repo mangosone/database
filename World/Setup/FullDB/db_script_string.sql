@@ -546,7 +546,10 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000000489,'Shane Dabiri, Lee, Alex T., Rob F., J. A. B.,  A. Mayberry!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,8,15,NULL),
 (2000000490,'Jeffrey Kaplan! Tom Chilton! Rob Pardo!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,8,15,NULL),
 (2000000491,'Justin Thavirat! Roman Kenney! Our entire awesome art and animation team!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,8,15,NULL),
-(2000000492,'Kevin Jordan and Jonathan LeCraft!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,8,15,NULL);
+(2000000492,'Kevin Jordan and Jonathan LeCraft!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,8,15,NULL),
+(2000000277,'Morae... Is that you?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,6,NULL),
+(2000000278,'No... you\'re not Morae, but I sense that you have met. When you see her, tell her that I survived the crash, only to be done in by the infiltrators.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,274,NULL),
+(2000000279,'Let her know... my last thought was of her...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,NULL);
 /*!40000 ALTER TABLE `db_script_string` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -559,4 +562,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-01-14 22:26:24
+-- Dump completed on 2019-08-17  0:41:19
