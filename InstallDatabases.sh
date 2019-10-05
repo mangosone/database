@@ -28,8 +28,8 @@ svr_def="localhost"
 user_def="mangos"
 pass_def=""
 port_def="3306"
-wdb_def="mangos2"
-cdb_def="character2"
+wdb_def="mangos1"
+cdb_def="character1"
 rdb_def="realmd"
 
 printHelp()
