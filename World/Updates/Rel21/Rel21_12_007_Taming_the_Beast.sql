@@ -18,7 +18,7 @@ BEGIN
     -- Expected Values
     SET @cOldVersion = '21'; 
     SET @cOldStructure = '12'; 
-    SET @cOldContent = '007';
+    SET @cOldContent = '006';
 
     -- New Values
     SET @cNewVersion = '21';
