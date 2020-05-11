@@ -22,7 +22,7 @@ BEGIN
     SET @cOldContent = '002';
 
     -- New Values
-    SET @cNewVersion = '00';
+    SET @cNewVersion = '21';
     SET @cNewStructure = '17';
     SET @cNewContent = '003';
                             -- DESCRIPTION IS 30 Characters MAX    
