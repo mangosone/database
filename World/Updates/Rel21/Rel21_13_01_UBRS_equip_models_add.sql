@@ -18,13 +18,13 @@ BEGIN
 
     -- Expected Values
     SET @cOldVersion = '21'; 
-    SET @cOldStructure = '17'; 
-    SET @cOldContent = '002';
+    SET @cOldStructure = '12'; 
+    SET @cOldContent = '044';
 
     -- New Values
     SET @cNewVersion = '21';
-    SET @cNewStructure = '17';
-    SET @cNewContent = '003';
+    SET @cNewStructure = '13';
+    SET @cNewContent = '001';
                             -- DESCRIPTION IS 30 Characters MAX    
     SET @cNewDescription = 'UBRS_equip_models_add';
 
@@ -43,7 +43,11 @@ BEGIN
         -- -- PLACE UPDATE SQL BELOW -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 
-    -- Rookery Hatcher (add equip template)--
+-- Add support for this update - Necrovoice
+ALTER TABLE `creature_equip_template` DROP INDEX `unique_template`;
+DELETE FROM `creature_equip_template` WHERE `entry` IN (1036,976,592,976);
+
+-- Rookery Hatcher (add equip template)--
 UPDATE `creature_template` SET `EquipmentTemplateId`='10683' WHERE `entry`='10683';
 
 DELETE FROM `creature_equip_template` WHERE `entry`='10683';
@@ -51,21 +55,21 @@ INSERT INTO `creature_equip_template` (`entry`, `equipentry1`, `equipentry2`, `e
 ('10683', '10825', '0', '0');
 
 -- Rookery Guardian (add equip template)--
-UPDATE `creature_template` SET `EquipmentTemplateId`='10258' WHERE `entry`='10258';
+UPDATE `creature_template` SET `EquipmentTemplateId`='10258' WHERE `Entry`='10258';
 
 DELETE FROM `creature_equip_template` WHERE `entry`='10258';
 INSERT INTO `creature_equip_template` (`entry`, `equipentry1`, `equipentry2`, `equipentry3`) VALUES
 ('10258', '10825', '0', '0');
 
 -- Lord Victor Nefarius (create alternative template)--
-UPDATE `creature_template` SET `EquipmentTemplateId`='10162' WHERE `entry`='10162';
+UPDATE `creature_template` SET `EquipmentTemplateId`='10162' WHERE `Entry`='10162';
 
 DELETE FROM `creature_equip_template` WHERE `entry`='10162';
 INSERT INTO `creature_equip_template` (`entry`, `equipentry1`, `equipentry2`, `equipentry3`) VALUES
 ('10162', '19404', '0', '0');
 
 -- Jed Runewatcher
-UPDATE `creature_template` SET `EquipmentTemplateId`='10509' WHERE `entry`='10509';
+UPDATE `creature_template` SET `EquipmentTemplateId`='10509' WHERE `Entry`='10509';
 
 DELETE FROM `creature_equip_template` WHERE `entry`='10509';
 INSERT INTO `creature_equip_template` (`entry`, `equipentry1`, `equipentry2`, `equipentry3`) VALUES
