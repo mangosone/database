@@ -10234,7 +10234,8 @@ INSERT INTO `creature_template_addon` (`entry`, `mount`, `bytes1`, `b2_0_sheath`
 (18032,0,0,1,1,0,0,NULL),
 (18033,0,0,1,1,0,0,NULL),
 (18034,0,0,1,1,0,0,NULL),
-(24933,0,0,1,16,0,0,'32567');
+(24933,0,0,1,16,0,0,'32567'),
+(21319,0,0,0,0,0,0,NULL);
 /*!40000 ALTER TABLE `creature_template_addon` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -10247,4 +10248,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-17  0:41:19
+-- Dump completed on 2020-05-13 23:02:53

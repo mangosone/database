@@ -11512,7 +11512,7 @@ INSERT INTO `game_event_gameobject` (`guid`, `event`) VALUES
 (50647,1),
 (50648,1),
 (50649,1),
-(50650,1),
+(50650,7),
 (50651,1),
 (50652,1),
 (50653,1),
@@ -16109,4 +16109,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-17  0:41:21
+-- Dump completed on 2020-05-13 23:02:55

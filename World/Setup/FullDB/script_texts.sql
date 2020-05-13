@@ -808,11 +808,12 @@ INSERT INTO `script_texts` (`entry`, `content_default`, `content_loc1`, `content
 (-1000955,'Okay, let\'s get out of here quick quick! Try and keep up. I\'m going to make a break for it.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'kinelory SAY_ESCAPE'),
 (-1000956,'We made it! Quae, we made it!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'kinelory SAY_FINISH'),
 (-1000957,'%s hands her pack to Quae.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'kinelory EMOTE_HAND_PACK'),
-(-1000958,'You must protect me from monsters, who are living in this forest!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'stinky ignatz SAY_STINKY_BEGIN'),
-(-1000959,'This part of forest are very danger for us. We must be a careful!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'stinky ignatz SAY_STINKY_FIRST_STOP'),
-(-1000960,'Kill two monsters, who stay near Bogbean plant and then I gather a bogbean.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'stinky ignatz SAY_STINKY_2_MONSTERS'),
-(-1000961,'I am gathering a bogbean. It takes some time.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,69,'stinky ignatz SAY_STINKY_GATHERING'),
-(-1000962,'Thanks you for help.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'stinky ignatz SAY_STINKY_END'),
+(-1001147,'Look out! The $N attacks!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'stinky ignatz SAY_AGGRO_4'),
+(-1001146,'I\'m glad you\'re here! Because I need your help!!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'stinky ignatz SAY_AGGRO_3'),
+(-1001145,'Ok, let\'s get out of here!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'stinky ignatz SAY_PLANT_GATHERED'),
+(-1001144,'Come, $N! Let\'s go over there and collect it!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'stinky ignatz SAY_THIRD_STOP_3'),
+(-1001143,'Ah, there\'s one!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'stinky ignatz SAY_THIRD_STOP_2'),
+(-1001142,'There must be one around here somewhere...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'stinky ignatz SAY_THIRD_STOP_1'),
 (-1033000,'Follow me and I\'ll open the courtyard door for you.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,7,1,'prisoner ashcrombe SAY_FREE_AS'),
 (-1033001,'I have just the spell to get this door open. Too bad the cell doors weren\'t locked so haphazardly.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,7,1,'prisoner ashcrombe SAY_OPEN_DOOR_AS'),
 (-1033002,'There it is! Wide open. Good luck to you conquering what lies beyond. I must report back to the Kirin Tor at once!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,7,1,'prisoner ashcrombe SAY_POST_DOOR_AS'),
@@ -2476,7 +2477,6 @@ INSERT INTO `script_texts` (`entry`, `content_default`, `content_loc1`, `content
 (-1557035,'Let\'s not waste any time! Take anything that isn\'t nailed down to the floor and teleport directly to Stormspire! Chop chop!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'sha\'heen SAY_ESCORT_READY'),
 (-1000963,'%s looks at you for a moment, then motions for you to follow.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'cenarion sparrowhawk EMOTE_FOLLOW'),
 (-1000964,'%s surveys the ground for the buried raven stones.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'cenarion sparrowhawk EMOTE_SURVEY'),
-(-1001147,'Look out! The $N attacks!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'stinky ignatz SAY_AGGRO_4'),
 (-1999926,'Overlord Wyrmthalak calls for help!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,3,0,0,'9568'),
 (-1000976,'Thank you, $n! I couldn\'t have done it without you. You\'ll let Gahruj know?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'drijya SAY_DRIJYA_COMPLETE'),
 (-1000975,'Ok, let\'s get out of here!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'drijya SAY_DRIJYA_7'),
@@ -2486,7 +2486,13 @@ INSERT INTO `script_texts` (`entry`, `content_default`, `content_loc1`, `content
 (-1000971,'Keep them off me!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'drijya SAY_DRIJYA_3'),
 (-1000970,'We\'ll start at that first energy pylon, straight ahead. Remember, try to keep them off of me.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'drijya SAY_DRIJYA_2'),
 (-1000969,'Let\'s proceed at a brisk pace.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'drijya SAY_DRIJYA_1'),
-(-1000968,'Very well. Before we head down there, take a moment to prepare yourself.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'drijya SAY_DRIJYA_START');
+(-1000968,'Very well. Before we head down there, take a moment to prepare yourself.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,1,'drijya SAY_DRIJYA_START'),
+(-1001141,'Nope, not here...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'stinky ignatz SAY_SECOND_STOP'),
+(-1000962,'I can make it from here. Thanks, $N! And talk to my employer about a reward!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'stinky ignatz SAY_STINKY_END'),
+(-1000961,'Help! I\'m under attack!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'stinky ignatz SAY_AGGRO_2'),
+(-1000960,'Help! The beast is on me!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'stinky ignatz SAY_AGGRO_1'),
+(-1000959,'Now let\'s look for the herb.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'stinky ignatz SAY_STINKY_FIRST_STOP'),
+(-1000958,'Ok, let\'s get started.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'stinky ignatz SAY_STINKY_BEGIN');
 /*!40000 ALTER TABLE `script_texts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -2499,4 +2505,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-17  0:41:31
+-- Dump completed on 2020-05-13 23:03:05

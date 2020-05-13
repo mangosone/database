@@ -20673,7 +20673,33 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1136501,11365,28,0,100,1,24332,1,1000,3000,11,24332,1,0,0,0,0,0,0,0,0,0,'Zulian Panther - Cast Rake on Missing Aura Rake'),
 (1136502,11365,0,0,100,1,3000,3000,15000,20000,11,24333,1,0,0,0,0,0,0,0,0,0,'Zulian Panther - Cast Ravage'),
 (1136503,11365,0,0,100,1,3000,3000,5000,12000,11,8355,1,0,0,0,0,0,0,0,0,0,'Zulian Panther - Cast Exploit Weakness'),
-(1822001,18220,0,0,100,1,1000,5000,10000,20000,11,30285,1,32,0,0,0,0,0,0,0,0,'Ravenous Windroc - Cast Eagle Claw');
+(1822001,18220,0,0,100,1,1000,5000,10000,20000,11,30285,1,32,0,0,0,0,0,0,0,0,'Ravenous Windroc - Cast Eagle Claw'),
+(1473401,14734,1,0,100,1,1200,1200,1200,1200,5,36,0,0,0,0,0,0,0,0,0,0,'Revantusk Drummer - OneShotAttack1H Emote OOC'),
+(1873301,18733,6,0,100,0,0,0,0,0,28,0,34623,0,0,0,0,0,0,0,0,0,'Fel Reaver - Remove Fel Reaver Warning Aura on Death'),
+(1873302,18733,9,0,100,1,0,15,8000,12000,11,41534,0,0,0,0,0,0,0,0,0,0,'Fel Reaver - Cast War Stomp'),
+(2316901,23169,0,0,100,1,3000,7000,15000,20000,11,13443,1,0,0,0,0,0,0,0,0,0,'Nethermine Flayer - Cast Rend'),
+(2316902,23169,0,0,100,1,4200,6200,28100,31600,11,40770,1,0,0,0,0,0,0,0,0,0,'Nethermine Flayer - Cast Shred Armor'),
+(2286001,22860,0,0,100,1,2000,4000,4000,7000,11,32202,1,0,0,0,0,0,0,0,0,0,'Illidari Succubus - Cast Lash of Pain'),
+(2286002,22860,0,0,100,1,5000,11000,12000,18000,11,31865,5,1,0,0,0,0,0,0,0,0,'Illidari Succubus - Cast Seduction'),
+(2246201,22462,0,0,100,1,3000,7000,8500,10000,11,12024,1,0,0,0,0,0,0,0,0,0,'Vindicator Haylen - Cast Net'),
+(1696701,16967,9,0,100,1,15,40,10000,20000,11,32720,0,0,0,0,0,0,0,0,0,0,'Haal\'eshi Talonguard - Cast Sprint'),
+(2079501,20795,0,0,100,1,0,1000,2500,4700,11,32011,1,0,0,0,0,0,0,0,0,0,'Keeper of the Cistern - Cast Water Bolt'),
+(2079502,20795,9,0,100,1,0,10,12000,16500,11,11831,0,0,0,0,0,0,0,0,0,0,'Keeper of the Cistern - Cast Frost Nova'),
+(1212501,12125,1,0,100,0,1000,1000,0,0,11,12787,0,32,0,0,0,0,0,0,0,0,'Mammoth Shark - Cast Thrash OOC'),
+(1890901,18909,0,0,100,1,5000,7000,7000,10000,11,12169,0,0,0,0,0,0,0,0,0,0,'Zabra\'jin Guard - Cast Shield Block'),
+(1890902,18909,0,0,100,1,7000,8500,8000,12000,11,12170,1,0,0,0,0,0,0,0,0,0,'Zabra\'jin Guard - Cast Revenge'),
+(1891001,18910,0,0,100,1,5000,7000,7000,10000,11,12169,0,0,0,0,0,0,0,0,0,0,'Swamprat Guard - Cast Shield Block'),
+(1891002,18910,0,0,100,1,7000,8500,8000,12000,11,12170,1,0,0,0,0,0,0,0,0,0,'Swamprat Guard - Cast Revenge'),
+(1892201,18922,0,0,100,1,5000,7000,7000,10000,11,12169,0,0,0,0,0,0,0,0,0,0,'Telredor Guard - Cast Shield Block'),
+(1892202,18922,0,0,100,1,7000,8500,8000,12000,11,12170,1,0,0,0,0,0,0,0,0,0,'Telredor Guard - Cast Revenge'),
+(1894301,18943,0,0,100,1,5000,7000,7000,10000,11,12169,0,0,0,0,0,0,0,0,0,0,'Orebor Harborage Defender - Cast Shield Block'),
+(1894302,18943,0,0,100,1,7000,8500,8000,12000,11,12170,1,0,0,0,0,0,0,0,0,0,'Orebor Harborage Defender - Cast Revenge'),
+(2285701,22857,0,0,100,1,4000,7000,9500,12000,11,15496,1,0,0,0,0,0,0,0,0,0,'Illidari Ravager - Cast Cleave'),
+(2285702,22857,0,0,100,1,6000,6000,14000,16000,11,32009,1,0,0,0,0,0,0,0,0,0,'Illidari Ravager - Cast Cutdown'),
+(2285703,22857,0,0,100,1,8000,8000,15000,18000,11,16244,0,0,0,0,0,0,0,0,0,0,'Illidari Ravager - Cast Demoralizing Shout'),
+(764301,7643,4,0,100,0,0,0,0,0,47,0,0,0,0,0,0,0,0,0,0,0,'Bengor - Set Stand State to Stand on Aggro'),
+(1565001,15650,1,0,100,0,1000,1000,0,0,11,29119,0,32,0,0,0,0,0,0,0,0,'Crazed Dragonhawk - Cast Feather Burst OOC'),
+(1564901,15649,1,0,100,0,1000,1000,0,0,11,29119,0,32,0,0,0,0,0,0,0,0,'Feral Dragonhawk Hatchling - Cast Feather Burst OOC');
 /*!40000 ALTER TABLE `creature_ai_scripts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -20686,4 +20712,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-17  0:41:15
+-- Dump completed on 2020-05-13 23:02:49

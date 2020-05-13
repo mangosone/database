@@ -212,7 +212,7 @@ INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (1182,1,'BroGaz the Clanless (18684)'),
 (1183,1,'Chief Engineer Lorthander (18697)'),
 (1184,1,'Ever-Core the Punisher (18698)'),
-(1185,1,'Voidhunter Yar (18683)'),
+(1185,1,'Nuramoc (20932)'),
 (1186,1,'Collidus the Warp-Watcher (18694)'),
 (1187,1,'Ambassador Jerrikar (18695)'),
 (1188,1,'Kraator (18696)'),
@@ -6180,4 +6180,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-17  0:41:30
+-- Dump completed on 2020-05-13 23:03:04

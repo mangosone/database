@@ -447,7 +447,9 @@ INSERT INTO `game_tele` (`id`, `position_x`, `position_y`, `position_z`, `orient
 (419,12884.6,-7317.69,65.5023,4.799,530,'Magisters\'Terrace'),
 (420,12574.1,-6774.81,15.0904,3.13788,530,'SunwellPlateau'),
 (421,15.2235,-0.221107,-2.79687,0.007752,585,'mgt'),
-(422,1784.23,924.563,15.581,3.5177,580,'swp');
+(422,1784.23,924.563,15.581,3.5177,580,'swp'),
+(423,967.964,-1443.99,65.0399,2.05398,0,'ChillwindCamp'),
+(424,262.381,-1437.45,50.1333,4.13091,0,'ChillwindPoint');
 /*!40000 ALTER TABLE `game_tele` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -460,4 +462,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-17  0:41:21
+-- Dump completed on 2020-05-13 23:02:55

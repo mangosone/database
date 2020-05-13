@@ -4000,7 +4000,6 @@ INSERT INTO `quest_relations` (`actor`, `entry`, `quest`, `role`) VALUES
 (0,7740,4508,1),
 (0,7740,4510,0),
 (0,7750,2701,0),
-(0,7750,2701,1),
 (0,7750,2702,1),
 (0,7763,2747,0),
 (0,7763,2747,1),
@@ -11383,6 +11382,7 @@ INSERT INTO `quest_relations` (`actor`, `entry`, `quest`, `role`) VALUES
 (1,138492,635,1),
 (1,138492,642,0),
 (1,138492,656,1),
+(1,141980,2701,1),
 (1,142071,2741,0),
 (1,142071,2741,1),
 (1,142071,8893,0),
@@ -11730,4 +11730,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-17  0:41:30
+-- Dump completed on 2020-05-13 23:03:04

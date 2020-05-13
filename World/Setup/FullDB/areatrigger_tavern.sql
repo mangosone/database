@@ -28,7 +28,6 @@ LOCK TABLES `areatrigger_tavern` WRITE;
 /*!40000 ALTER TABLE `areatrigger_tavern` DISABLE KEYS */;
 INSERT INTO `areatrigger_tavern` (`id`, `name`) VALUES 
 (71,'Westfall - Sentinel Hill Inn'),
-(98,'Nesingwary\'s Expedition'),
 (178,'Strahnbrad'),
 (562,'Elwynn Forest - Goldshire - Lion\'s Pride Inn'),
 (682,'Redridge Mountains - Lakeshire Inn'),
@@ -118,4 +117,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-17  0:41:13
+-- Dump completed on 2020-05-13 23:02:47

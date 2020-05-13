@@ -148,7 +148,49 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `commen
 (724,-1,229,114,'completed quest 975 and not have item 12384'),
 (804,9,5247,0,'Used in gossip_menu_option 4743'),
 (805,8,5245,0,'Used in gossip_menu | text_id 4743 | 5817'),
-(1740,9,10368,0,'Control gossip option for quest.');
+(1740,9,10368,0,'Control gossip option for quest.'),
+(1741,9,30,0,'Gossip quest check'),
+(1742,9,272,0,'Gossip quest check'),
+(1743,-2,1741,1742,'Druid gossip quest check'),
+(1744,14,0,1024,NULL),
+(1745,-1,10,1744,'Alliance gossip Druid flight'),
+(1746,-1,12,1744,'Horde gossip Druid flight'),
+(1747,-2,1744,93,NULL),
+(1748,9,9067,0,NULL),
+(92,14,0,2,NULL),
+(1749,-1,1744,169,NULL),
+(965,8,3785,0,NULL),
+(79,14,0,128,NULL),
+(523,-1,79,169,NULL),
+(544,-1,74,169,NULL),
+(332,24,17126,1,NULL),
+(333,19,6881,0,NULL),
+(567,-1,333,332,NULL),
+(530,-1,73,169,NULL),
+(93,14,0,64,NULL),
+(80,14,0,1279,NULL),
+(814,5,54,7,NULL),
+(823,14,1037,0,NULL),
+(833,-1,814,823,NULL),
+(841,14,64,0,NULL),
+(853,-2,833,841,NULL),
+(73,14,0,8,NULL),
+(72,14,0,1527,NULL),
+(74,14,0,1,NULL),
+(157,9,3909,0,NULL),
+(107,16,9279,1,NULL),
+(108,2,9279,1,NULL),
+(75,14,0,511,NULL),
+(77,14,0,16,NULL),
+(169,15,10,1,NULL),
+(566,-1,77,169,NULL),
+(82,14,0,4,NULL),
+(542,-1,82,169,NULL),
+(103,14,0,256,NULL),
+(543,-1,103,169,NULL),
+(1750,24,13544,1,'Gossip menu 3310 second check.'),
+(1751,-1,24,1750,'Replace Spectral Essence Gossip menu 3310 check'),
+(1752,9,9437,0,NULL);
 /*!40000 ALTER TABLE `conditions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -161,4 +203,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-17  0:41:14
+-- Dump completed on 2020-05-13 23:02:47
