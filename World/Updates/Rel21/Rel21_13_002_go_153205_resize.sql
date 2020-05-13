@@ -17,13 +17,13 @@ BEGIN
 
     -- Expected Values
     SET @cOldVersion = '21'; 
-    SET @cOldStructure = '11'; 
-    SET @cOldContent = '006';
+    SET @cOldStructure = '13'; 
+    SET @cOldContent = '001';
 
     -- New Values
     SET @cNewVersion = '21';
-    SET @cNewStructure = '11';
-    SET @cNewContent = '007';
+    SET @cNewStructure = '13';
+    SET @cNewContent = '002';
                             -- DESCRIPTION IS 30 Characters MAX    
     SET @cNewDescription = 'go 153205 resize';
 
