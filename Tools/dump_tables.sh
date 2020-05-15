@@ -50,6 +50,7 @@ for TABLE in \
 `db_script_string` \
 `db_scripts` \
 `db_version` \
+`disables` \
 `disenchant_loot_template` \
 `exploration_basexp` \
 `fishing_loot_template` \
@@ -141,7 +142,7 @@ for TABLE in \
 `warden` \
 ; do
 
-echo "Dumping ${i}/128 ${TABLE}..."
+echo "Dumping ${i}/129 ${TABLE}..."
 
 echo "--
 -- Copyright (C) 2005-2017 MaNGOS <http://getmangos.eu/>
