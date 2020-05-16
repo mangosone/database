@@ -41,6 +41,8 @@ CREATE TABLE `db_version` (
   `comment` varchar(150) DEFAULT '' COMMENT 'A comment about the latest database revision.',
   PRIMARY KEY (`version`,`structure`,`content`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='Used DB version notes';
+
+
 --
 -- Table structure for table `areatrigger_tavern`
 --
