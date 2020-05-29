@@ -18,13 +18,13 @@ BEGIN
 
     -- Expected Values
     SET @cOldVersion = '21'; 
-    SET @cOldStructure = '13'; 
-    SET @cOldContent = '003';
+    SET @cOldStructure = '15'; 
+    SET @cOldContent = '001';
 
     -- New Values
     SET @cNewVersion = '21';
-    SET @cNewStructure = '13';
-    SET @cNewContent = '004';
+    SET @cNewStructure = '15';
+    SET @cNewContent = '002';
                             -- DESCRIPTION IS 30 Characters MAX    
     SET @cNewDescription = 'minor mangos string update';
 
