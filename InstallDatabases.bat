@@ -105,53 +105,53 @@ echo %colWhiteLightBlue%^|                                                      
 echo ^|   Website / Forum / Wiki / Support: https://getmangos.eu                    ^|
 echo ^|_____________________________________________________________________________^|%colReset%
 echo %colWhiteBold%^|                                                                             ^|
-if %createcharDB% == NO set PAD=
+if %createcharDB% == NO set PAD= 
 if %createcharDB% == YES set PAD=
 if %updatesOnly% == NO echo %colWhiteBold%^|   %colWhiteBold%Character Database : V - %colReset%Toggle Actually Create Character DB (%colYellowBold%%createcharDB%%colReset%)        %PAD%%colWhiteBold%^|
-if %loadcharDB% == NO set PAD=
+if %loadcharDB% == NO set PAD= 
 if %loadcharDB% == YES set PAD=
 if %updatesOnly% == NO echo %colWhiteBold%^|                        %colWhiteBold%C - %colReset%Toggle Create Character DB Structure (%colYellowBold%%loadcharDB%%colReset%)       %PAD%%colWhiteBold%^|
-if %CDBUpdate% == NO set PAD=
+if %CDBUpdate% == NO set PAD= 
 if %CDBUpdate% == YES set PAD=
 if %updatesOnly% == NO echo %colWhiteBold%^|                        %colWhiteBold%B - %colReset%Apply Character DB updates (%colYellowBold%%CDBUpdate%%colReset%)                 %PAD%%colWhiteBold%^|
 if %updatesOnly% == YES echo %colWhiteBold%^|   %colWhiteBold%Character Database : B - %colReset%Apply Character DB updates (%colYellowBold%%CDBUpdate%%colReset%)                 %PAD%%colWhiteBold%^|
 
 echo %colWhiteBold%^|                                                                             ^|
-if %createworldDB% == NO set PAD=
+if %createworldDB% == NO set PAD= 
 if %createworldDB% == YES set PAD=
-if %updatesOnly% == NO echo %colWhiteBold%^|       %colYellowBold%World Database : E  - %colYellow%Toggle Actually Create World DB (%colWhiteBold%%createworldDB%%colYellow%)%colReset%           %PAD%%colWhiteBold%^|
-if %loadworldDB% == NO set PAD=
+if %updatesOnly% == NO echo %colWhiteBold%^|       %colYellowBold%World Database : E - %colYellow%Toggle Actually Create World DB (%colWhiteBold%%createworldDB%%colYellow%)%colReset%            %PAD%%colWhiteBold%^|
+if %loadworldDB% == NO set PAD= 
 if %loadworldDB% == YES set PAD=
-if %updatesOnly% == NO echo %colWhiteBold%^|                        %colYellowBold%W  - %colYellow%Toggle Create World DB Structure (%colWhiteBold%%loadworldDB%%colYellow%)%colReset%          %PAD%%colWhiteBold%^|
-if %DBType% == EMPTY set PAD=
-if %DBType% == POPULATED set P=
+if %updatesOnly% == NO echo %colWhiteBold%^|                        %colYellowBold%W - %colYellow%Toggle Create World DB Structure (%colWhiteBold%%loadworldDB%%colYellow%)%colReset%           %PAD%%colWhiteBold%^|
+if %DBType% == EMPTY set PAD=    
+if %DBType% == POPULATED set PAD=
 
 if %loadworldDB% == YES echo %colWhiteBold%^|                        %colYellowBold%D - %colYellow%Toggle World Type (%colWhiteBold%%DBType%%colYellow%)%colReset%                    %PAD%%colWhiteBold%^|
 
-if %WDBUpdate% == NO set PAD=
+if %WDBUpdate% == NO set PAD= 
 if %WDBUpdate% == YES set PAD=
 if %updatesOnly% == NO echo %colWhiteBold%^|                        %colYellowBold%U - %colYellow%Apply World DB updates (%colWhiteBold%%WDBUpdate%%colYellow%)%colReset%                     %PAD%%colWhiteBold%^|
 if %updatesOnly% == YES echo %colWhiteBold%^|       %colYellowBold%World Database : U - %colYellow%Apply World DB updates (%colWhiteBold%%WDBUpdate%%colYellow%)%colReset%                     %PAD%%colWhiteBold%^|
 echo %colWhiteBold%^|                                                                             ^|
-if %createrealmDB% == NO set PAD=
+if %createrealmDB% == NO set PAD= 
 if %createrealmDB% == YES set PAD=
 if %updatesOnly% == NO echo %colWhiteBold%^|       %colCyanBold%Realm Database : T - %colCyan%Toggle Actually Create Realm DB (%colWhiteBold%%createrealmDB%%colCyan%)%colReset%            %PAD%%colWhiteBold%^|
-if %loadrealmDB% == NO set PAD=
+if %loadrealmDB% == NO set PAD= 
 if %loadrealmDB% == YES set PAD=
 if %updatesOnly% == NO echo %colWhiteBold%^|                        %colCyanBold%R - %colCyan%Toggle Create Realm Db Structure (%colWhiteBold%%loadrealmDB%%colCyan%)%colReset%           %PAD%%colWhiteBold%^|
-if %RDBUpdate% == NO set PAD=
+if %RDBUpdate% == NO set PAD= 
 if %RDBUpdate% == YES set PAD=
 if %updatesOnly% == NO echo %colWhiteBold%^|                        %colCyanBold%Y - %colCyan%Apply Realm DB updates (%colWhiteBold%%RDBUpdate%%colCyan%)%colReset%                     %PAD%%colWhiteBold%^|
 if %updatesOnly% == YES echo %colWhiteBold%^|       %colCyanBold%Realm Database : Y - %colCyan%Apply Realm DB updates (%colWhiteBold%%RDBUpdate%%colCyan%)%colReset%                     %PAD%%colWhiteBold%^|
-if %addrealmentry% == NO set PAD=
+if %addrealmentry% == NO set PAD= 
 if %addrealmentry% == YES set PAD=
 if %updatesOnly% == NO echo %colWhiteBold%^|                        %colCyanBold%L - %colCyan%Toggle Add Default RealmList Entry for Core (%colWhiteBold%%addrealmentry%%colCyan%)%colReset%%PAD%%colWhiteBold%^|
 echo %colWhiteBold%^|                                                                             ^|
 if %updatesOnly% == NO set PAD=
 if %updatesOnly% == YES set PAD=
-echo %colWhiteBold%^|                        %colMagentaBold%O - %colMagenta%Toggle Only Install Updates to Database's (%colWhiteBold%%updatesOnly%%colMagenta%)%colReset%  %PAD%%colWhiteBold%^|
+echo %colWhiteBold%^|                        %colMagentaBold%O - %colMagenta%Toggle Only Install Updates to Database's (%colWhiteBold%%updatesOnly%%colMagenta%)%colReset%   %PAD%%colWhiteBold%^|
 echo %colWhiteBold%^|                                                                             ^|
-if %createMangosUser% == NO set PAD=
+if %createMangosUser% == NO set PAD= 
 if %createMangosUser% == YES set PAD=
 if %updatesOnly% == NO echo %colWhiteBold%^|                        %colRedBold%P - %colRed%Toggle Create Mangos User (%colWhiteBold%%createMangosUser%%colRed%)%colReset%                  %PAD%%colWhiteBold%^|
 if %updatesOnly% == NO echo %colWhiteBold%^|                                                                             ^|
@@ -160,13 +160,14 @@ if %LOCList% == NO set PAD=
 if %LOCList% == YES set PAD=
 echo %colWhiteBold%^|                        %colYellowBold%A - %colYellow%Add Localised Content (%colWhiteBold%%LOCList%%colYellow%)%colReset%                       %PAD%%colWhiteBold%^|
 echo %colWhiteBold%^|                                                                             ^|
-echo %colWhiteBold%^|                        %colMagentaBold%Z - %colMagenta%Toggle everything off                            %PAD%%colWhiteBold%^|
+echo %colWhiteBold%^|                        %colMagentaBold%Z - %colMagenta%Set everything off                               %PAD%%colWhiteBold%^|
+echo %colWhiteBold%^|                        %colMagentaBold%G - %colMagenta%Set defaults                                     %PAD%%colWhiteBold%^|
 echo %colWhiteBold%^|                                                                             ^|
 echo %colWhiteBold%^|                        %colGreenBold%N - %colGreen%Next Step%colReset%                                        %colWhiteBold%^|
 echo %colWhiteBold%^|                        %colWhiteBold%X - %colReset%Exit                                             %colWhiteBold%^|
 echo %colWhiteBold%^|_____________________________________________________________________________^|%colReset%
 echo.
-set /p activity=. Please select an activity ? :
+set /p activity=Select an activity: 
 if %activity% == V goto ToggleCharDB:
 if %activity% == v goto ToggleCharDB:
 if %activity% == B goto ToggleCharDBUpdate:
@@ -200,8 +201,10 @@ if %activity% == n goto Step1:
 if %activity% == A goto StepLoc1:
 if %activity% == a goto StepLoc1:
 
-if %activity% == Z goto ToggleEverythingOff:
-if %activity% == z goto ToggleEverythingOff:
+if %activity% == Z goto SetEverythingOff:
+if %activity% == z goto SetEverythingOff:
+if %activity% == G goto SetDefaults:
+if %activity% == g goto SetDefaults:
 
 if %activity% == X goto quitting:
 if %activity% == x goto quitting:
@@ -404,7 +407,7 @@ set RDBUpdate=YES
 set addrealmentry=NO
 goto main:
 
-:ToggleEverythingOff
+:SetEverythingOff
 set updatesOnly=NO
 set createcharDB=NO
 set createworldDB=NO
@@ -420,6 +423,9 @@ set RDBUpdate=NO
 
 set addrealmentry=NO
 goto main
+
+:SetDefaults
+goto setOptions
 
 :Step1
 if not exist "%mysqlDir%\mysql.exe" then goto patherror
