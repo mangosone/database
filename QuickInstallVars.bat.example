@@ -2,8 +2,12 @@ rem This file intentionally does not try to alter any internal variables,
 rem only those that appear near the beginning controlling high-level configuration
 rem and task selection, as to not destabilize the main script.
 
+rem Used for testing and development debugging.
+rem Could also be helpful when resolving support issues when enabling.
+set DEBUG=false
+
 rem DB Connection information
-set mysql=Tools\
+set mysqlDir=C:\Program Files\MySQL\MySQL Server 8.0\bin\
 set svr=localhost
 set newuser=mangos
 set user=root
@@ -14,8 +18,8 @@ set wdb=mangos1
 set cdb=character1
 set rdb=realmd
 
-rem Can use above parts, or this one will take priority:
-set mysqlBaseConnectionString=%mysql%mysql -q -s --login-path=local
+rem Can use the above parts, or this one will take priority:
+set mysqlAuth=--login-path=local
 
 rem Comment out the following line if you want to control task options automatically.
 goto :EOF

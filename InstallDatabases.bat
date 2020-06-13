@@ -3,7 +3,7 @@
 set scriptVersion=v2.1
 
 rem -- Change the values below to match your server --
-set mysql=Tools\
+set mysqlDir=Tools\
 set svr=localhost
 set newuser=mangos
 set user=root
@@ -422,8 +422,8 @@ set addrealmentry=NO
 goto main
 
 :Step1
-if not exist %mysql%\mysql.exe then goto patherror
-if not "%mysqlBaseConnectionString%" == "" goto AfterStep1:
+if not exist "%mysqlDir%\mysql.exe" then goto patherror
+if not "%mysqlAuth%" == "" goto AfterStep1:
 
 CLS
 echo %colWhiteBold%_______________________________________________________________________________
@@ -483,7 +483,11 @@ if %createMangosUser% == YES set /p newpass=%colYellowBold% New MySQL user passw
 if %newpass%. == . set newpass=mangos
 
 :AfterStep1
-if "%mysqlBaseConnectionString%" == "" set mysqlBaseConnectionString=%mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port%
+if "%mysqlAuth%" == "" set mysqlAuth=-h %svr% --user=%user% --password=%pass% --port=%port%
+set mysqlString="%mysqlDir:"=%mysql.exe" %mysqlAuth% -q -s
+if "%DEBUG%" == "true" set mysqlString=echo %mysqlString%
+if "%DEBUG%" == "TRUE" set mysqlString=echo %mysqlString%
+
 if %createMangosUser% == YES if %newpass% == mangos set defaultsused=YES
 REM if %newuser% == mangos set defaultsused=YES
 REM if %defaultsused% == YES goto done:
@@ -526,7 +530,7 @@ echo ^| Creating World Database                                                 
 echo ^|_____________________________________________________________________________^|%colReset%
 echo %colReset%
 echo %colReset% Creating Database %wdb%
-%mysqlBaseConnectionString% -e "create database %wdb%";
+%mysqlString% -e "create database %wdb%";
 goto WorldDB2:
 
 :WorldDB3
@@ -537,7 +541,7 @@ echo ^| Preparing World Database Structure                                      
 echo ^|_____________________________________________________________________________^|%colReset%
 echo %colReset%
 echo %colReset% Preparing Database %wdb%
-%mysqlBaseConnectionString% -D %wdb% < World\Setup\mangosdLoadDB.sql
+%mysqlString% -D %wdb% < World\Setup\mangosdLoadDB.sql
 goto CharDB:
 
 :WorldDB4
@@ -546,8 +550,8 @@ echo %colWhiteDarkYellow%^|                                                     
 echo ^| Populating World Database                                                   ^|
 echo ^|_____________________________________________________________________________^|%colReset%
 echo %colReset%
-%mysqlBaseConnectionString% -D %wdb% < World\Setup\mangosdLoadDB.sql
-for %%i in (World\Setup\FullDB\*.sql) do echo . Loading %%i & %mysqlBaseConnectionString% -D %wdb% < %%i
+%mysqlString% -D %wdb% < World\Setup\mangosdLoadDB.sql
+for %%i in (World\Setup\FullDB\*.sql) do echo . Loading %%i & %mysqlString% -D %wdb% < %%i
 goto CharDB:
 
 :CharDB1
@@ -557,7 +561,7 @@ echo ^| Creating Character Database                                             
 echo ^|_____________________________________________________________________________^|%colReset%
 echo %colReset%
 echo %colReset% Creating Database %cdb%
-%mysqlBaseConnectionString% -e "create database %cdb%";
+%mysqlString% -e "create database %cdb%";
 goto CharDB2:
 
 :CharDB3
@@ -567,7 +571,7 @@ echo ^| Loading Character Database                                              
 echo ^|_____________________________________________________________________________^|%colReset%
 echo %colReset%
 echo %colReset% Loading Database %Cdb%
-%mysqlBaseConnectionString% -D %cdb% < Character\Setup\characterLoadDB.sql
+%mysqlString% -D %cdb% < Character\Setup\characterLoadDB.sql
 
 goto RealmDB:
 
@@ -578,7 +582,7 @@ echo ^| Creating Realm Database                                                 
 echo ^|_____________________________________________________________________________^|%colReset%
 echo %colReset%
 echo %colReset% Creating Database %rdb%
-%mysqlBaseConnectionString% -e "create database %rdb%";
+%mysqlString% -e "create database %rdb%";
 goto RealmDB2:
 
 :RealmDB3
@@ -588,7 +592,7 @@ echo ^| Loading Realm Database                                                  
 echo ^|_____________________________________________________________________________^|%colReset%
 echo %colReset%
 echo %colReset% Loading Database %rdb%
-%mysqlBaseConnectionString% -D %rdb% < Realm\Setup\realmdLoadDB.sql
+%mysqlString% -D %rdb% < Realm\Setup\realmdLoadDB.sql
 
 goto RealmDB4:
 
@@ -600,7 +604,7 @@ echo ^|_________________________________________________________________________
 echo %colReset%
 echo %colReset% Adding Realmlist entry to %rdb%
 echo _______________________________________________________________________________
-if %addrealmentry% == YES %mysqlBaseConnectionString% -D %rdb% < Tools\updateRealm.sql
+if %addrealmentry% == YES %mysqlString% -D %rdb% < Tools\updateRealm.sql
 goto NeedToCreateMangosUser:
 
 :MangosUser1
@@ -611,10 +615,10 @@ echo ^|_________________________________________________________________________
 echo %colReset%
 echo %colReset% Creating '%newuser%' user and granting privileges
 
-%mysqlBaseConnectionString% -e "CREATE USER '%newuser%'@'%svr%' IDENTIFIED BY '%newpass%'";
-%mysqlBaseConnectionString% -e "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER, LOCK TABLES ON `%wdb%`.* TO '%newuser%'@'%svr%'";
-%mysqlBaseConnectionString% -e "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER, LOCK TABLES ON `%cdb%`.* TO '%newuser%'@'%svr%'";
-%mysqlBaseConnectionString% -e "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER, LOCK TABLES ON `%rdb%`.* TO '%newuser%'@'%svr%'";
+%mysqlString% -e "CREATE USER '%newuser%'@'%svr%' IDENTIFIED BY '%newpass%'";
+%mysqlString% -e "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER, LOCK TABLES ON `%wdb%`.* TO '%newuser%'@'%svr%'";
+%mysqlString% -e "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER, LOCK TABLES ON `%cdb%`.* TO '%newuser%'@'%svr%'";
+%mysqlString% -e "GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER, LOCK TABLES ON `%rdb%`.* TO '%newuser%'@'%svr%'";
 goto done:
 
 
@@ -847,7 +851,7 @@ echo ^|                                                                         
 echo ^| Applying World DB updates                                                   ^|
 echo ^|                                                                             ^|
 echo ^|_____________________________________________________________________________^|%colReset%
-for %%i in (World\Updates\Rel21\*.sql) do echo %%i & %mysqlBaseConnectionString% -D %wdb% < %%i
+for %%i in (World\Updates\Rel21\*.sql) do echo %%i & %mysqlString% -D %wdb% < %%i
 goto done2
 
 :PatchRealm
@@ -857,7 +861,7 @@ echo ^|                                                                         
 echo ^| Applying Realmd DB updates                                                  ^|
 echo ^|                                                                             ^|
 echo ^|_____________________________________________________________________________^|%colReset%
-for %%i in (Realm\Updates\Rel21\*.sql) do echo %%i & %mysqlBaseConnectionString% -D %rdb% < %%i
+for %%i in (Realm\Updates\Rel21\*.sql) do echo %%i & %mysqlString% -D %rdb% < %%i
 goto done3
 
 :patchCharacter
@@ -867,7 +871,7 @@ echo ^|                                                                         
 echo ^| Applying Character DB updates                                               ^|
 echo ^|                                                                             ^|
 echo ^|_____________________________________________________________________________^|%colReset%
-for %%i in (Character\Updates\Rel21\*.sql) do echo %%i & %mysqlBaseConnectionString% -D %cdb% < %%i
+for %%i in (Character\Updates\Rel21\*.sql) do echo %%i & %mysqlString% -D %cdb% < %%i
 goto done1
 
 :missingRecursive
@@ -980,31 +984,31 @@ echo ^| Loading French Locale into World Database                               
 echo ^|                                                                             ^|
 echo ^|_____________________________________________________________________________^|%colReset%
 echo  .... Creatures (1/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\French\French_Creature.sql
+%mysqlString% -D %wdb% < Translations\Translations\French\French_Creature.sql
 echo  .... Creature AI Texts (2/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\French\French_Creature_AI_Texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\French\French_Creature_AI_Texts.sql
 echo  .... DB Script Strings (3/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\French\French_db_script_string.sql
+%mysqlString% -D %wdb% < Translations\Translations\French\French_db_script_string.sql
 echo  .... GameObjects (4/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\French\French_Gameobject.sql
+%mysqlString% -D %wdb% < Translations\Translations\French\French_Gameobject.sql
 echo  .... Gossip Texts (5/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\French\French_Gossip_texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\French\French_Gossip_texts.sql
 echo  .... Gossip_Menu_option (6/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\French\French_Gossip_Menu_option.sql
+%mysqlString% -D %wdb% < Translations\Translations\French\French_Gossip_Menu_option.sql
 echo  .... Items (7/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\French\French_Items.sql
+%mysqlString% -D %wdb% < Translations\Translations\French\French_Items.sql
 echo  .... Mangos String (8/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\French\French_Mangos_String.sql
+%mysqlString% -D %wdb% < Translations\Translations\French\French_Mangos_String.sql
 echo  .... PageText (9/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\French\French_PageText.sql
+%mysqlString% -D %wdb% < Translations\Translations\French\French_PageText.sql
 echo  .... Points of Interest (10/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\French\French_Points_of_interest.sql
+%mysqlString% -D %wdb% < Translations\Translations\French\French_Points_of_interest.sql
 echo  .... Quests (11/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\French\French_Quest.sql
+%mysqlString% -D %wdb% < Translations\Translations\French\French_Quest.sql
 echo  .... Script Texts (12/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\French\French_Script_Texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\French\French_Script_Texts.sql
 echo  .... NpcText (13/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\French\French_NpcText.sql
+%mysqlString% -D %wdb% < Translations\Translations\French\French_NpcText.sql
 goto LocWorldDB1:
 
 :LoadDE
@@ -1015,31 +1019,31 @@ echo ^| Loading German Locale into World Database                               
 echo ^|                                                                             ^|
 echo ^|_____________________________________________________________________________^|%colReset%
 echo  .... Creatures (1/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\German\German_Creature.sql
+%mysqlString% -D %wdb% < Translations\Translations\German\German_Creature.sql
 echo  .... Creature AI Texts (2/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\German\German_Creature_ai_texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\German\German_Creature_ai_texts.sql
 echo  .... DB Script Strings (3/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\German\German_db_script_string.sql
+%mysqlString% -D %wdb% < Translations\Translations\German\German_db_script_string.sql
 echo  .... GameObjects (4/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\German\German_Gameobject.sql
+%mysqlString% -D %wdb% < Translations\Translations\German\German_Gameobject.sql
 echo  .... Gossip Texts (5/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\German\German_Gossip_texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\German\German_Gossip_texts.sql
 echo  .... Gossip_Menu_option (6/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\German\German_Gossip_Menu_option.sql
+%mysqlString% -D %wdb% < Translations\Translations\German\German_Gossip_Menu_option.sql
 echo  .... Items (7/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\German\German_Items.sql
+%mysqlString% -D %wdb% < Translations\Translations\German\German_Items.sql
 echo  .... Mangos String (8/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\German\German_Mangos_String.sql
+%mysqlString% -D %wdb% < Translations\Translations\German\German_Mangos_String.sql
 echo  .... PageText (9/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\German\German_PageText.sql
+%mysqlString% -D %wdb% < Translations\Translations\German\German_PageText.sql
 echo  .... Points of Interest (10/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\German\German_Points_of_interest.sql
+%mysqlString% -D %wdb% < Translations\Translations\German\German_Points_of_interest.sql
 echo  .... Quests (11/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\German\German_Quest.sql
+%mysqlString% -D %wdb% < Translations\Translations\German\German_Quest.sql
 echo  .... Script Texts (12/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\German\German_Script_Texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\German\German_Script_Texts.sql
 echo  .... NpcText (13/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\German\German_NpcText.sql
+%mysqlString% -D %wdb% < Translations\Translations\German\German_NpcText.sql
 goto LocWorldDB2:
 
 :LoadKO
@@ -1050,31 +1054,31 @@ echo ^| Loading Korean Locale into World Database                               
 echo ^|                                                                             ^|
 echo ^|_____________________________________________________________________________^|%colReset%
 echo  .... Creatures (1/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Korean\Korean_Creature.sql
+%mysqlString% -D %wdb% < Translations\Translations\Korean\Korean_Creature.sql
 echo  .... Creature AI Texts (2/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Korean\Korean_Creature_ai_texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\Korean\Korean_Creature_ai_texts.sql
 echo  .... DB Script Strings (3/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Korean\Korean_db_script_string.sql
+%mysqlString% -D %wdb% < Translations\Translations\Korean\Korean_db_script_string.sql
 echo  .... GameObjects (4/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Korean\Korean_Gameobject.sql
+%mysqlString% -D %wdb% < Translations\Translations\Korean\Korean_Gameobject.sql
 echo  .... Gossip Texts (5/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Korean\Korean_Gossip_texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\Korean\Korean_Gossip_texts.sql
 echo  .... Gossip Menu Option (6/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Korean\Korean_Gossip_Menu_option.sql
+%mysqlString% -D %wdb% < Translations\Translations\Korean\Korean_Gossip_Menu_option.sql
 echo  .... Items (7/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Korean\Korean_Items.sql
+%mysqlString% -D %wdb% < Translations\Translations\Korean\Korean_Items.sql
 echo  .... Mangos String (8/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Korean\Korean_Mangos_String.sql
+%mysqlString% -D %wdb% < Translations\Translations\Korean\Korean_Mangos_String.sql
 echo  .... PageText (9/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Korean\Korean_PageText.sql
+%mysqlString% -D %wdb% < Translations\Translations\Korean\Korean_PageText.sql
 echo  .... Points of Interest (10/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Korean\Korean_Points_of_interest.sql
+%mysqlString% -D %wdb% < Translations\Translations\Korean\Korean_Points_of_interest.sql
 echo  .... Quests (11/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Korean\Korean_Quest.sql
+%mysqlString% -D %wdb% < Translations\Translations\Korean\Korean_Quest.sql
 echo  .... Script Texts (12/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Korean\Korean_Script_Texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\Korean\Korean_Script_Texts.sql
 echo  .... NpcText (13/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Korean\Korean_NpcText.sql
+%mysqlString% -D %wdb% < Translations\Translations\Korean\Korean_NpcText.sql
 goto LocWorldDB3:
 
 :LoadCH
@@ -1085,31 +1089,31 @@ echo ^| Loading Chinese Locale into World Database                              
 echo ^|                                                                             ^|
 echo ^|_____________________________________________________________________________^|%colReset%
 echo  .... Creatures (1/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Chinese\Chinese_Creature.sql
+%mysqlString% -D %wdb% < Translations\Translations\Chinese\Chinese_Creature.sql
 echo  .... Creature AI Texts (2/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Chinese\Chinese_Creature_ai_texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\Chinese\Chinese_Creature_ai_texts.sql
 echo  .... DB Script Strings (3/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Chinese\Chinese_db_script_string.sql
+%mysqlString% -D %wdb% < Translations\Translations\Chinese\Chinese_db_script_string.sql
 echo  .... GameObjects (4/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Chinese\Chinese_Gameobject.sql
+%mysqlString% -D %wdb% < Translations\Translations\Chinese\Chinese_Gameobject.sql
 echo  .... Gossip Texts (5/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Chinese\Chinese_Gossip_texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\Chinese\Chinese_Gossip_texts.sql
 echo  .... Gossip Menu Option (6/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Chinese\Chinese_Gossip_Menu_option.sql
+%mysqlString% -D %wdb% < Translations\Translations\Chinese\Chinese_Gossip_Menu_option.sql
 echo  .... Items (7/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Chinese\Chinese_Items.sql
+%mysqlString% -D %wdb% < Translations\Translations\Chinese\Chinese_Items.sql
 echo  .... Mangos String (8/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Chinese\Chinese_Mangos_String.sql
+%mysqlString% -D %wdb% < Translations\Translations\Chinese\Chinese_Mangos_String.sql
 echo  .... PageText (9/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Chinese\Chinese_PageText.sql
+%mysqlString% -D %wdb% < Translations\Translations\Chinese\Chinese_PageText.sql
 echo  .... Points of Interest (10/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Chinese\Chinese_Points_of_interest.sql
+%mysqlString% -D %wdb% < Translations\Translations\Chinese\Chinese_Points_of_interest.sql
 echo  .... Quests (11/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Chinese\Chinese_Quest.sql
+%mysqlString% -D %wdb% < Translations\Translations\Chinese\Chinese_Quest.sql
 echo  .... Script Texts (12/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Chinese\Chinese_Script_Texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\Chinese\Chinese_Script_Texts.sql
 echo  .... NpcText (13/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Chinese\Chinese_NpcText.sql
+%mysqlString% -D %wdb% < Translations\Translations\Chinese\Chinese_NpcText.sql
 goto LocWorldDB4:
 
 :LoadTW
@@ -1120,31 +1124,31 @@ echo ^| Loading Taiwanese Locale into World Database                            
 echo ^|                                                                             ^|
 echo ^|_____________________________________________________________________________^|%colReset%
 echo  .... Creatures (1/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_Creature.sql
+%mysqlString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_Creature.sql
 echo  .... Creature AI Texts (2/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_Creature_ai_texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_Creature_ai_texts.sql
 echo  .... DB Script Strings (3/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_db_script_string.sql
+%mysqlString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_db_script_string.sql
 echo  .... GameObjects (4/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_Gameobject.sql
+%mysqlString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_Gameobject.sql
 echo  .... Gossip Texts (5/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_Gossip_texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_Gossip_texts.sql
 echo  .... Gossip Menu Option (6/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_Gossip_Menu_option.sql
+%mysqlString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_Gossip_Menu_option.sql
 echo  .... Items (7/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_Items.sql
+%mysqlString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_Items.sql
 echo  .... Mangos String (8/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_Mangos_String.sql
+%mysqlString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_Mangos_String.sql
 echo  .... PageText (9/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_PageText.sql
+%mysqlString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_PageText.sql
 echo  .... Points of Interest (10/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_Points_of_interest.sql
+%mysqlString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_Points_of_interest.sql
 echo  .... Quests (11/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_Quest.sql
+%mysqlString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_Quest.sql
 echo  .... Script Texts (12/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_Script_Texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_Script_Texts.sql
 echo  .... NpcText (13/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_NpcText.sql
+%mysqlString% -D %wdb% < Translations\Translations\Taiwanese\Taiwanese_NpcText.sql
 goto LocWorldDB5:
 
 :LoadES
@@ -1155,31 +1159,31 @@ echo ^| Loading Spanish Locale into World Database                              
 echo ^|                                                                             ^|
 echo ^|_____________________________________________________________________________^|%colReset%
 echo  .... Creatures (1/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish\Spanish_Creature.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish\Spanish_Creature.sql
 echo  .... Creature AI Texts (2/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish\Spanish_Creature_ai_texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish\Spanish_Creature_ai_texts.sql
 echo  .... DB Script Strings (3/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish\Spanish_db_script_string.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish\Spanish_db_script_string.sql
 echo  .... GameObjects (4/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish\Spanish_Gameobject.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish\Spanish_Gameobject.sql
 echo  .... Gossip Texts (5/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish\Spanish_Gossip_texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish\Spanish_Gossip_texts.sql
 echo  .... Gossip Menu Option (6/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish\Spanish_Gossip_Menu_Option.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish\Spanish_Gossip_Menu_Option.sql
 echo  .... Items (7/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish\Spanish_Items.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish\Spanish_Items.sql
 echo  .... Mangos String (8/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish\Spanish_Mangos_String.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish\Spanish_Mangos_String.sql
 echo  .... PageText (9/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish\Spanish_PageText.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish\Spanish_PageText.sql
 echo  .... Points of Interest (10/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish\Spanish_Points_of_interest.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish\Spanish_Points_of_interest.sql
 echo  .... Quests (11/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish\Spanish_Quest.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish\Spanish_Quest.sql
 echo  .... Script Texts (12/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish\Spanish_Script_Texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish\Spanish_Script_Texts.sql
 echo  .... NpcText (13/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish\Spanish_NpcText.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish\Spanish_NpcText.sql
 goto LocWorldDB6:
 
 :LoadMX
@@ -1190,31 +1194,31 @@ echo ^| Loading Spanish (South American) Locale into World Database             
 echo ^|                                                                             ^|
 echo ^|_____________________________________________________________________________^|%colReset%
 echo  .... Creatures (1/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_Creature.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_Creature.sql
 echo  .... Creature AI Texts (2/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_Creature_ai_texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_Creature_ai_texts.sql
 echo  .... DB Script Strings (3/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_db_script_string.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_db_script_string.sql
 echo  .... GameObjects (4/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_Gameobject.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_Gameobject.sql
 echo  .... Gossip Texts (5/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_Gossip_texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_Gossip_texts.sql
 echo  .... Gossip Menu Option (6/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_Gossip_Menu_option.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_Gossip_Menu_option.sql
 echo  .... Items (7/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_Items.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_Items.sql
 echo  .... Mangos String (8/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_Mangos_String.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_Mangos_String.sql
 echo  .... PageText (9/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_PageText.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_PageText.sql
 echo  .... Points of Interest (10/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_Points_of_interest.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_Points_of_interest.sql
 echo  .... Quests (11/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_Quest.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_Quest.sql
 echo  .... Script Texts (12/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_Script_Texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_Script_Texts.sql
 echo  .... NpcText (13/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_NpcText.sql
+%mysqlString% -D %wdb% < Translations\Translations\Spanish_South_American\SpanishSA_NpcText.sql
 goto LocWorldDB7:
 
 :LoadRU
@@ -1225,31 +1229,31 @@ echo ^| Loading Russian Locale into World Database                              
 echo ^|                                                                             ^|
 echo ^|_____________________________________________________________________________^|%colReset%
 echo  .... Creatures (1/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Russian\Russian_Creature.sql
+%mysqlString% -D %wdb% < Translations\Translations\Russian\Russian_Creature.sql
 echo  .... Creature AI Texts (2/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Russian\Russian_Creature_AI_Texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\Russian\Russian_Creature_AI_Texts.sql
 echo  .... DB Script Strings (3/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Russian\Russian_db_script_string.sql
+%mysqlString% -D %wdb% < Translations\Translations\Russian\Russian_db_script_string.sql
 echo  .... GameObjects (4/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Russian\Russian_Gameobject.sql
+%mysqlString% -D %wdb% < Translations\Translations\Russian\Russian_Gameobject.sql
 echo  .... Gossip Texts (5/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Russian\Russian_Gossip_texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\Russian\Russian_Gossip_texts.sql
 echo  .... Gossip Menu Option (6/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Russian\Russian_Gossip_Menu_option.sql
+%mysqlString% -D %wdb% < Translations\Translations\Russian\Russian_Gossip_Menu_option.sql
 echo  .... Items (7/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Russian\Russian_Items.sql
+%mysqlString% -D %wdb% < Translations\Translations\Russian\Russian_Items.sql
 echo  .... Mangos String (8/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Russian\Russian_Mangos_String.sql
+%mysqlString% -D %wdb% < Translations\Translations\Russian\Russian_Mangos_String.sql
 echo  .... PageText (9/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Russian\Russian_PageText.sql
+%mysqlString% -D %wdb% < Translations\Translations\Russian\Russian_PageText.sql
 echo  .... Points of Interest (10/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Russian\Russian_Points_of_interest.sql
+%mysqlString% -D %wdb% < Translations\Translations\Russian\Russian_Points_of_interest.sql
 echo  .... Quests (11/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Russian\Russian_Quest.sql
+%mysqlString% -D %wdb% < Translations\Translations\Russian\Russian_Quest.sql
 echo  .... Script Texts (12/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Russian\Russian_Script_Texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\Russian\Russian_Script_Texts.sql
 echo  .... NpcText (13/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Russian\Russian_NpcText.sql
+%mysqlString% -D %wdb% < Translations\Translations\Russian\Russian_NpcText.sql
 goto LocWorldDB8:
 
 :LoadIT
@@ -1260,31 +1264,31 @@ echo ^| Loading Italian Locale into World Database                              
 echo ^|                                                                             ^|
 echo ^|_____________________________________________________________________________^|%colReset%
 echo  .... Creatures (1/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Italian\Italian_Creature.sql
+%mysqlString% -D %wdb% < Translations\Translations\Italian\Italian_Creature.sql
 echo  .... Creature AI Texts (2/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Italian\Italian_Creature_AI_Texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\Italian\Italian_Creature_AI_Texts.sql
 echo  .... DB Script Strings (3/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Italian\Italian_db_script_string.sql
+%mysqlString% -D %wdb% < Translations\Translations\Italian\Italian_db_script_string.sql
 echo  .... GameObjects (4/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Italian\Italian_Gameobject.sql
+%mysqlString% -D %wdb% < Translations\Translations\Italian\Italian_Gameobject.sql
 echo  .... Gossip Texts (5/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Italian\Italian_Gossip_texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\Italian\Italian_Gossip_texts.sql
 echo  .... Gossip Menu Option (6/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Italian\Italian_Gossip_Menu_option.sql
+%mysqlString% -D %wdb% < Translations\Translations\Italian\Italian_Gossip_Menu_option.sql
 echo  .... Items (7/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Italian\Italian_Items.sql
+%mysqlString% -D %wdb% < Translations\Translations\Italian\Italian_Items.sql
 echo  .... Mangos String (8/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Italian\Italian_Mangos_String.sql
+%mysqlString% -D %wdb% < Translations\Translations\Italian\Italian_Mangos_String.sql
 echo  .... PageText (9/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Italian\Italian_PageText.sql
+%mysqlString% -D %wdb% < Translations\Translations\Italian\Italian_PageText.sql
 echo  .... Points of Interest (10/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Italian\Italian_Points_of_interest.sql
+%mysqlString% -D %wdb% < Translations\Translations\Italian\Italian_Points_of_interest.sql
 echo  .... Quests (11/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Italian\Italian_Quest.sql
+%mysqlString% -D %wdb% < Translations\Translations\Italian\Italian_Quest.sql
 echo  .... Script Texts (12/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Italian\Italian_Script_Texts.sql
+%mysqlString% -D %wdb% < Translations\Translations\Italian\Italian_Script_Texts.sql
 echo  .... NpcText (13/13)
-%mysqlBaseConnectionString% -D %wdb% < Translations\Translations\Italian\Italian_NpcText.sql
+%mysqlString% -D %wdb% < Translations\Translations\Italian\Italian_NpcText.sql
 goto done4:
 
 
