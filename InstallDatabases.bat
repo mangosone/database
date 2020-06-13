@@ -1,5 +1,7 @@
 @ECHO OFF
 
+set scriptVersion=v2.1
+
 rem -- Change the values below to match your server --
 set mysql=Tools\
 set svr=localhost
@@ -97,7 +99,7 @@ echo %colWhiteBold%_____________________________________________________________
 echo %colWhiteDarkBlue%^|    __  __      _  _  ___  ___  ___                                          ^|
 echo ^|   ^|  \/  ^|__ _^| \^| ^|/ __^|/ _ \/ __^|                                         ^|
 echo ^|   ^| ^|\/^| / _` ^| .` ^| (_ ^| (_) \__ \                                         ^|
-echo ^|   ^|_^|  ^|_\__,_^|_^|\_^|\___^|\___/^|___/ %colYellowBold%Database Setup and World Loader v2.0%colWhiteBold%    ^|
+echo ^|   ^|_^|  ^|_\__,_^|_^|\_^|\___^|\___/^|___/ %colYellowBold%Database Setup and World Loader %scriptVersion%%colWhiteBold%    ^|
 echo ^|_____________________________________________________________________________^|
 echo %colWhiteLightBlue%^|                                                                             ^|
 echo ^|   Website / Forum / Wiki / Support: https://getmangos.eu                    ^|
@@ -421,7 +423,7 @@ goto main
 
 :Step1
 if not exist %mysql%\mysql.exe then goto patherror
-if not "%mysqlBaseConnectionString:"=%" == "" goto AfterStep1:
+if not "%mysqlBaseConnectionString%" == "" goto AfterStep1:
 
 CLS
 echo %colWhiteBold%_______________________________________________________________________________
@@ -481,8 +483,7 @@ if %createMangosUser% == YES set /p newpass=%colYellowBold% New MySQL user passw
 if %newpass%. == . set newpass=mangos
 
 :AfterStep1
-if "%mysqlBaseConnectionString:"=%"=="" set mysqlBaseConnectionString=%mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port%
-
+if "%mysqlBaseConnectionString%" == "" set mysqlBaseConnectionString=%mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port%
 if %createMangosUser% == YES if %newpass% == mangos set defaultsused=YES
 REM if %newuser% == mangos set defaultsused=YES
 REM if %defaultsused% == YES goto done:
