@@ -1,0 +1,57 @@
+rem This file intentionally does not try to alter any internal variables,
+rem only those that appear near the beginning controlling high-level configuration
+rem and task selection, as to not destabilize the main script.
+
+rem DB Connection information
+set mysql=Tools\
+set svr=localhost
+set newuser=mangos
+set user=root
+set pass=mangos
+set newpass=mangos
+set port=3306
+set wdb=mangos1
+set cdb=character1
+set rdb=realmd
+
+rem Can use above parts, or this one will take priority:
+set mysqlBaseConnectionString=%mysql%mysql -q -s --login-path=local
+
+rem Comment out the following line if you want to control task options automatically.
+goto :EOF
+
+rem Main Task Selection
+set createcharDB=YES
+set createworldDB=YES
+set createrealmDB=YES
+set createMangosUser=YES
+set updatesOnly=NO
+set loadcharDB=YES
+set loadworldDB=YES
+set loadrealmDB=YES
+set defaultsused=NO
+
+rem Update Task Selection
+set CDBUpdate=YES
+set WDBUpdate=YES
+set RDBUpdate=YES
+
+rem Realm list addition and type Task Selections
+set addrealmentry=YES
+set DBType=POPULATED
+set activity=N
+
+rem Locale Task Selection
+set LOCList=NO
+set locFR=NO
+set locES=NO
+set locDE=NO
+set locKO=NO
+set locCH=NO
+set locTW=NO
+set locRU=NO
+set locIT=NO
+set locMX=NO
+
+rem Autostart Flag
+set autostart=YES
