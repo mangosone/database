@@ -993,7 +993,7 @@ echo ^|                                                                         
 echo ^|_____________________________________________________________________________^|%colReset%
 echo.
 
-%mysql%mysql -q -s -h %svr% --user=%user% --password=%pass% --port=%port% %wdb% < Translations\1_LocaleTablePrepare.sql
+%mysqlString% -D %wdb% < Translations\1_LocaleTablePrepare.sql
 goto LocWorldDB:
 
 
