@@ -81,7 +81,7 @@ set locRU=NO
 set locIT=NO
 set locMX=NO
 
-if exist QuickInstallVars.bat call QuickInstallVars.bat
+if not "%skipExternalVars%" == "YES" if exist QuickInstallVars.bat call QuickInstallVars.bat
 
 rem -- first check that the repo has been cloned correctly
 if not exist Realm goto missingRecursive:
@@ -156,12 +156,12 @@ if %createMangosUser% == YES set PAD=
 if %updatesOnly% == NO echo %colWhiteBold%^|                        %colRedBold%P - %colRed%Toggle Create Mangos User (%colWhiteBold%%createMangosUser%%colRed%)%colReset%                  %PAD%%colWhiteBold%^|
 if %updatesOnly% == NO echo %colWhiteBold%^|                                                                             ^|
 
-if %LOCList% == NO set PAD=
+if %LOCList% == NO set PAD= 
 if %LOCList% == YES set PAD=
-echo %colWhiteBold%^|                        %colYellowBold%A - %colYellow%Add Localised Content (%colWhiteBold%%LOCList%%colYellow%)%colReset%                       %PAD%%colWhiteBold%^|
+echo %colWhiteBold%^|                        %colYellowBold%A - %colYellow%Add Localised Content (%colWhiteBold%%LOCList%%colYellow%)%colReset%                      %PAD%%colWhiteBold%^|
 echo %colWhiteBold%^|                                                                             ^|
-echo %colWhiteBold%^|                        %colMagentaBold%Z - %colMagenta%Set everything off                               %PAD%%colWhiteBold%^|
-echo %colWhiteBold%^|                        %colMagentaBold%G - %colMagenta%Set defaults                                     %PAD%%colWhiteBold%^|
+echo %colWhiteBold%^|                        %colMagentaBold%Z - %colMagenta%Set everything off                               %colWhiteBold%^|
+echo %colWhiteBold%^|                        %colMagentaBold%G - %colMagenta%Set defaults                                     %colWhiteBold%^|
 echo %colWhiteBold%^|                                                                             ^|
 echo %colWhiteBold%^|                        %colGreenBold%N - %colGreen%Next Step%colReset%                                        %colWhiteBold%^|
 echo %colWhiteBold%^|                        %colWhiteBold%X - %colReset%Exit                                             %colWhiteBold%^|
@@ -425,6 +425,7 @@ set addrealmentry=NO
 goto main
 
 :SetDefaults
+set skipExternalVars=YES
 goto setOptions
 
 :Step1
@@ -646,35 +647,35 @@ echo ^| Database Localisation Support                                           
 echo ^|_____________________________________________________________________________^|%colReset%
 echo ^|                                                                             ^|
 set PAD=
-if %locCH% == NO set PAD=
+if %locCH% == NO set PAD= 
 echo %colWhiteBold%^|                Locales : %colYellowBold%C - %colYellow%Toggle Chinese (%colWhiteBold%%locCH%%colYellow%)%colReset%                           %PAD%%colWhiteBold%^|
 
 set PAD=
-if %locFR% == NO set PAD=
+if %locFR% == NO set PAD= 
 echo %colWhiteBold%^|                          %colYellowBold%F - %colYellow%Toggle French (%colWhiteBold%%locFR%%colYellow%)%colReset%                            %PAD%%colWhiteBold%^|
 
 set PAD=
-if %locDE% == NO set PAD=
+if %locDE% == NO set PAD= 
 echo %colWhiteBold%^|                          %colYellowBold%G - %colYellow%Toggle German (%colWhiteBold%%locDE%%colYellow%)%colReset%                            %PAD%%colWhiteBold%^|
 
 set PAD=
-if %locKO% == NO set PAD=
+if %locKO% == NO set PAD= 
 echo %colWhiteBold%^|                          %colYellowBold%K - %colYellow%Toggle Korean (%colWhiteBold%%locKO%%colYellow%)%colReset%                            %PAD%%colWhiteBold%^|
 
 set PAD=
-if %locMX% == NO set PAD=
+if %locMX% == NO set PAD= 
 echo %colWhiteBold%^|                          %colYellowBold%M - %colYellow%Toggle Spanish (Mexican) (%colWhiteBold%%locMX%%colYellow%)%colReset%                 %PAD%%colWhiteBold%^|
 
 set PAD=
-if %locRU% == NO set PAD=
+if %locRU% == NO set PAD= 
 echo %colWhiteBold%^|                          %colYellowBold%R - %colYellow%Toggle Russian (%colWhiteBold%%locRU%%colYellow%)%colReset%                           %PAD%%colWhiteBold%^|
 
 set PAD=
-if %locES% == NO set PAD=
+if %locES% == NO set PAD= 
 echo %colWhiteBold%^|                          %colYellowBold%S - %colYellow%Toggle Spanish (%colWhiteBold%%locES%%colYellow%)%colReset%                           %PAD%%colWhiteBold%^|
 
 set PAD=
-if %locTW% == NO set PAD=
+if %locTW% == NO set PAD= 
 echo %colWhiteBold%^|                          %colYellowBold%T - %colYellow%Toggle Taiwanese (%colWhiteBold%%locTW%%colYellow%)%colReset%                         %PAD%%colWhiteBold%^|
 
 REM echo                         I - Toggle Italian (%locIT%)
