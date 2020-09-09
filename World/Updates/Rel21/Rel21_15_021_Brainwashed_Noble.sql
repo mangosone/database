@@ -23,7 +23,7 @@ BEGIN
 
     -- New Values
     SET @cNewVersion = '21';
-    SET @cNewStructure = '12';
+    SET @cNewStructure = '15';
     SET @cNewContent = '021';
                             -- DESCRIPTION IS 30 Characters MAX    
     SET @cNewDescription = 'Brainwashed Noble';
