@@ -24,7 +24,7 @@ BEGIN
     -- New Values
     SET @cNewVersion = '21';
     SET @cNewStructure = '15';
-    SET @cNewContent = '0032';
+    SET @cNewContent = '032';
                             -- DESCRIPTION IS 30 Characters MAX    
     SET @cNewDescription = 'Dire Maul Spawn updates pt3';
 
