@@ -44,3 +44,9 @@ Thumbs.db
 
 # Generated files, vendor libraries
 
+## Project-specific files
+# Local user configuration
+QuickInstallVars.bat
+
+# Local cache files, temporary, or quick testing files
+*/Updates/Rel*/*_Updates/
