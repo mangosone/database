@@ -43,7 +43,7 @@ BEGIN
         -- -- PLACE UPDATE SQL BELOW -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 
-DELETE FROM `creature_linking_template` WHERE `map` = 429;
+DELETE FROM `creature_linking_template` WHERE `map` = 429
 INSERT INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`, `search_range`) VALUES
 (14349,429,14327,515,0),
 (11459,429,11489,1,0),
