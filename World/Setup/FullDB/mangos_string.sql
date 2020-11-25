@@ -82,8 +82,8 @@ INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `conten
 (53,'Mail can\'t have more %u item stacks',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (54,'The new passwords do not match',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (55,'Your password can\'t be longer than 16 characters (client limit),
- password not changed!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-(56,'Current Message of the day: \r\n%s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+\n password not changed!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+(56,'Current Message of the day: %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (57,'Using World DB: %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (58,'Using script library: %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (59,'Using creature EventAI: %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
@@ -241,7 +241,7 @@ INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `conten
 (286,'Accepting Whisper: OFF',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (287,'Creature (GUID: %u) not found',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (288,'Tickets count: %i show new tickets: %s\n',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-(289,'New ticket from %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+(289,'New ticket from %s (ID %u)',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (291,'New ticket show: ON',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (292,'New ticket show: OFF',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (293,'Ticket %i doesn\'t exist',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
@@ -698,7 +698,7 @@ INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `conten
 (1003,'Account %s NOT deleted (unknown error)',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1004,'Account created: %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1005,'Account name cannot be longer than 16 characters (client limit),
- account not created!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+\n account not created!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1006,'Account with this name already exist!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1007,'Account %s NOT created (probably sql file format was updated)',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1008,'Account %s NOT created (unknown error)',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
@@ -723,7 +723,7 @@ INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `conten
 (1028,'All log filters set to: %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1029,'Command can only be called from a Remote Admin console.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1100,'Account %s (Id: %u) has been granted %u expansion rights.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-(1101,'Message of the day changed to:\r\n%s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+(1101,'Message of the day changed to: %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1102,'Message sent to %s: %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1103,'%d - %s %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1104,'%d - %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
@@ -861,7 +861,7 @@ INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `conten
 (1634,'|cffffff00Halaa is defenseless!|r',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1635,'|cffffff00The Horde has collected 200 silithyst!|r',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1636,'|cffffff00The Alliance has collected 200 silithyst!|r',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-(1510,'Closed ticket for player %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+(1510,'Ticket %u from %s has been closed by <GM>%s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1511,'Ticket system is globally on, accepting all tickets',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1512,'Ticket system is globally off, not accepting tickets at all',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1513,'You cant close a ticket for offline players',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
@@ -879,10 +879,10 @@ INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `conten
 (252,'AIScriptName: %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (373,'Response: %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1514,'ID %u from %s (%s),
- changed %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+\n changed %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1515,'= Shown %u tickets out of total %u from online players.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1516,'ID %u from GUID %u (%s),
- changed %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+\n changed %s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1517,'= Shown %u tickets of total %u.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (1518,'Informing you about arriving tickets is %s.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (714,'This Battleground is disabled by the server administration.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
@@ -890,7 +890,11 @@ INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `conten
 (1700,'|cffff0000[Server Announce]:|r%s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (573,'The lootstate of GO lowGuid %u is %u.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
 (574,'The GO state of GO lowGuid %u is %u.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
-(555,'Opcode %u with target %s was received from you.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
+(555,'Opcode %u with target %s was received from you.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+(1519,'Response to your ticket',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+(1520,'$B$BBest regards, $B$B<GM>%s',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+(1521,'Your ticket has been closed.@@It has been serviced by <GM>%s, please check your ingame mailbox to see the answer.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+(1440,'Player %s has updated his ticket (ID %u).',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `mangos_string` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -903,4 +907,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-13 23:03:00
+-- Dump completed on 2020-11-25 23:00:50

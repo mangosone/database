@@ -91,7 +91,10 @@ INSERT INTO `gossip_texts` (`entry`, `content_default`, `content_loc1`, `content
 (-3568000,'Thanks for the concern, but we intend to explore Zul\'Aman.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'harrison jones GOSSIP_ITEM_BEGIN'),
 (-3532020,'Oh, grandmother, what big eyes you have.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'grandma GOSSIP_ITEM_GRANDMA2'),
 (-3532021,'Oh, grandmother, what phat lewts you have.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'grandma GOSSIP_ITEM_GRANDMA3'),
-(-3006669,'I am ready, Anchorite. Let us begin the exorcism.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'anchorite barada GOSSIP_ITEM_EXORCISM');
+(-3006669,'I am ready, Anchorite. Let us begin the exorcism.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'anchorite barada GOSSIP_ITEM_EXORCISM'),
+(-3509002,'A gnome, really ? Show me your real face, daemon !','A gnome, really ? Show me your real face, daemon !','Un gnome, vraiment ? Montre moi ton vrai visage, démon !',NULL,NULL,NULL,NULL,NULL,NULL,'nelson the nice GOSSIP_ITEM_NELSON_THE_NICE'),
+(-3509003,'A tauren, really ? Show me your real face, daemon !','A tauren, really ? Show me your real face, daemon !','Un tauren, vraiment ? Montre moi ton vrai visage, démon !',NULL,NULL,NULL,NULL,NULL,NULL,'artorius teh amiable GOSSIP_ITEM_ARTORIUS_THE_AMIABLE'),
+(-3509004,'Show me your real face, daemon !','Show me your real face, daemon !','Montre moi ton vrai visage, démon !',NULL,NULL,NULL,NULL,NULL,NULL,'npc_klinfran_the_crazed GOSSIP_ITEM_KLINFRAN_THE_AMIABLE');
 /*!40000 ALTER TABLE `gossip_texts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -104,4 +107,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-13 23:02:57
+-- Dump completed on 2020-11-25 23:00:46

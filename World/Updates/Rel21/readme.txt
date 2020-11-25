@@ -1,6 +1,6 @@
 If your database is a version prior to:
 
-Rel21_13_002_go_153205_resize.sql
+Rel21_15_053_NPC_1434_position_fix.sql
 
 You need to run the appriopriate updates in the zip file  in folder:
 

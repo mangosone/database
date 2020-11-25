@@ -197,7 +197,10 @@ INSERT INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`,
 (390,0,330,515,0),
 (5798,1,5797,3,15),
 (5799,1,5797,3,15),
-(5800,1,5797,3,15);
+(5800,1,5797,3,15),
+(14349,429,14327,515,0),
+(11459,429,11489,1,0),
+(14324,429,11501,3,0);
 /*!40000 ALTER TABLE `creature_linking_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -210,4 +213,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-13 23:02:50
+-- Dump completed on 2020-11-25 23:00:35

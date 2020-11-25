@@ -1786,7 +1786,7 @@ INSERT INTO `npc_vendor` (`entry`, `item`, `maxcount`, `incrtime`, `ExtendedCost
 (8508,6533,2,43200,0,0),
 (8665,8500,0,0,0,0),
 (8665,8501,0,0,0,0),
-(8666,8489,0,0,0,0),
+(8666,8489,1,9000,0,0),
 (8678,10607,1,7200,0,0),
 (8679,10602,1,7200,0,0),
 (8681,10314,0,0,0,0),
@@ -6197,4 +6197,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-13 23:03:01
+-- Dump completed on 2020-11-25 23:00:52

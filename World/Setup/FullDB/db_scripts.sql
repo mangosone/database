@@ -1979,7 +1979,10 @@ INSERT INTO `db_scripts` (`script_guid`, `script_type`, `id`, `delay`, `command`
 (4323,3,1711903,1,21,0,0,0,0,0,0,0,0,0,0,0,0,0,'Ithania unactive'),
 (4324,3,1711903,2,18,0,0,0,0,4,0,0,0,0,0,0,0,0,''),
 (4325,4,17119,1,20,0,0,0,0,0,0,0,0,0,0,0,0,0,'movement chenged to 0:idle'),
-(4326,7,185547,2,10,22993,600000,0,0,0,0,0,0,0,-2623.6,4573.66,138.827,1.64381,'summon');
+(4326,7,185547,2,10,22993,600000,0,0,0,0,0,0,0,-2623.6,4573.66,138.827,1.64381,'summon'),
+(4327,3,9615,0,32,1,0,0,0,0,0,0,0,0,0,0,0,0,'Laris Pause WP1'),
+(4328,1,4512,0,32,0,0,0,0,0,0,0,0,0,0,0,0,0,'Laris Unpause WP'),
+(4329,3,9616,0,0,0,0,0,0,0,2000006004,0,0,0,0,0,0,0,'Laris Say on WP');
 /*!40000 ALTER TABLE `db_scripts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1992,4 +1995,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-13 23:02:54
+-- Dump completed on 2020-11-25 23:00:40

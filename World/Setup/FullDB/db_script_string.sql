@@ -554,7 +554,8 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000006002,'Hah! The Thunderspike is mine. Die!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Gor say 2.'),
 (2000006003,'You\'ve saved me, fleshling! Ameer will hear of this noble act.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Captain Tyralius say on prison release'),
 (2000000486,'I think, I\'ll be able to get to Brackenwall. The cargo they carried to the top of the towers. Be careful!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,''),
-(2000000487,'To arms! the prisoner is escaping!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'');
+(2000000487,'To arms! the prisoner is escaping!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,''),
+(2000006004,'Incredible! Amazing! I don\'t even know what this means!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Laris Say.');
 /*!40000 ALTER TABLE `db_script_string` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -567,4 +568,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-13 23:02:53
+-- Dump completed on 2020-11-25 23:00:40

@@ -385,9 +385,8 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`,
 (2385,1,0,'I wish to unlearn my talents.',1,1,4461,0,0,0,0,'',0),
 (2387,0,0,'Um... sorry to bother you, but could I see Goodsteel\'s ledger again... if you\'re not using it.',1,1,0,0,0,0,0,'',0),
 (2404,0,6,'I would like to check my deposit box.',9,131072,0,0,0,0,0,'',0),
-(2405,0,0,'Is there a difference between ooze and slime?',1,1,0,0,0,0,0,'',0),
-(2405,1,0,'What do you mean by \"pure?\"',1,1,0,0,0,0,0,'',0),
-(2405,2,0,'Are there any areas you can think of that would be so untouched?',1,1,0,0,0,0,0,'',0),
+(2406,0,0,'What do you mean by \"pure?\"',1,1,2407,0,0,0,0,'',1756),
+(2405,0,0,'Is there a difference between ooze and slime?',1,1,2406,0,0,0,0,'',1756),
 (2422,0,0,'What do you think of Dadanga?',1,1,2421,0,0,0,0,'',0),
 (2441,0,0,'Where is the zeppelin now?',1,1,0,0,0,0,0,'',0),
 (2464,0,1,'Let me browse your goods.',3,128,0,0,0,0,0,'',0),
@@ -2697,7 +2696,8 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`,
 (6648,0,3,'I am interested in mage training.',5,16,0,0,0,0,0,'',79),
 (6648,1,0,'I wish to unlearn my talents.',1,1,4461,0,0,0,0,'',523),
 (3310,1,0,'Eva, I have lost the Spectral Essence. I need another.',1,1,-1,0,9839502,0,0,NULL,1751),
-(7371,0,0,'Balandar sent me to get you out of here and pick up his cargo. He is waiting for you in the Brackenwall.',1,1,-1,0,7371,0,0,NULL,1752);
+(7371,0,0,'Balandar sent me to get you out of here and pick up his cargo. He is waiting for you in the Brackenwall.',1,1,-1,0,7371,0,0,NULL,1752),
+(2407,0,0,'Are there any areas you can think of that would be so untouched?',1,1,2408,0,0,0,0,'',1756);
 /*!40000 ALTER TABLE `gossip_menu_option` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -2710,4 +2710,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-13 23:02:57
+-- Dump completed on 2020-11-25 23:00:46

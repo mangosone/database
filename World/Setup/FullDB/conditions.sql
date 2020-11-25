@@ -190,7 +190,14 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `commen
 (543,-1,103,169,NULL),
 (1750,24,13544,1,'Gossip menu 3310 second check.'),
 (1751,-1,24,1750,'Replace Spectral Essence Gossip menu 3310 check'),
-(1752,9,9437,0,NULL);
+(1752,9,9437,0,NULL),
+(1753,8,4512,0,'Show gossip text 3099 if quest, A Little Slime Goes a Long Way (Part 1),
+ is rewarded'),
+(1754,8,4513,0,'Show gossip text 3098 if quest, A Little Slime Goes a Long Way (Part 2),
+ is rewarded'),
+(1755,-3,1754,0,'Only show if quest, A Little Slime Goes a Long Way (Part 2),
+ is NOT rewarded'),
+(1756,-1,1753,1755,'Condition Check for A Little Slime Goes a Long Way gossip');
 /*!40000 ALTER TABLE `conditions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -203,4 +210,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-05-13 23:02:47
+-- Dump completed on 2020-11-25 23:00:31
