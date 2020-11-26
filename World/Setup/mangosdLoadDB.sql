@@ -41,6 +41,7 @@ CREATE TABLE `db_version` (
   `comment` varchar(150) DEFAULT '' COMMENT 'A comment about the latest database revision.',
   PRIMARY KEY (`version`,`structure`,`content`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='Used DB version notes';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 
 --
@@ -466,6 +467,8 @@ CREATE TABLE `creature_model_info` (
 --
 
 DROP TABLE IF EXISTS `creature_model_race`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `creature_model_race` (
   `modelid` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `racemask` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -473,7 +476,7 @@ CREATE TABLE `creature_model_race` (
   `modelid_racial` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'option 2, explicit modelid',
   PRIMARY KEY (`modelid`,`racemask`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Model system';
-
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `creature_movement`
@@ -668,7 +671,8 @@ CREATE TABLE `creature_template_addon` (
 --
 
 DROP TABLE IF EXISTS `creature_template_classlevelstats`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `creature_template_classlevelstats` (
   `Level` tinyint(4) NOT NULL COMMENT 'Creature level for the stats.',
   `Class` tinyint(4) NOT NULL COMMENT 'A creature''s class. The following table describes the available classes.',
@@ -682,6 +686,7 @@ CREATE TABLE `creature_template_classlevelstats` (
   `BaseArmor` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'Base armor value for any creature of this level and class.',
   PRIMARY KEY (`Level`,`Class`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `creature_template_spells`
@@ -725,6 +730,7 @@ CREATE TABLE `custom_texts` (
   `comment` text COMMENT 'This documents the script text.',
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Custom Texts';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `db_script_string`
@@ -781,7 +787,7 @@ CREATE TABLE `db_scripts` (
   `o` float NOT NULL DEFAULT '0' COMMENT 'Orientation angle (0 to 2*Pi).',
   `comments` varchar(255) NOT NULL COMMENT 'Textual comment.',
   PRIMARY KEY (`script_guid`)
-) ENGINE=MyISAM AUTO_INCREMENT=4327 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10626 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
@@ -1412,7 +1418,8 @@ CREATE TABLE `item_template` (
 --
 
 DROP TABLE IF EXISTS `locales_command`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `locales_command` (
   `id` mediumint(8) unsigned NOT NULL COMMENT 'The unique Command ID.',
   `help_text_loc1` longtext COMMENT 'Korean help text for the command that explian its use and parameters',
@@ -1425,6 +1432,7 @@ CREATE TABLE `locales_command` (
   `help_text_loc8` longtext COMMENT 'Russian help text for the command that explian its use and parameters',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='GM Commands localized help';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `locales_creature`
@@ -2381,7 +2389,8 @@ CREATE TABLE `pool_template` (
 --
 
 DROP TABLE IF EXISTS `prospecting_loot_template`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `prospecting_loot_template` (
   `entry` mediumint(8) unsigned NOT NULL DEFAULT '0',
   `item` mediumint(8) unsigned NOT NULL DEFAULT '0',
@@ -2392,13 +2401,15 @@ CREATE TABLE `prospecting_loot_template` (
   `condition_id` mediumint(8) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`entry`,`item`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Loot System';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `quest_relations`
 --
 
 DROP TABLE IF EXISTS `quest_relations`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `quest_relations` (
   `actor` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'The Entity involved in the quest',
   `entry` int(11) unsigned NOT NULL DEFAULT '0' COMMENT 'Creature or GO entr',
@@ -2406,6 +2417,7 @@ CREATE TABLE `quest_relations` (
   `role` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'Role of the actor',
   PRIMARY KEY (`entry`,`quest`,`role`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `quest_template`
@@ -2624,22 +2636,25 @@ CREATE TABLE `reserved_name` (
 --
 
 DROP TABLE IF EXISTS `script_binding`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `script_binding` (
-  `type` tinyint(2) unsigned NOT NULL COMMENT 'enum ScriptedObjectType',
+  `type` tinyint(2) unsigned NOT NULL COMMENT 'enum ScriptedObjectType in ScriptMgr.h',
   `ScriptName` char(64) NOT NULL COMMENT 'Script name, to be unique across all types',
   `bind` mediumint(10) NOT NULL COMMENT 'Bound to entry (>0) or GUID (<0)',
   `data` tinyint(2) unsigned DEFAULT '0' COMMENT 'Misc data; Effect number for spellscripts',
   PRIMARY KEY (`ScriptName`,`bind`),
   KEY `type` (`type`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='SD2 Script Names and Binding';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `script_texts`
 --
 
 DROP TABLE IF EXISTS `script_texts`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `script_texts` (
   `entry` mediumint(8) NOT NULL COMMENT 'Script text ID.',
   `content_default` text NOT NULL COMMENT 'Contains the text presented in the default language English.',
@@ -2658,13 +2673,15 @@ CREATE TABLE `script_texts` (
   `comment` text COMMENT 'Textual comment.',
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Script Texts';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `script_waypoint`
 --
 
 DROP TABLE IF EXISTS `script_waypoint`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `script_waypoint` (
   `entry` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'Creature ID (See creature_template.entry).',
   `pointid` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'Point ID.',
@@ -2675,27 +2692,30 @@ CREATE TABLE `script_waypoint` (
   `point_comment` text COMMENT 'Textual comment.',
   PRIMARY KEY (`entry`,`pointid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Script Creature waypoints';
-
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `skill_discovery_template`
 --
 
 DROP TABLE IF EXISTS `skill_discovery_template`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `skill_discovery_template` (
   `spellId` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'SpellId of the discoverable spell',
   `reqSpell` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'spell requirement',
   `chance` float NOT NULL DEFAULT '0' COMMENT 'chance to discover',
   PRIMARY KEY (`spellId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Skill Discovery System';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `skill_extra_item_template`
 --
 
 DROP TABLE IF EXISTS `skill_extra_item_template`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `skill_extra_item_template` (
   `spellId` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'SpellId of the item creation spell',
   `requiredSpecialization` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'Specialization spell id',
@@ -2703,8 +2723,7 @@ CREATE TABLE `skill_extra_item_template` (
   `additionalMaxNum` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'max num of adds',
   PRIMARY KEY (`spellId`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Skill Specialization System';
-
---
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `skill_fishing_base_level`
@@ -2949,7 +2968,8 @@ CREATE TABLE `spell_target_position` (
 --
 
 DROP TABLE IF EXISTS `spell_template`;
-
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `spell_template` (
   `id` int(11) unsigned NOT NULL DEFAULT '0',
   `proc_flags` int(11) unsigned NOT NULL DEFAULT '0',
@@ -2965,6 +2985,7 @@ CREATE TABLE `spell_template` (
   `comments` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='MaNGOS server side spells';
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Table structure for table `spell_threat`
