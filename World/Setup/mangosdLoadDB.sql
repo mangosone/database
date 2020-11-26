@@ -161,11 +161,12 @@ DROP TABLE IF EXISTS `command`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `command` (
-  `name` varchar(50) NOT NULL DEFAULT '' COMMENT 'The Command Name.',
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT COMMENT 'The unique Command ID.',
+  `command_text` varchar(50) NOT NULL DEFAULT '' COMMENT 'The Command Name.',
   `security` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'The minimum security level to use the command (See account.gmlevel) in the realm',
-  `help` longtext COMMENT 'The help text for the command which explains it''s use and parameters.',
-  PRIMARY KEY (`name`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Chat System';
+  `help_text` longtext COMMENT 'The help text for the command which explains it''s use and parameters.',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=808 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Chat System';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
@@ -435,7 +436,7 @@ CREATE TABLE `creature_loot_template` (
   `item` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'Template ID of the item which can be included into the loot.',
   `ChanceOrQuestChance` float NOT NULL DEFAULT '100' COMMENT 'Meaning of that field is a bit different depending on its sign.',
   `groupid` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'A group is a set of loot definitions.',
-  `mincountOrRef` mediumint(9) NOT NULL DEFAULT '1' COMMENT 'This field defines when positive: the minimum number of copies of the item. ',
+  `mincountOrRef` mediumint(9) NOT NULL DEFAULT '1' COMMENT 'This field defines \nwhen positive: the minimum number of copies of the item. ',
   `maxcount` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT 'For non-reference entries - the maximum number of copies of the item.',
   `condition_id` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'Value that represents a loot condition that must be filled.',
   PRIMARY KEY (`entry`,`item`)
@@ -656,7 +657,7 @@ CREATE TABLE `creature_template_addon` (
   `b2_0_sheath` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'Defines the sheath state of the creature_template.',
   `b2_1_flags` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'The value here overrides the value for the creature''s unit field UNIT_FIELD_BYTE',
   `emote` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT 'Emote ID that the creature should continually perform.',
-  `moveflags` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'The flag controls how a creature_template will be animated while moving.',
+  `moveflags` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '\nThe flag controls how a creature_template will be animated while moving.',
   `auras` text COMMENT 'Allows to attach auras to a creature_template entry.',
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -1036,7 +1037,7 @@ CREATE TABLE `gameobject` (
   PRIMARY KEY (`guid`),
   KEY `idx_map` (`map`),
   KEY `idx_id` (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=300142 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Gameobject System';
+) ENGINE=InnoDB AUTO_INCREMENT=632480 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Gameobject System';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1405,6 +1406,25 @@ CREATE TABLE `item_template` (
   KEY `items_index` (`class`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='Item System';
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Table structure for table `locales_command`
+--
+
+DROP TABLE IF EXISTS `locales_command`;
+
+CREATE TABLE `locales_command` (
+  `id` mediumint(8) unsigned NOT NULL COMMENT 'The unique Command ID.',
+  `help_text_loc1` longtext COMMENT 'Korean help text for the command that explian its use and parameters',
+  `help_text_loc2` longtext COMMENT 'French help text for the command that explian its use and parameters',
+  `help_text_loc3` longtext COMMENT 'German help text for the command that explian its use and parameters',
+  `help_text_loc4` longtext COMMENT 'Chinese help text for the command that explian its use and parameters',
+  `help_text_loc5` longtext COMMENT 'Taiwanese help text for the command that explian its use and parameters',
+  `help_text_loc6` longtext COMMENT 'Spanish Spain help text for the command that explian its use and parameters',
+  `help_text_loc7` longtext COMMENT 'Spanish Latin America help text for the command that explian its use and parameters',
+  `help_text_loc8` longtext COMMENT 'Russian help text for the command that explian its use and parameters',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='GM Commands localized help';
 
 --
 -- Table structure for table `locales_creature`
@@ -1852,9 +1872,13 @@ CREATE TABLE `mangos_string` (
   `content_loc6` text COMMENT 'Spanish (Spain) localization of content_default',
   `content_loc7` text COMMENT 'Spanish (Latin America) localization of content_default',
   `content_loc8` text COMMENT 'Russian localization of content_default',
+  `source_file` varchar(100) DEFAULT NULL,
+  `source_enum_wrapper` varchar(100) DEFAULT NULL,
+  `source_enum_tag` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`entry`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
 
 --
 -- Table structure for table `npc_text`
@@ -1869,82 +1893,82 @@ CREATE TABLE `npc_text` (
   `text0_1` longtext COMMENT 'This is the locale text that is displayed if the creature is female.',
   `lang0` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'The language of the text ingame.',
   `prob0` float NOT NULL DEFAULT '0' COMMENT 'This is the probability that the creature will say this text.',
-  `em0_0_delay` smallint(5) DEFAULT NULL,
-  `em0_0` smallint(5) DEFAULT NULL,
-  `em0_1_delay` smallint(5) DEFAULT NULL,
-  `em0_1` smallint(5) DEFAULT NULL,
-  `em0_2_delay` smallint(5) DEFAULT NULL,
-  `em0_2` smallint(5) DEFAULT NULL,
+  `em0_0_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait before the first emote is played.',
+  `em0_0` smallint(5) DEFAULT NULL COMMENT 'Emote to play when text is displayed.',
+  `em0_1_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the first emote are played, before the second emote.',
+  `em0_1` smallint(5) DEFAULT NULL COMMENT 'Second emote to play when text is displayed.',
+  `em0_2_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the second emote are played, before the third emote.',
+  `em0_2` smallint(5) DEFAULT NULL COMMENT 'Third emote to play when text is displayed',
   `text1_0` longtext COMMENT 'This is the locale text that is displayed if the creature is male.',
   `text1_1` longtext COMMENT 'This is the locale text that is displayed if the creature is female.',
   `lang1` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'The language of the text in game.',
   `prob1` float NOT NULL DEFAULT '0' COMMENT 'This is the probability that the creature will say this text.',
-  `em1_0_delay` smallint(5) DEFAULT NULL,
-  `em1_0` smallint(5) DEFAULT NULL,
-  `em1_1_delay` smallint(5) DEFAULT NULL,
-  `em1_1` smallint(5) DEFAULT NULL,
-  `em1_2_delay` smallint(5) DEFAULT NULL,
-  `em1_2` smallint(5) DEFAULT NULL,
+  `em1_0_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait before the first emote is played.',
+  `em1_0` smallint(5) DEFAULT NULL COMMENT 'emote to play when text is displayed.',
+  `em1_1_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the first emote are played, before the second emote.',
+  `em1_1` smallint(5) DEFAULT NULL COMMENT 'Second emote to play when text is displayed.',
+  `em1_2_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the second emote are played, before the third emote.',
+  `em1_2` smallint(5) DEFAULT NULL COMMENT 'Third emote to play when text is displayed.',
   `text2_0` longtext COMMENT 'This is the locale text that is displayed if the creature is male.',
   `text2_1` longtext COMMENT 'This is the locale text that is displayed if the creature is female.',
   `lang2` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'The language of the text in game.',
   `prob2` float NOT NULL DEFAULT '0' COMMENT 'This is the probability that the creature will say this text.',
-  `em2_0_delay` smallint(5) DEFAULT NULL,
-  `em2_0` smallint(5) DEFAULT NULL,
-  `em2_1_delay` smallint(5) DEFAULT NULL,
-  `em2_1` smallint(5) DEFAULT NULL,
-  `em2_2_delay` smallint(5) DEFAULT NULL,
-  `em2_2` smallint(5) DEFAULT NULL,
+  `em2_0_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait before the first emote is played.',
+  `em2_0` smallint(5) DEFAULT NULL COMMENT 'emote to play when text is displayed.',
+  `em2_1_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the first emote are played, before the second emote.',
+  `em2_1` smallint(5) DEFAULT NULL COMMENT 'Second emote to play when text is displayed.',
+  `em2_2_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the second emote are played, before the third emote.',
+  `em2_2` smallint(5) DEFAULT NULL COMMENT 'Third emote to play when text is displayed.',
   `text3_0` longtext COMMENT 'This is the locale text that is displayed if the creature is male.',
   `text3_1` longtext COMMENT 'This is the locale text that is displayed if the creature is female.',
   `lang3` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'The language of the text in game.',
   `prob3` float NOT NULL DEFAULT '0' COMMENT 'This is the probability that the creature will say this text.',
-  `em3_0_delay` smallint(5) DEFAULT NULL,
-  `em3_0` smallint(5) DEFAULT NULL,
-  `em3_1_delay` smallint(5) DEFAULT NULL,
-  `em3_1` smallint(5) DEFAULT NULL,
-  `em3_2_delay` smallint(5) DEFAULT NULL,
-  `em3_2` smallint(5) DEFAULT NULL,
+  `em3_0_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait before the first emote is played.',
+  `em3_0` smallint(5) DEFAULT NULL COMMENT 'emote to play when text is displayed.',
+  `em3_1_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the first emote are played, before the second emote.',
+  `em3_1` smallint(5) DEFAULT NULL COMMENT 'Second emote to play when text is displayed.',
+  `em3_2_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the second emote are played, before the third emote.',
+  `em3_2` smallint(5) DEFAULT NULL COMMENT 'Third emote to play when text is displayed.',
   `text4_0` longtext COMMENT 'This is the locale text that is displayed if the creature is male.',
   `text4_1` longtext COMMENT 'This is the locale text that is displayed if the creature is female.',
   `lang4` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'The language of the text in game.',
   `prob4` float NOT NULL DEFAULT '0' COMMENT 'This is the probability that the creature will say this text.',
-  `em4_0_delay` smallint(5) DEFAULT NULL,
-  `em4_0` smallint(5) DEFAULT NULL,
-  `em4_1_delay` smallint(5) DEFAULT NULL,
-  `em4_1` smallint(5) DEFAULT NULL,
-  `em4_2_delay` smallint(5) DEFAULT NULL,
-  `em4_2` smallint(5) DEFAULT NULL,
+  `em4_0_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait before the first emote is played.',
+  `em4_0` smallint(5) DEFAULT NULL COMMENT 'emote to play when text is displayed.',
+  `em4_1_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the first emote are played, before the second emote.',
+  `em4_1` smallint(5) DEFAULT NULL COMMENT 'Second emote to play when text is displayed.',
+  `em4_2_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the second emote are played, before the third emote.',
+  `em4_2` smallint(5) DEFAULT NULL COMMENT 'Third emote to play when text is displayed.',
   `text5_0` longtext COMMENT 'This is the locale text that is displayed if the creature is male.',
   `text5_1` longtext COMMENT 'This is the locale text that is displayed if the creature is female.',
   `lang5` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'The language of the text in game.',
   `prob5` float NOT NULL DEFAULT '0' COMMENT 'This is the probability that the creature will say this text.',
-  `em5_0_delay` smallint(5) DEFAULT NULL,
-  `em5_0` smallint(5) DEFAULT NULL,
-  `em5_1_delay` smallint(5) DEFAULT NULL,
-  `em5_1` smallint(5) DEFAULT NULL,
-  `em5_2_delay` smallint(5) DEFAULT NULL,
-  `em5_2` smallint(5) DEFAULT NULL,
+  `em5_0_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait before the first emote is played.',
+  `em5_0` smallint(5) DEFAULT NULL COMMENT 'emote to play when text is displayed.',
+  `em5_1_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the first emote are played, before the second emote.',
+  `em5_1` smallint(5) DEFAULT NULL COMMENT 'Second emote to play when text is displayed.',
+  `em5_2_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the second emote are played, before the third emote.',
+  `em5_2` smallint(5) DEFAULT NULL COMMENT 'Third emote to play when text is displayed.',
   `text6_0` longtext COMMENT 'This is the locale text that is displayed if the creature is male.',
   `text6_1` longtext COMMENT 'This is the locale text that is displayed if the creature is female.',
   `lang6` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'The language of the text in game.',
   `prob6` float NOT NULL DEFAULT '0' COMMENT 'This is the probability that the creature will say this text.',
-  `em6_0_delay` smallint(5) DEFAULT NULL,
-  `em6_0` smallint(5) DEFAULT NULL,
-  `em6_1_delay` smallint(5) DEFAULT NULL,
-  `em6_1` smallint(5) DEFAULT NULL,
-  `em6_2_delay` smallint(5) DEFAULT NULL,
-  `em6_2` smallint(5) DEFAULT NULL,
+  `em6_0_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait before the first emote is played.',
+  `em6_0` smallint(5) DEFAULT NULL COMMENT 'emote to play when text is displayed.',
+  `em6_1_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the first emote are played, before the second emote.',
+  `em6_1` smallint(5) DEFAULT NULL COMMENT 'Second emote to play when text is displayed.',
+  `em6_2_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the second emote are played, before the third emote.',
+  `em6_2` smallint(5) DEFAULT NULL COMMENT 'Third emote to play when text is displayed.',
   `text7_0` longtext COMMENT 'This is the locale text that is displayed if the creature is male.',
   `text7_1` longtext COMMENT 'This is the locale text that is displayed if the creature is female.',
   `lang7` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT 'The language of the text in game.',
   `prob7` float NOT NULL DEFAULT '0' COMMENT 'This is the probability that the creature will say this text.',
-  `em7_0_delay` smallint(5) DEFAULT NULL,
-  `em7_0` smallint(5) DEFAULT NULL,
-  `em7_1_delay` smallint(5) DEFAULT NULL,
-  `em7_1` smallint(5) DEFAULT NULL,
-  `em7_2_delay` smallint(5) DEFAULT NULL,
-  `em7_2` smallint(5) DEFAULT NULL,
+  `em7_0_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait before the first emote is played.',
+  `em7_0` smallint(5) DEFAULT NULL COMMENT 'emote to play when text is displayed.',
+  `em7_1_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the first emote are played, before the second emote.',
+  `em7_1` smallint(5) DEFAULT NULL COMMENT 'Second emote to play when text is displayed.',
+  `em7_2_delay` smallint(5) DEFAULT NULL COMMENT 'Time to wait after the second emote are played, before the third emote.',
+  `em7_2` smallint(5) DEFAULT NULL COMMENT 'Third emote to play when text is displayed.',
   PRIMARY KEY (`ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -2266,7 +2290,7 @@ CREATE TABLE `pool_creature` (
   `description` varchar(255) CHARACTER SET utf8 NOT NULL COMMENT 'Description.',
   PRIMARY KEY (`guid`),
   KEY `pool_idx` (`pool_entry`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2300,7 +2324,7 @@ CREATE TABLE `pool_gameobject` (
   `description` varchar(255) CHARACTER SET utf8 NOT NULL COMMENT 'Description.',
   PRIMARY KEY (`guid`),
   KEY `pool_idx` (`pool_entry`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2334,7 +2358,7 @@ CREATE TABLE `pool_pool` (
   `description` varchar(255) CHARACTER SET utf8 NOT NULL COMMENT 'Description.',
   PRIMARY KEY (`pool_id`),
   KEY `pool_idx` (`mother_pool`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2981,8 +3005,8 @@ DROP TABLE IF EXISTS `warden`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `warden` (
-  `id` smallint(5) unsigned NOT NULL COMMENT 'Check ID from warden_checks',
-  `build` smallint(5) unsigned NOT NULL COMMENT 'Client build',
+  `id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Unique Identifier',
+  `build` smallint(5) unsigned NOT NULL COMMENT 'Build Number',
   `type` tinyint(3) unsigned DEFAULT NULL COMMENT 'Check Type',
   `data` varchar(48) NOT NULL DEFAULT '',
   `str` varchar(20) NOT NULL DEFAULT '',
@@ -2991,8 +3015,7 @@ CREATE TABLE `warden` (
   `result` varchar(24) NOT NULL DEFAULT '',
   `comment` varchar(50) DEFAULT '' COMMENT 'Description of what the check is',
   PRIMARY KEY (`id`,`build`)
-) ENGINE=MyISAM AUTO_INCREMENT=790 DEFAULT CHARSET=utf8;
-
+) ENGINE=MyISAM AUTO_INCREMENT=1571 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
