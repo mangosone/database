@@ -72,7 +72,7 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 
 -- Waypoint to support Jessel's script.
 UPDATE `creature` SET `MovementType` = 2 WHERE `guid` = 71602;
-DELETE FROM creature_movement_template WHERE entry = 20100;
+DELETE FROM `creature_movement_template` WHERE `entry` = 20100;
 INSERT INTO `creature_movement_template` (`entry`, `point`, `position_x`, `position_y`, `position_z`, `waittime`, `script_id`, `textid1`, `textid2`, `textid3`, `textid4`, `textid5`, `emote`, `spell`, `orientation`, `model1`, `model2`) values
 (20100,1,10520.5,-6504.38,1.28933,50000,2010001,0,0,0,0,0,0,0,5.48033,0,0),
 (20100,2,10520.5,-6504.38,1.28933,120000,0,0,0,0,0,0,0,0,5.48033,0,0);
