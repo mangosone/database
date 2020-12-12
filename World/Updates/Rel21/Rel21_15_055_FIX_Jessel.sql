@@ -77,7 +77,7 @@ INSERT INTO `creature_movement_template` (`entry`, `point`, `position_x`, `posit
 (20100,1,10520.5,-6504.38,1.28933,50000,2010001,0,0,0,0,0,0,0,5.48033,0,0),
 (20100,2,10520.5,-6504.38,1.28933,120000,0,0,0,0,0,0,0,0,5.48033,0,0);
 
--- Update position and movement for  Manny, Nove, Jane and Kitty.
+-- Update position and movement for  Manny, Nova, Jane and Kitty.
 UPDATE `creature` SET `position_x` = 10509.5, `position_y` = -6503.36, `position_z` = 3.39121, `spawndist` = 8, `MovementType` = 1 WHERE guid = 71601;
 UPDATE `creature` SET `position_x` = 10516.9, `position_y` = -6494.79, `position_z` = 3.60547, `spawndist` = 8, `MovementType` = 1 WHERE guid = 71940;
 UPDATE `creature` SET `position_x` = 10516.9, `position_y` = -6494.79, `position_z` = 3.60547, `spawndist` = 8, `MovementType` = 1 WHERE guid = 71941;
