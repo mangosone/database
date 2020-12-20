@@ -18,13 +18,13 @@ BEGIN
 
     -- Expected Values
     SET @cOldVersion = '21'; 
-    SET @cOldStructure = '15'; 
-    SET @cOldContent = '055';
+    SET @cOldStructure = '16'; 
+    SET @cOldContent = '003';
 
     -- New Values
     SET @cNewVersion = '21';
-    SET @cNewStructure = '15';
-    SET @cNewContent = '056';
+    SET @cNewStructure = '16';
+    SET @cNewContent = '004';
                             -- DESCRIPTION IS 30 Characters MAX    
     SET @cNewDescription = 'Update barrel locations';
 
