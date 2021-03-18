@@ -7,7 +7,7 @@ TRUNCATE TABLE `pool_template`;
 --
 -- Host: localhost    Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.6.25-log
+-- Server version	5.5.5-10.5.8-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -6154,11 +6154,11 @@ INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (12263,1,'Shadowmoon Valley mineral, node 127'),
 (12264,1,'Shadowmoon Valley mineral, node 128'),
 (12265,18,'Master Creature Pool - Fargodeep Mine (Inner Section)'),
-(25536,10,'Blood Mushroom'),
 (25524,1,'Blood Watch - Defender Auston/Defender Katroi - Pool 1'),
 (25525,1,'Blood Watch - Defender Kadithuul/Defender Kranos - Pool 2'),
 (25526,1,'Blood Watch - Defender Ashoon/Defender Ursi - Pool 3'),
 (25527,1,'Blood Watch - Defender Zaibah/Defender Sorli - Pool 4'),
+(25536,10,'Blood Mushroom'),
 (25537,1,'Spawn pool for Lord Melenas'),
 (25538,1,'Kharanos - Food Crate / Water Barrel '),
 (25539,1,'Food Crate / Water Barrel'),
@@ -6180,4 +6180,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-25 23:00:57
+-- Dump completed on 2021-03-18 20:52:35

@@ -7,7 +7,7 @@ TRUNCATE TABLE `creature_ai_texts`;
 --
 -- Host: localhost    Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.6.25-log
+-- Server version	5.5.5-10.5.8-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -27,6 +27,26 @@ TRUNCATE TABLE `creature_ai_texts`;
 LOCK TABLES `creature_ai_texts` WRITE;
 /*!40000 ALTER TABLE `creature_ai_texts` DISABLE KEYS */;
 INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `sound`, `type`, `language`, `emote`, `comment`) VALUES 
+(-2002,'%s raises his shield in a vigorous defense!','0','0','0','0','0','0','0','0',0,2,0,0,'Coilskar Sorceress'),
+(-2001,'The orcs in my citadel will drink your blood and devour you!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,''),
+(-2000,'How dare you trifle with my playthings!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,''),
+(-1418,'Face the wrath of Bristlelimb!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'17702'),
+(-1326,'Gorefiend will have your head, interloper!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'21788 21795'),
+(-1325,'We are bound here... eternally. It is the will of Gorefiend.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'21788 21795'),
+(-1324,'We will never dissipate, mortal... Our fate is tied to Gorefiend...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'21788 21795'),
+(-1323,'It is you who have invaded our home. Gorefiend will avenge us!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'21788 21795'),
+(-1322,'Pray that the chilling embrace of Teron Gorefiend does not reach out for you...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'21788 21795'),
+(-1321,'What ... have you done...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'21877'),
+(-1320,'Your pathetic attempt to escape will be short lived, Gorefiend. Let the boy go and submit! Even with your armour and weapons, you cannot defeat the ancients!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'21877'),
+(-1319,'Silithid Creeper Egg splits open!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'5781'),
+(-1318,'Silithid Creeper Egg begins to crack and open...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'5781'),
+(-1317,'Silithid Creeper lays an egg!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'3250'),
+(-1316,'Don\'t worry, I\'ll find a good home for ya.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'8666'),
+(-1315,'Will someone please give my little kitten a good home?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'8666'),
+(-1314,'What does allergic mean anyway? And what does it have to do with either of my kitties?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'8666'),
+(-1313,'Can anyone give my adorable, extra little kitty a home?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'8666'),
+(-1312,'I can\'t believe dad won\'t let me keep your sister.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'8666'),
+(-1311,'Kitten for sale, looking for a good home.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'8666'),
 (-1310,'Welcome to flavor country!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'11058'),
 (-1309,'Do as I say, Fly!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'17994'),
 (-1308,'The Scarlet Crusade shall smite the wicked and drive evil from these lands!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Scarlet Monastery'),
@@ -390,6 +410,18 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-769,'I am slain! Summon Verog!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Common Say for Kokar Centaurs'),
 (-765,'Death to the interlopers!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'18952'),
 (-764,'Leave this place!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'10940'),
+(-755,'I HAVE YOUR LITTLE BELT TIED AROUND MY FINGER, SMOTTS. DON\'T YOU WANT IT BACK?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
+(-754,'YOU WERE SUCH GOOD SPORT THE LAST TIME...COME OUT!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
+(-753,'HAVE YOU RUN OUT OF SHIPS TO SEND? WHERE IS YOUR COURAGE?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
+(-752,'I PROMISE I WON\'T KILL YOUR CREW THIS TIME. HAH! BUT MY BROTHER MIGHT EAT THEM!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
+(-751,'COME OUT TO JANEIRO\'S POINT. I\'M WAITING FOR YOU, SMOTTS...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
+(-750,'DON\'T LET THIS STATUE BE MY ONLY COMPANY, COME OUT AND PLAY!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
+(-749,'SMOTTS! HEY, SMOTTS! COME OUT AND PLAY!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
+(-748,'SMOTTS, I HAVE YOUR LITTLE BELT....COME GET IT!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
+(-747,'The %s flies up through the trees, free of Terokk\'s corruption.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'22339'),
+(-744,'You\'ve found a cure! We will crush our enemies!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'16847'),
+(-743,'You\'ve restored my health! I\'m in your debt, $N.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'16847'),
+(-742,'My strength.... is... returning!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'16847'),
 (-719,'YOU WANT DRINK? WE GOT DRINK!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'23685'),
 (-718,'HEY YOU! DRINK OGRE BREWS! MAKE YOU BIG AND STRONG!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'23685'),
 (-717,'YOU TRY DA\' BEST, NOW TRY DA\' REST! OGRE BREW!!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'23685'),
@@ -449,6 +481,9 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-654,'Snivvle is here! Snivvle claims the Coldtooth Mine!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'11677'),
 (-649,'%s goes into a drunken rage!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'14322'),
 (-648,'%s lets out a deep roar, alerting nearby allies and becoming enraged!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'Dire Maul Guards'),
+(-642,'Listen carefully, for the lord of Blackrock will surely destroy you, should you not be prepared.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Vaelan greetings'),
+(-641,'At last: one among you is worthy of my knowledge. Worry not: I have probed your thoughts, no harm will come to you.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Vaelan greetings'),
+(-640,'Ah, damn it all! Clever trap. Too bad you\'ll never live to tell the tale...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'21409'),
 (-639,'The void...beckons.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,11255,1,0,0,'20870'),
 (-638,'No...more...life.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,11252,1,0,0,'20870'),
 (-637,'This vessel... is empty.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,11251,1,0,0,'20870'),
@@ -870,6 +905,7 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-145,'Protect the Mechanar at all costs!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'19166'),
 (-144,'Protect the Botanica at all costs!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'17976'),
 (-143,'Any intruders must be eliminated!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Tempest Keep'),
+(-142,'Get it while it\'s hot!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'3518'),
 (-141,'Invaders! Sound the Alarm!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'23586'),
 (-140,'The coils of death... Will crush you.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,5787,1,0,0,'3670'),
 (-138,'It\'s so cold, so dark.... I\'m not overacting, am I?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'16473'),
@@ -979,6 +1015,8 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-30,'%s blood sprays into the air!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'Common Gnomeregan Emote'),
 (-29,'You no challenge me, scrubs! I\'m da king now, and I stay king FOREVER!!!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'11501'),
 (-28,'You do not belong here!  Ancients, rise against these intruders!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'11489'),
+(-24,'The master will know of this incursion. You will be hunted for all eternity!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'20427'),
+(-23,'Cipher of Damnation belongs to us now!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'20427'),
 (-22,'VanCleef pay big for you heads!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,5774,1,0,0,'644'),
 (-21,'Mission accomplished.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,11073,1,0,0,'17976'),
 (-20,'I hope you die! Painfully!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'20905'),
@@ -1000,45 +1038,7 @@ INSERT INTO `creature_ai_texts` (`entry`, `content_default`, `content_loc1`, `co
 (-4,'Feel the power of the Brotherhood!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Common Defias Text'),
 (-3,'Ah, a chance to use this freshly sharpened blade.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Common Defias Text'),
 (-2,'The Brotherhood will not tolerate your actions.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Common Defias Text'),
-(-1,'I see those fools at the Abbey sent some fresh meat for us.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'103'),
-(-23,'Cipher of Damnation belongs to us now!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'20427'),
-(-24,'The master will know of this incursion. You will be hunted for all eternity!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'20427'),
-(-142,'Get it while it\'s hot!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'3518'),
-(-640,'Ah, damn it all! Clever trap. Too bad you\'ll never live to tell the tale...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'21409'),
-(-641,'At last: one among you is worthy of my knowledge. Worry not: I have probed your thoughts, no harm will come to you.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Vaelan greetings'),
-(-642,'Listen carefully, for the lord of Blackrock will surely destroy you, should you not be prepared.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Vaelan greetings'),
-(-742,'My strength.... is... returning!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'16847'),
-(-743,'You\'ve restored my health! I\'m in your debt, $N.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'16847'),
-(-744,'You\'ve found a cure! We will crush our enemies!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'16847'),
-(-747,'The %s flies up through the trees, free of Terokk\'s corruption.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'22339'),
-(-748,'SMOTTS, I HAVE YOUR LITTLE BELT....COME GET IT!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
-(-749,'SMOTTS! HEY, SMOTTS! COME OUT AND PLAY!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
-(-750,'DON\'T LET THIS STATUE BE MY ONLY COMPANY, COME OUT AND PLAY!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
-(-751,'COME OUT TO JANEIRO\'S POINT. I\'M WAITING FOR YOU, SMOTTS...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
-(-752,'I PROMISE I WON\'T KILL YOUR CREW THIS TIME. HAH! BUT MY BROTHER MIGHT EAT THEM!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
-(-753,'HAVE YOU RUN OUT OF SHIPS TO SEND? WHERE IS YOUR COURAGE?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
-(-754,'YOU WERE SUCH GOOD SPORT THE LAST TIME...COME OUT!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
-(-755,'I HAVE YOUR LITTLE BELT TIED AROUND MY FINGER, SMOTTS. DON\'T YOU WANT IT BACK?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'Mok\'Rash - Random Yell'),
-(-1311,'Kitten for sale, looking for a good home.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'8666'),
-(-1312,'I can\'t believe dad won\'t let me keep your sister.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'8666'),
-(-1313,'Can anyone give my adorable, extra little kitty a home?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'8666'),
-(-1314,'What does allergic mean anyway? And what does it have to do with either of my kitties?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'8666'),
-(-1315,'Will someone please give my little kitten a good home?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'8666'),
-(-1316,'Don\'t worry, I\'ll find a good home for ya.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'8666'),
-(-1317,'Silithid Creeper lays an egg!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'3250'),
-(-1318,'Silithid Creeper Egg begins to crack and open...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'5781'),
-(-1319,'Silithid Creeper Egg splits open!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,2,0,0,'5781'),
-(-1320,'Your pathetic attempt to escape will be short lived, Gorefiend. Let the boy go and submit! Even with your armour and weapons, you cannot defeat the ancients!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'21877'),
-(-1321,'What ... have you done...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'21877'),
-(-1322,'Pray that the chilling embrace of Teron Gorefiend does not reach out for you...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'21788 21795'),
-(-1323,'It is you who have invaded our home. Gorefiend will avenge us!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'21788 21795'),
-(-1324,'We will never dissipate, mortal... Our fate is tied to Gorefiend...',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'21788 21795'),
-(-1325,'We are bound here... eternally. It is the will of Gorefiend.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'21788 21795'),
-(-1326,'Gorefiend will have your head, interloper!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,4,0,0,'21788 21795'),
-(-2000,'How dare you trifle with my playthings!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,''),
-(-2001,'The orcs in my citadel will drink your blood and devour you!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,''),
-(-1418,'Face the wrath of Bristlelimb!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,1,0,0,'17702'),
-(-2002,'%s raises his shield in a vigorous defense!','0','0','0','0','0','0','0','0',0,2,0,0,'Coilskar Sorceress');
+(-1,'I see those fools at the Abbey sent some fresh meat for us.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'103');
 /*!40000 ALTER TABLE `creature_ai_texts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1051,4 +1051,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-25 23:00:34
+-- Dump completed on 2021-03-18 20:52:08

@@ -7,7 +7,7 @@ TRUNCATE TABLE `areatrigger_teleport`;
 --
 -- Host: localhost    Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.6.25-log
+-- Server version	5.5.5-10.5.8-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -181,15 +181,15 @@ INSERT INTO `areatrigger_teleport` (`id`, `name`, `required_level`, `required_it
 (4561,'Invasion Point, Cataclysm (Return Point)',0,0,0,0,0,0,0,530,-3278.63,2831.31,123.01,1.56),
 (4562,'Invasion Point, Cataclysm (Return Point)',0,0,0,0,0,0,0,530,-3278.63,2831.31,123.01,1.56),
 (4598,'Black Temple (Entrance)',70,0,0,0,0,0,0,564,96.4462,1002.35,-86.9984,6.15675),
+(4612,'The Botanica',0,0,0,0,0,0,0,530,3407.11,1488.48,182.838,2.50112),
+(4614,'The Mechanar',0,0,0,0,0,0,0,530,2869.89,1552.76,252.159,0.733993),
 (4619,'Black Temple (Exit)',0,0,0,0,0,0,0,530,-3653.51,317.493,36.1671,6.24941),
 (4738,'Zul\'Aman (Entrance)',68,0,0,0,0,0,0,568,120.7,1776,43.46,4.7713),
 (4739,'Zul\'Aman (Exit)',0,0,0,0,0,0,0,530,6851.5,-7997.68,192.36,1.56688),
 (4885,'Magisters\' Terrace (Exit)',0,0,0,0,0,0,0,530,12884.6,-7336.17,65.48,1.09),
 (4887,'Magisters\' Terrace (Entrance)',70,0,0,0,0,0,0,585,7.09,-0.45,-2.8,0.05),
 (4889,'Sunwell Plateau (Entrance)',70,0,0,0,0,0,0,580,1790.65,925.67,15.15,3.1),
-(4891,'Sunwell Plateau (Exit)',0,0,0,0,0,0,0,530,12560.8,-6774.59,15.08,6.25),
-(4612,'The Botanica',0,0,0,0,0,0,0,530,3407.11,1488.48,182.838,2.50112),
-(4614,'The Mechanar',0,0,0,0,0,0,0,530,2869.89,1552.76,252.159,0.733993);
+(4891,'Sunwell Plateau (Exit)',0,0,0,0,0,0,0,530,12560.8,-6774.59,15.08,6.25);
 /*!40000 ALTER TABLE `areatrigger_teleport` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -202,4 +202,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-25 23:00:30
+-- Dump completed on 2021-03-18 20:52:03

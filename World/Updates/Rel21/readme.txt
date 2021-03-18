@@ -1,6 +1,6 @@
 If your database is a version prior to:
 
-Rel21_15_053_NPC_1434_position_fix.sql
+Rel21_16_008_Remove_NPC_17077_static_spawn.sql
 
 You need to run the appriopriate updates in the zip file  in folder:
 

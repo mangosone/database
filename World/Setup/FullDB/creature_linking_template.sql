@@ -7,7 +7,7 @@ TRUNCATE TABLE `creature_linking_template`;
 --
 -- Host: localhost    Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.6.25-log
+-- Server version	5.5.5-10.5.8-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -27,18 +27,23 @@ TRUNCATE TABLE `creature_linking_template`;
 LOCK TABLES `creature_linking_template` WRITE;
 /*!40000 ALTER TABLE `creature_linking_template` DISABLE KEYS */;
 INSERT INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`, `search_range`) VALUES 
+(390,0,330,515,0),
 (2532,0,2533,656,0),
 (5277,109,5709,1,0),
 (5280,109,5709,1,0),
 (5283,109,5709,1,0),
 (5719,109,5709,1,0),
 (5722,109,5709,1,0),
+(5798,1,5797,3,15),
+(5799,1,5797,3,15),
+(5800,1,5797,3,15),
 (7268,209,7267,1,0),
 (8120,209,7267,1,0),
 (8319,109,5709,1,0),
 (10316,229,10316,3,0),
 (10814,229,10363,7,0),
 (11373,309,14507,7,0),
+(11459,429,11489,1,0),
 (11661,409,12259,7,0),
 (11662,409,12098,7,0),
 (11663,409,12018,7,0),
@@ -48,6 +53,8 @@ INSERT INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`,
 (12099,409,12057,7,0),
 (12119,409,12118,519,0),
 (12557,469,12435,6,0),
+(14324,429,11501,3,0),
+(14349,429,14327,515,0),
 (14456,469,12557,143,0),
 (14892,1,14857,512,0),
 (14988,309,11382,4096,0),
@@ -110,6 +117,7 @@ INSERT INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`,
 (18835,565,18831,143,0),
 (18836,565,18831,143,0),
 (18925,550,18805,4112,0),
+(18978,530,19136,3,15),
 (18994,269,15608,16,0),
 (18995,269,15608,16,0),
 (19224,555,18732,4112,0),
@@ -192,15 +200,7 @@ INSERT INTO `creature_linking_template` (`entry`, `map`, `master_entry`, `flag`,
 (26046,580,25315,4,0),
 (26764,230,23872,4112,0),
 (26776,230,23872,4112,0),
-(26822,230,23872,4112,0),
-(18978,530,19136,3,15),
-(390,0,330,515,0),
-(5798,1,5797,3,15),
-(5799,1,5797,3,15),
-(5800,1,5797,3,15),
-(14349,429,14327,515,0),
-(11459,429,11489,1,0),
-(14324,429,11501,3,0);
+(26822,230,23872,4112,0);
 /*!40000 ALTER TABLE `creature_linking_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -213,4 +213,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-25 23:00:35
+-- Dump completed on 2021-03-18 20:52:09

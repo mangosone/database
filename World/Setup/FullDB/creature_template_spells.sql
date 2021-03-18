@@ -7,7 +7,7 @@ TRUNCATE TABLE `creature_template_spells`;
 --
 -- Host: localhost    Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.6.25-log
+-- Server version	5.5.5-10.5.8-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -2971,6 +2971,7 @@ INSERT INTO `creature_template_spells` (`entry`, `spell1`, `spell2`, `spell3`, `
 (17155,32012,0,0,0),
 (17156,13728,3019,0,0),
 (17157,33840,0,0,0),
+(17178,29992,0,0,0),
 (17184,32131,31272,0,0),
 (17187,32415,0,0,0),
 (17191,9739,12550,0,0),
@@ -3897,6 +3898,7 @@ INSERT INTO `creature_template_spells` (`entry`, `spell1`, `spell2`, `spell3`, `
 (20923,15496,0,0,0),
 (20924,37590,0,0,0),
 (20925,35236,0,0,0),
+(20928,36251,38920,0,0),
 (20929,15496,30798,38611,0),
 (20930,34017,36541,0,0),
 (20931,36629,35321,0,0),
@@ -4416,9 +4418,7 @@ INSERT INTO `creature_template_spells` (`entry`, `spell1`, `spell2`, `spell3`, `
 (25575,44534,0,0,0),
 (25576,44503,44504,0,0),
 (25577,44533,0,0,0),
-(25653,45862,45860,45856,45848),
-(17178,29992,0,0,0),
-(20928,36251,38920,0,0);
+(25653,45862,45860,45856,45848);
 /*!40000 ALTER TABLE `creature_template_spells` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -4431,4 +4431,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-25 23:00:39
+-- Dump completed on 2021-03-18 20:52:13

@@ -7,7 +7,7 @@ TRUNCATE TABLE `playercreateinfo_spell`;
 --
 -- Host: localhost    Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.6.25-log
+-- Server version	5.5.5-10.5.8-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -96,12 +96,12 @@ INSERT INTO `playercreateinfo_spell` (`race`, `class`, `Spell`, `Note`) VALUES
 (1,2,9078,'Cloth'),
 (1,2,9116,'Shield'),
 (1,2,9125,'Generic'),
-(1,2,21084,'Seal of Righteousness'),
 (1,2,20597,'Sword Specialization'),
 (1,2,20598,'The Human Spirit'),
 (1,2,20599,'Diplomacy'),
 (1,2,20600,'Perception'),
 (1,2,20864,'Mace Specialization'),
+(1,2,21084,'Seal of Righteousness'),
 (1,2,21651,'Opening'),
 (1,2,21652,'Closing'),
 (1,2,22027,'Remove Insignia'),
@@ -506,10 +506,10 @@ INSERT INTO `playercreateinfo_spell` (`race`, `class`, `Spell`, `Note`) VALUES
 (3,2,9078,'Cloth'),
 (3,2,9116,'Shield'),
 (3,2,9125,'Generic'),
-(3,2,21084,'Seal of Righteousness'),
 (3,2,20594,'Stoneform'),
 (3,2,20595,'Gun Specialization'),
 (3,2,20596,'Frost Resistance'),
+(3,2,21084,'Seal of Righteousness'),
 (3,2,21651,'Opening'),
 (3,2,21652,'Closing'),
 (3,2,22027,'Remove Insignia'),
@@ -1827,8 +1827,8 @@ INSERT INTO `playercreateinfo_spell` (`race`, `class`, `Spell`, `Note`) VALUES
 (11,2,9078,'Cloth'),
 (11,2,9116,'Shield'),
 (11,2,9125,'Generic'),
-(11,2,21084,'Seal of Righteousness'),
 (11,2,20579,'Shadow Resistance'),
+(11,2,21084,'Seal of Righteousness'),
 (11,2,21651,'Opening'),
 (11,2,21652,'Closing'),
 (11,2,22027,'Remove Insignia'),
@@ -1995,4 +1995,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-25 23:00:55
+-- Dump completed on 2021-03-18 20:52:32
