@@ -44,9 +44,16 @@ BEGIN
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 
 DELETE FROM `gossip_menu` WHERE `entry`=9726 AND `text_id`=3173;
+DELETE FROM `gossip_menu` WHERE `entry`=2481 AND `text_id`=13310;
 DELETE FROM `gossip_menu_option` WHERE `menu_id`=9727 AND `id`=1;
+DELETE FROM `gossip_menu_option` WHERE `menu_id`=9727 AND `id`=0;
 DELETE FROM `npc_text` WHERE `id`=3173;
+DELETE FROM `npc_text` WHERE `id`=1310;
 DELETE FROM `points_of_interest` WHERE `entry`=183;
+UPDATE `gossip_menu_option` SET `action_poi_id`=182 WHERE `menu_id`=1951 AND `id`=6;
+UPDATE `gossip_menu` SET `text_id`=13311 WHERE `entry`=9727;
+UPDATE `points_of_interest` SET `icon_name`='Orgrimmar Zeppelin Tower' WHERE `entry`=182;
+UPDATE `npc_text` SET `text0_0`='Look for the Zeppelin Landing Tower outside of the city to the southeast.',`text0_1`='Look for the Zeppelin Landing Tower outside of the city to the southeast.' WHERE `id`=13311;
 
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL ABOVE -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
