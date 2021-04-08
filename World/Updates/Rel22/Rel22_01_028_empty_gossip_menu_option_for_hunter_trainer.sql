@@ -26,7 +26,7 @@ BEGIN
     SET @cNewStructure = '01';
     SET @cNewContent = '028';
                             -- DESCRIPTION IS 30 Characters MAX    
-    SET @cNewDescription = 'empty gossip menu option for hunter trainer ';
+    SET @cNewDescription = 'empty gossip menu option';
 
                         -- COMMENT is 150 Characters MAX
     SET @cNewComment = 'empty gossip menu option for hunter trainer ';
