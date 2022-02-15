@@ -56,6 +56,8 @@ INSERT INTO `item_required_target` (`entry`, `type`, `targetEntry`) VALUES
 (12647,1,4678),
 (12647,1,4681),
 (12647,1,4685),
+(15826,1,12296),
+(15826,1,12298),
 (15908,1,1196),
 (15911,1,1126),
 (15913,1,1201),
@@ -102,4 +104,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-18 20:52:23
+-- Dump completed on 2022-02-15  9:48:30

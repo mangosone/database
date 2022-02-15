@@ -560,7 +560,10 @@ INSERT INTO `db_script_string` (`entry`, `content_default`, `content_loc1`, `con
 (2000006001,'Puny $r cannot lift spear. Gor lift spear.!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Gor say 1.'),
 (2000006002,'Hah! The Thunderspike is mine. Die!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Gor say 2.'),
 (2000006003,'You\'ve saved me, fleshling! Ameer will hear of this noble act.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Captain Tyralius say on prison release'),
-(2000006004,'Incredible! Amazing! I don\'t even know what this means!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Laris Say.');
+(2000006004,'Incredible! Amazing! I don\'t even know what this means!',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Laris Say.'),
+(2000006005,'Who dares defile the altar of Gorgrom the Dragon-Eater?',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Gorgrom SAY 1'),
+(2000006006,'I will crush it and flay it and eat its meat and crack its bones one by one when I am done.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,0,0,'Gorgrom SAY 2'),
+(2000006007,'Misha lets out a loud roar as she rakes her claws against the gronn\'s altar.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,7933,2,0,35,'Misha EMOTE 1');
 /*!40000 ALTER TABLE `db_script_string` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -573,4 +576,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-18 20:52:14
+-- Dump completed on 2022-02-15  9:48:26

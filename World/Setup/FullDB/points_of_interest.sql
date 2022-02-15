@@ -151,8 +151,7 @@ INSERT INTO `points_of_interest` (`entry`, `x`, `y`, `icon`, `flags`, `data`, `i
 (179,1644,-4447.28,6,99,0,'Orgrimmar Inn'),
 (180,1622,-4388.8,6,99,0,'Orgrimmar Mailbox'),
 (181,1679,-4450.11,6,99,0,'Orgrimmar Auction House'),
-(182,1337,-4632.7,6,99,0,'Orgrimmar Eastern Zeppelin Tower'),
-(183,1172,-4169.5,6,99,0,'Orgrimmar Western Zeppelin Tower'),
+(182,1337,-4632.7,6,99,0,'Orgrimmar Zeppelin Tower'),
 (184,2092,-4823.95,6,99,0,'Sayoc & Hanashi'),
 (185,2133,-4663.93,6,99,0,'Xon\'cha'),
 (186,1633,-4249.37,6,99,0,'Hall of Legends'),
@@ -264,7 +263,6 @@ INSERT INTO `points_of_interest` (`entry`, `x`, `y`, `icon`, `flags`, `data`, `i
 (297,2264,248.158,6,99,0,'Dark Cleric Beryl'),
 (298,2259,235.865,6,99,0,'Cain Firesong'),
 (299,2266,242.754,6,99,0,'Gallows\' End Tavern'),
-(300,-1027,322.681,6,99,0,'Thunder Bluff Zeppelin'),
 (301,-1156,66.8664,6,99,0,'Thunder Bluff Armorers'),
 (302,-1148,51.1842,6,99,0,'Mooranta'),
 (303,-1249,155.028,6,99,0,'Stonehoof Geology'),
@@ -413,4 +411,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-18 20:52:33
+-- Dump completed on 2022-02-15  9:48:35

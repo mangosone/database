@@ -26727,7 +26727,9 @@ INSERT INTO `pool_gameobject` (`guid`, `pool_entry`, `chance`, `description`) VA
 (197888,10803,0,'Hellfire Peninsula 181555, node 2'),
 (197889,10802,5,'Hellfire Peninsula 181557, node 1'),
 (197890,10802,0,'Hellfire Peninsula 181555, node 1'),
-(300126,25544,0,'Bloodsail Charts Point 3');
+(300126,25544,0,'Bloodsail Charts Point 3'),
+(32742,25546,0,'Water Barrel (29275) - Stormwind City'),
+(32287,25546,0,'Food Crate (30758) - Stormwind City');
 /*!40000 ALTER TABLE `pool_gameobject` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -26740,4 +26742,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-18 20:52:34
+-- Dump completed on 2022-02-15  9:48:35

@@ -6167,7 +6167,8 @@ INSERT INTO `pool_template` (`entry`, `max_limit`, `description`) VALUES
 (25542,1,'Food Crate / Water Barrel'),
 (25543,1,'Food Crate / Water Barrel'),
 (25544,1,'Bloodsail Charts'),
-(25545,1,'Bloodsail Orders');
+(25545,1,'Bloodsail Orders'),
+(25546,1,'Water Barrel (29275) / Food Crate (30758) - Stormwind City');
 /*!40000 ALTER TABLE `pool_template` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -6180,4 +6181,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-18 20:52:35
+-- Dump completed on 2022-02-15  9:48:36

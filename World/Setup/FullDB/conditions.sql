@@ -193,12 +193,27 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `commen
 (1751,-1,24,1750,'Replace Spectral Essence Gossip menu 3310 check'),
 (1752,9,9437,0,NULL),
 (1753,8,4512,0,'Show gossip text 3099 if quest, A Little Slime Goes a Long Way (Part 1),
-\n is rewarded'),
+\n\n is rewarded'),
 (1754,8,4513,0,'Show gossip text 3098 if quest, A Little Slime Goes a Long Way (Part 2),
-\n is rewarded'),
+\n\n is rewarded'),
 (1755,-3,1754,0,'Only show if quest, A Little Slime Goes a Long Way (Part 2),
-\n is NOT rewarded'),
-(1756,-1,1753,1755,'Condition Check for A Little Slime Goes a Long Way gossip');
+\n\n is NOT rewarded'),
+(1756,-1,1753,1755,'Condition Check for A Little Slime Goes a Long Way gossip'),
+(887,11,24746,0,'Greater Wind Stone GO gossip'),
+(888,1,24746,0,'Greater Wind Stone GO gossip'),
+(891,1,24748,0,'Greater Wind Stone GO gossip'),
+(892,-1,888,891,'Greater Wind Stone GO gossip'),
+(893,1,24782,0,'Greater Wind Stone GO gossip'),
+(894,-1,892,893,'Greater Wind Stone GO gossip'),
+(911,2,20447,1,'Greater Wind Stone GO gossip'),
+(912,2,20449,1,'Greater Wind Stone GO gossip'),
+(913,2,20448,1,'Greater Wind Stone GO gossip'),
+(914,2,20450,1,'Greater Wind Stone GO gossip'),
+(915,-1,894,911,'Greater Wind Stone GO gossip'),
+(916,-1,894,912,'Greater Wind Stone GO gossip'),
+(917,-1,894,913,'Greater Wind Stone GO gossip'),
+(918,-1,894,914,'Greater Wind Stone GO gossip'),
+(975,8,1029,0,NULL);
 /*!40000 ALTER TABLE `conditions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -211,4 +226,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-18 20:52:06
+-- Dump completed on 2022-02-15  9:48:22

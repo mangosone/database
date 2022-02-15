@@ -173,7 +173,6 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`,
 (721,8,0,'The battlemaster',1,1,8223,317,0,0,0,'',0),
 (721,9,0,'A class trainer',1,1,740,0,0,0,0,'',0),
 (721,10,0,'A profession trainer',1,1,751,0,0,0,0,'',0),
-(721,12,0,'The zeppelin master',1,1,10596,300,0,0,0,'',0),
 (740,0,0,'Druid',1,1,745,316,0,0,0,'',0),
 (740,1,0,'Hunter',1,1,746,313,0,0,0,'',0),
 (740,2,0,'Mage',1,1,747,315,0,0,0,'',0),
@@ -310,7 +309,7 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`,
 (1951,3,0,'The inn',1,1,1904,179,0,0,0,'',0),
 (1951,4,0,'The mailbox',1,1,1905,180,0,0,0,'',0),
 (1951,5,0,'The auction house',1,1,2403,181,0,0,0,'',0),
-(1951,6,0,'The zeppelin master',1,1,9727,0,0,0,0,'',0),
+(1951,6,0,'The zeppelin master',1,1,9727,182,0,0,0,'',0),
 (1951,7,0,'The weapon master',1,1,3724,184,0,0,0,'',0),
 (1951,8,0,'The stable master',1,1,4902,185,0,0,0,'',0),
 (1951,9,0,'The officers\' lounge',1,1,5882,186,0,0,0,'',0),
@@ -964,7 +963,6 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`,
 (4783,0,0,'How do I train my pet?',1,1,20012,0,0,0,0,'',0),
 (4783,1,0,'I wish to untrain my pet.',1,1,20013,0,0,0,0,'',0),
 (4783,3,3,'I wish to train my pet.',5,16,0,0,0,0,0,NULL,0),
-(4783,15,2,NULL,17,16,0,0,0,0,0,NULL,0),
 (4822,0,3,'Please teach me.',5,16,0,0,0,0,0,'',0),
 (4826,0,3,'Please teach me.',5,16,0,0,0,0,0,'',0),
 (4844,0,3,'Train me.',5,16,0,0,0,0,0,'',0),
@@ -2262,8 +2260,6 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`,
 (9724,0,0,'Can you spare an orange?',1,1,0,0,0,0,0,'',0),
 (9724,1,0,'Have a spare bunch of bananas?',1,1,0,0,0,0,0,'',0),
 (9724,2,0,'I could really use a papaya.',1,1,0,0,0,0,0,'',0),
-(9727,0,0,'The eastern zeppelin tower',1,1,2481,182,0,0,0,'',0),
-(9727,1,0,'The western zeppelin tower',1,1,9726,183,0,0,0,'',0),
 (9728,0,0,'<Check for a pulse...>',1,1,0,0,0,0,0,'',0),
 (9731,0,0,'I am ready to accompany you, Drakuru.',1,1,-1,0,0,0,0,'',0),
 (9731,4,0,'The Drakkari Chieftains have been captured! What more would you have me do?',1,1,10406,0,0,0,0,'',0),
@@ -2697,7 +2693,12 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`,
 (20018,0,0,'So how did he break the deal?',1,1,20019,0,0,0,0,NULL,0),
 (20019,0,0,'Perhaps I can be of some assistance. I will make a deal with you, Satyr. I shall recover this unforged breastplate and slay the beast. In exchange for this task, you will teach me how to create the breastplate.',1,1,-1,0,3049,0,0,NULL,0),
 (20022,0,0,'I need a Cenarion beacon.',1,1,-1,0,2208,0,0,NULL,0),
-(20029,0,0,'How can I get Evoroot?',1,128,1915,0,0,0,0,'',0);
+(20029,0,0,'How can I get Evoroot?',1,128,1915,0,0,0,0,'',0),
+(6543,0,0,'The day of the judgement has come, fiend! I challenge you to battle!',1,1,-1,0,654301,0,0,NULL,894),
+(6543,1,0,'Prince Skaldrenox! I hold your signet! Heed my call!',1,1,-1,0,654302,0,0,NULL,915),
+(6543,2,0,'Baron Kazum! I hold your signet! Heed my call!',1,1,-1,0,654303,0,0,NULL,916),
+(6543,3,0,'High Marshal Whirlaxis! I hold your signet! Heed my call!',1,1,-1,0,654304,0,0,NULL,917),
+(6543,4,0,'Lord Skwol! I hold your signet! Heed my call!',1,1,-1,0,654305,0,0,NULL,918);
 /*!40000 ALTER TABLE `gossip_menu_option` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -2710,4 +2711,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-18 20:52:22
+-- Dump completed on 2022-02-15  9:48:29

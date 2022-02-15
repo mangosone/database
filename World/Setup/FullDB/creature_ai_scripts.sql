@@ -7669,7 +7669,7 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (651201,6512,11,0,100,0,0,0,0,0,11,14111,0,0,0,0,0,0,0,0,0,0,'Bloodpetal Trapper - Cast Bloodpetal Poison'),
 (651202,6512,0,0,100,1,6000,6000,18000,23000,11,11922,1,0,0,0,0,0,0,0,0,0,'Bloodpetal Trapper - Cast Entangling Roots'),
 (651301,6513,2,0,100,0,20,0,0,0,11,8599,0,0,1,-46,0,0,0,0,0,0,'Un\'Goro Stomper - Cast Enrage at 20% HP'),
-(651601,6516,0,0,100,1,5000,5000,9000,15000,11,12553,1,0,0,0,0,0,0,0,0,0,'Un\'Goro Thunderer - Cast Shock'),
+(651602,6516,0,0,100,1,5000,5000,9000,15000,11,12553,1,0,0,0,0,0,0,0,0,0,'Un\'Goro Thunderer - Cast Shock'),
 (651701,6517,11,0,100,0,0,0,0,0,11,14178,0,1,0,0,0,0,0,0,0,0,'Tar Beast - Cast Sticky Tar on Spawn'),
 (651801,6518,11,0,100,0,0,0,0,0,11,14178,0,1,0,0,0,0,0,0,0,0,'Tar Lurker - Cast Sticky Tar on Spawn'),
 (651802,6518,0,0,100,1,10000,10000,18000,23000,11,7279,0,0,0,0,0,0,0,0,0,0,'Tar Lurker - Cast Black Sludge'),
@@ -9938,7 +9938,7 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (997801,9978,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Wesley - Flee at 15% HP'),
 (997901,9979,10,0,100,0,0,15,0,0,12,15138,1,600000,0,0,0,0,0,0,0,0,'Sarah Goode - Summon Silverpine Elite on Hostile LOS'),
 (998701,9987,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Shoja\'my - Flee at 15% HP'),
-(1004001,10040,0,0,100,1,8000,8000,8000,12000,11,14120,1,0,0,0,0,0,0,0,0,0,'Gorishi Hive Guard - Cast Tunneler Acid'),
+(651601,6516,4,0,100,0,0,0,0,0,47,0,0,0,0,0,0,0,0,0,0,0,'Un\'Goro Thunderer: set UnitStandStateType to UNIT_STAND_STATE_STAND'),
 (1004701,10047,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Michael - Flee at 15% HP'),
 (1004801,10048,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Gereck - Flee at 15% HP'),
 (1005001,10050,2,0,100,0,15,0,0,0,25,0,0,0,1,-47,0,0,0,0,0,0,'Seikwa - Flee at 15% HP'),
@@ -16285,8 +16285,8 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1846503,18465,0,0,100,1,2000,2000,16000,21000,11,32920,1,1,0,0,0,0,0,0,0,0,'Warp Hunter - Cast Warp'),
 (1846504,18465,9,0,100,1,0,5,1000,1000,11,39449,1,1,0,0,0,0,0,0,0,0,'Warp Hunter - Cast Pounce'),
 (1846505,18465,7,0,100,0,0,0,0,0,11,32942,0,0,0,0,0,0,0,0,0,0,'Warp Hunter - Cast Phasing Invisibility on Evade'),
-(1846601,18466,0,0,100,1,3000,6500,4000,9000,11,32902,1,32,0,0,0,0,0,0,0,0,'Dreadfang Lurker - Cast Dread Poison'),
-(1846701,18467,0,0,100,1,3000,6500,4000,9000,11,32902,1,32,0,0,0,0,0,0,0,0,'Dreadfang Widow - Cast Dread Poison'),
+(1846601,18466,0,0,100,1,3000,6500,4000,9000,11,32902,1,0,0,0,0,0,0,0,0,0,'Dreadfang Lurker - Cast Dread Poison'),
+(1846701,18467,0,0,100,1,3000,6500,4000,9000,11,32902,1,0,0,0,0,0,0,0,0,0,'Dreadfang Widow - Cast Dread Poison'),
 (1846801,18468,0,0,100,1,6000,12500,15000,22000,11,32904,1,0,0,0,0,0,0,0,0,0,'Teromoth - Cast Pacifying Dust'),
 (1846901,18469,0,0,100,1,6000,12500,15000,22000,11,32904,1,0,0,0,0,0,0,0,0,0,'Royal Teromoth - Cast Pacifying Dust'),
 (1846902,18469,0,0,100,1,2000,5000,9000,15000,11,32914,0,1,0,0,0,0,0,0,0,0,'Royal Teromoth - Cast Wing Buffet'),
@@ -16567,7 +16567,7 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (1864110,18641,3,3,100,7,100,30,1000,1000,22,1,0,0,0,0,0,0,0,0,0,0,'Cabal Familiar - Set Phase 1 when Mana is above 30% (Phase 2)'),
 (1864111,18641,7,0,100,6,0,0,0,0,22,0,0,0,0,0,0,0,0,0,0,0,'Cabal Familiar - Set Phase to 0 on Evade'),
 (1864201,18642,0,0,100,7,4800,14500,12100,18100,11,30849,1,0,0,0,0,0,0,0,0,0,'Fel Guardhound - Cast Spell Lock'),
-(1864701,18647,0,0,100,1,3000,6000,7000,11000,11,32902,1,32,0,0,0,0,0,0,0,0,'Deathskitter - Cast Dread Poison'),
+(1864701,18647,0,0,100,1,3000,6000,7000,11000,11,32902,1,0,0,0,0,0,0,0,0,0,'Deathskitter - Cast Dread Poison'),
 (1864801,18648,0,0,100,1,3000,6000,45000,50000,11,32905,1,0,0,0,0,0,0,0,0,0,'Stonegazer - Cast Glare'),
 (1865801,18658,1,0,100,0,0,0,0,0,21,0,0,0,0,0,0,0,0,0,0,0,'Kil\'sorrow Ritualist - Prevent Combat Movement on Spawn'),
 (1865802,18658,4,0,100,0,0,0,0,0,11,9613,1,0,22,1,0,0,0,0,0,0,'Kil\'sorrow Ritualist - Cast Shadow Bolt and Set Phase 1 on Aggro'),
@@ -18776,7 +18776,7 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (2130102,21301,29,0,100,2,1000,1000,0,0,35,1,0,0,0,0,0,0,0,0,0,0,'Coilfang Shatterer - Set Instance Data64 (SD2) on Timer'),
 (2130301,21303,10,0,100,6,0,8,0,0,11,36593,0,0,0,0,0,0,0,0,0,0,'Defender Corpse - Cast Corpse Burst on 8 Yards LOS'),
 (2130401,21304,10,0,100,6,0,8,0,0,11,36593,0,0,0,0,0,0,0,0,0,0,'Warder Corpse - Cast Corpse Burst on 8 Yards LOS'),
-(2130601,21306,1,0,20,1,6000,9000,10000,15000,2,14,1,0,0,0,0,0,0,0,0,0,'Cursed Scarab - 20% Should Change Faction'),
+(2130601,21306,11,0,100,0,0,0,0,0,48,1,15,0,0,0,0,0,0,0,0,0,'Cursed Scarab - SET Random Movement on spawn'),
 (2132401,21324,0,0,100,1,1000,3000,12000,15000,11,38021,0,0,0,0,0,0,0,0,0,0,'Spirit Raven - Cast Terrifying Screech'),
 (2132402,21324,2,0,100,1,30,0,5000,8000,11,38254,4,33,0,0,0,0,0,0,0,0,'Spirit Raven - Cast Festering Wound at 30% HP'),
 (2133801,21338,1,0,100,6,0,0,0,0,21,0,0,0,0,0,0,0,0,0,0,0,'Coilfang Leper - Prevent Combat Movement on Spawn'),
@@ -20740,7 +20740,28 @@ INSERT INTO `creature_ai_scripts` (`id`, `creature_id`, `event_type`, `event_inv
 (19228119,19228,1,7,100,0,263000,263000,0,0,1,-1115,0,0,0,0,0,0,0,0,0,0,'Perry Gatner - Male Undead Impersonation (Phase 3)'),
 (19228120,19228,1,7,100,0,274000,274000,0,0,5,21,0,0,0,0,0,0,0,0,0,0,'Perry Gatner - Emote (Phase 3)'),
 (19228121,19228,1,7,100,0,281000,281000,0,0,1,-1087,-1089,-1098,0,0,0,0,0,0,0,0,'Perry Gatner - Closing Random Say (Phase 3)'),
-(19228122,27946,0,0,100,1,4000,7000,6000,9000,11,37985,0,0,0,0,0,0,0,0,0,0,'Silvermoon Dragonhawk - Cast Fire Breath');
+(19228122,27946,0,0,100,1,4000,7000,6000,9000,11,37985,0,0,0,0,0,0,0,0,0,0,'Silvermoon Dragonhawk - Cast Fire Breath'),
+(2130602,21306,1,0,30,0,5000,9000,0,0,2,14,1,0,0,0,0,0,0,0,0,0,'Cursed Scarab - 30% Should Change Faction'),
+(2130603,21306,1,0,100,0,18000,24000,0,0,41,0,0,0,0,0,0,0,0,0,0,0,'Cursed Scarab - despawn self'),
+(655701,6557,2,0,100,0,10,0,0,0,11,14146,0,0,0,0,0,0,0,0,0,0,'Primal Ooze - Cast Clone at 10% HP'),
+(655702,6557,30,0,100,1,5,10290,0,0,11,16032,0,16,36,9621,0,0,0,0,0,0,'Primal Ooze - Cast Merging Oozes AND Transform into Gargantuan Ooze on Receive AI Event A'),
+(1029001,10290,29,0,100,0,1000,1000,0,0,45,5,40,0,41,2000,0,0,0,0,0,0,'Captured Felwood Ooze - Send AI Event \"A\" AND Despawn self(Q.4642)'),
+(1446001,14460,9,0,100,1,0,8,11000,14000,11,23113,0,1,0,0,0,0,0,0,0,0,'Blazing Invader - Cast Blast Wave'),
+(1004001,10040,0,0,100,1,8000,8000,8000,12000,11,14120,1,0,0,0,0,0,0,0,0,0,'Gorishi Hive Guard - Cast Tunneler Acid'),
+(1004002,10040,9,5,100,1,0,5,4000,6000,11,14120,1,0,0,0,0,0,0,0,0,0,'Gorishi Hive Guard - Cast Tunneler Acid (Phase 1)'),
+(1004003,10040,24,5,100,1,14120,5,5000,5000,22,2,0,0,0,0,0,0,0,0,0,0,'Gorishi Hive Guard - Set Phase 2 on Target Max Tunneler Acid Aura Stack (Phase 1)'),
+(1004004,10040,28,3,100,1,14120,1,5000,5000,22,1,0,0,0,0,0,0,0,0,0,0,'Gorishi Hive Guard - Set Phase 1 on Target Missing Tunneler Acid Aura Stack (Phase 2)'),
+(3601,36,0,0,100,0,1,18600,22200,34500,11,8014,1,0,0,0,0,0,0,0,0,0,'HarvestGolem- CastTetanus'),
+(23301,233,1,0,100,1,1000,15000,150000,180000,1,-2003,-2004,-2005,0,0,0,0,0,0,0,0,'Farmer Saldean - Say OOC'),
+(58801,588,2,0,100,0,30,0,0,0,11,8599,0,0,1,-46,0,0,0,0,0,0,'Bloodscalp Scout - Cast Enrage at 30% HP'),
+(66001,660,0,0,100,1057,6500,15300,13300,21700,11,5605,0,0,11,8376,0,0,0,0,0,0,'Bloodscalp Witch Doctor - Cast Healing Ward or Cast Earthgrab Totem'),
+(66002,660,2,0,100,1024,30,0,0,0,0,0,11,8599,1,-46,0,0,0,0,0,0,'Bloodscalp Witch Doctor - Cast Enrage at 30% HP'),
+(66701,667,13,0,100,1,15000,20000,0,0,11,11972,1,1,0,0,0,0,0,0,0,0,'Skullsplitter Warrior - Cast Shield Bash on Target Casting'),
+(66702,667,0,0,100,1,5000,7000,23000,26000,11,3148,1,0,0,0,0,0,0,0,0,0,'Skullsplitter Warrior - Cast Head Crack'),
+(105901,1059,0,0,100,0,3000,6000,18000,20000,11,9791,1,0,0,0,0,0,0,0,0,0,'Ana\'thek the Cruel - Cast Head Crack'),
+(105902,1059,12,0,100,0,20,0,30000,30000,11,7160,1,0,0,0,0,0,0,0,0,0,'Ana\'thek the Cruel - Cast Execute when Target HP below 20%'),
+(1607501,16075,22,0,100,1,58,0,0,0,11,27572,6,32,0,0,0,0,0,0,0,0,'Kwee Q. Peddlefeet - Cast Smitten on Receive TEXTEMOTE_KISS'),
+(2040401,20404,9,0,100,1,0,5,7000,13000,11,35147,1,0,0,0,0,0,0,0,0,0,'Warp-Gate Engineer - Cast Sundering Swipe');
 /*!40000 ALTER TABLE `creature_ai_scripts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -20753,4 +20774,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-18 20:52:07
+-- Dump completed on 2022-02-15  9:48:23
