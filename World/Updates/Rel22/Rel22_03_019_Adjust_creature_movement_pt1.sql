@@ -26,10 +26,10 @@ BEGIN
     SET @cNewStructure = '03';
     SET @cNewContent = '019';
                             -- DESCRIPTION IS 30 Characters MAX    
-    SET @cNewDescription = 'Adjust_Creature_Movement';
+    SET @cNewDescription = 'Adjust_Creature_Movement_pt1';
 
                         -- COMMENT is 150 Characters MAX
-    SET @cNewComment = 'Adjust_Creature_Movement';
+    SET @cNewComment = 'Adjust_Creature_Movement_pt1';
 
     -- Evaluate all settings
     SET @cCurResult := (SELECT `description` FROM `db_version` ORDER BY `version` DESC, `STRUCTURE` DESC, `CONTENT` DESC LIMIT 0,1);

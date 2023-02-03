@@ -26,7 +26,7 @@ BEGIN
     SET @cNewStructure = '03';
     SET @cNewContent = '021';
                             -- DESCRIPTION IS 30 Characters MAX    
-    SET @cNewDescription = 'Adjust_Creature_Movement';
+    SET @cNewDescription = 'Adjust_Creature_Movement_pt3';
 
                         -- COMMENT is 150 Characters MAX
     SET @cNewComment = 'Adjust_Creature_Movement_pt3';
