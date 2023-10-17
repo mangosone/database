@@ -7,7 +7,7 @@ TRUNCATE TABLE `gossip_menu_option`;
 --
 -- Host: localhost    Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.5-10.5.8-MariaDB
+-- Server version	5.5.5-10.11.1-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -1409,7 +1409,7 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`,
 (7389,0,3,'I want to become a blacksmith.',5,16,0,0,0,0,0,'',0),
 (7389,1,1,'Let me browse your wares, Calypso.',3,128,0,0,0,0,0,'',0),
 (7396,0,1,'I want to browse your goods.',3,128,0,0,0,0,0,'',0),
-(7399,0,0,'Admiral, I need another tree disguise kit.',1,1,-1,0,7399,0,0,'',0),
+(7399,0,0,'Admiral, I need another tree disguise kit.',1,1,-1,0,7399,0,0,'',528),
 (7401,0,0,'We have much in common, night elf. I can\'t help but feel that perhaps it was fate that brought us together. Let me help you, Cowlen. Let my people help. We will right the wrongs. This I vow.',1,1,7403,0,0,0,0,'',0),
 (7402,0,0,'I fear that my people are somewhat responsible for this destruction. We are refugees, displaced from our homes by the Burning Legion. This tragedy is a result of our latest evacuation. Our vessel crashed - this debris is a part of that vessel.',1,1,7401,0,0,0,0,'',0),
 (7403,0,0,'I have not come to kill you, night elf. And the gods did not do this...',1,1,7402,0,0,0,0,'',0),
@@ -1921,7 +1921,7 @@ INSERT INTO `gossip_menu_option` (`menu_id`, `id`, `option_icon`, `option_text`,
 (8754,0,1,'I\'m interested in purchasing a new drake.',3,128,0,0,0,0,0,'',0),
 (8760,1,1,'Let me browse your goods.',3,128,0,0,0,0,0,'',0),
 (8760,3,3,'Train me',5,16,0,0,0,0,0,'',0),
-(8761,0,0,'Can you spread the reflective dust again?',1,1,-1,0,8761,0,0,'',0),
+(8761,0,0,'Can you spread the reflective dust again?',1,1,-1,0,8761,0,0,'',387),
 (8762,0,0,'Your propaganda won\'t work on me. Spout your treasonous filth elsewhere, traitor!',1,1,0,0,0,0,0,'',0),
 (8763,0,0,'Who is the Headless Horseman?',1,1,8880,0,0,0,0,'',0),
 (8767,0,0,'Where is the zeppelin to Undercity right now?',1,1,8765,0,0,0,0,'',0),
@@ -2711,4 +2711,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-02-15  9:48:29
+-- Dump completed on 2023-10-17 10:33:59

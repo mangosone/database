@@ -1,6 +1,6 @@
 If your database is a version prior to:
 
-Rel22_03_003_Scripts_for_q10723_and_q10802.sql
+Rel22_03_032_Bartleby.sql
 
 You need to run the appriopriate updates in the zip file in the folder:
 

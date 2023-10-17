@@ -7,7 +7,7 @@ TRUNCATE TABLE `db_scripts`;
 --
 -- Host: localhost    Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.5-10.5.8-MariaDB
+-- Server version	5.5.5-10.11.1-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -2031,7 +2031,32 @@ INSERT INTO `db_scripts` (`script_guid`, `script_type`, `id`, `delay`, `command`
 (4378,8,14536,12,15,38763,0,21514,40,12,0,0,0,0,0,0,0,0,'Gorgrom - CAST SPELL Suicide'),
 (4379,8,14400,12,18,15000,0,10204,40,4,0,0,0,0,0,0,0,0,'Gorgrom - Misha DESPAWN'),
 (4380,8,14536,12,18,60000,0,21514,40,1,0,0,0,0,0,0,0,0,'Gorgrom - Gorgrom DESPAWN'),
-(4381,8,14400,12,18,60000,0,21514,40,1,0,0,0,0,0,0,0,0,'Gorgrom - Gorgrom DESPAWN');
+(4381,8,14400,12,18,60000,0,21514,40,1,0,0,0,0,0,0,0,0,'Gorgrom - Gorgrom DESPAWN'),
+(4382,6,50029,23,7,2969,0,0,0,0,0,0,0,0,0,0,0,0,'Quest 2969 Complete'),
+(4383,6,50029,0,3,0,0,7997,50062,16,0,0,0,0,-4514.79,753.332,60.4589,0,'Move - Captured Sprite Darter'),
+(4384,6,50029,0,3,0,0,7997,50063,16,0,0,0,0,-4516.79,756.357,60.3792,0,'Move - Captured Sprite Darter'),
+(4385,6,50029,0,3,0,0,7997,50064,16,0,0,0,0,-4515.79,754.357,60.3792,0,'Move - Captured Sprite Darter'),
+(4386,6,50029,0,3,0,0,7997,50065,16,0,0,0,0,-4515.64,756.607,60.3453,0,'Move - Captured Sprite Darter'),
+(4387,6,50029,0,3,0,0,7997,50066,16,0,0,0,0,-4517.23,755.28,60.3972,0,'Move - Captured Sprite Darter'),
+(4388,6,50029,0,3,0,0,7997,50067,16,0,0,0,0,-4517.08,750.508,60.4589,0,'Move - Captured Sprite Darter'),
+(4389,6,50029,0,3,0,0,7997,50068,16,0,0,0,0,-4556.03,786.234,48.3795,0,'Move - Captured Sprite Darter'),
+(4390,6,50029,0,3,0,0,7997,50069,16,0,0,0,0,-4554.98,784.931,48.3029,0,'Move - Captured Sprite Darter'),
+(4391,6,50029,0,3,0,0,7997,50070,16,0,0,0,0,-4626.63,831.622,57.141,0,'Move - Captured Sprite Darter'),
+(4392,6,50029,0,3,0,0,7997,50071,16,0,0,0,0,-4523.55,831.25,57.4991,0,'Move - Captured Sprite Darter'),
+(4393,6,50029,0,3,0,0,7997,50072,16,0,0,0,0,-4521.78,829.74,57.5191,0,'Move - Captured Sprite Darter'),
+(4394,6,50029,0,3,0,0,7997,50073,16,0,0,0,0,-4523.55,832.25,57.4991,0,'Move - Captured Sprite Darter'),
+(4395,6,50029,23,18,5,0,7997,50062,16,0,0,0,0,0,0,0,0,'Despawn - Captured Sprite Darter'),
+(4396,6,50029,23,18,5,0,7997,50063,16,0,0,0,0,0,0,0,0,'Despawn - Captured Sprite Darter'),
+(4397,6,50029,23,18,5,0,7997,50064,16,0,0,0,0,0,0,0,0,'Despawn - Captured Sprite Darter'),
+(4398,6,50029,23,18,5,0,7997,50065,16,0,0,0,0,0,0,0,0,'Despawn - Captured Sprite Darter'),
+(4399,6,50029,23,18,5,0,7997,50066,16,0,0,0,0,0,0,0,0,'Despawn - Captured Sprite Darter'),
+(4400,6,50029,23,18,5,0,7997,50067,16,0,0,0,0,0,0,0,0,'Despawn - Captured Sprite Darter'),
+(4401,6,50029,23,18,5,0,7997,50068,16,0,0,0,0,0,0,0,0,'Despawn - Captured Sprite Darter'),
+(4402,6,50029,23,18,5,0,7997,50069,16,0,0,0,0,0,0,0,0,'Despawn - Captured Sprite Darter'),
+(4403,6,50029,23,18,5,0,7997,50070,16,0,0,0,0,0,0,0,0,'Despawn - Captured Sprite Darter'),
+(4404,6,50029,23,18,5,0,7997,50071,16,0,0,0,0,0,0,0,0,'Despawn - Captured Sprite Darter'),
+(4405,6,50029,23,18,5,0,7997,50072,16,0,0,0,0,0,0,0,0,'Despawn - Captured Sprite Darter'),
+(4406,6,50029,23,18,5,0,7997,50073,16,0,0,0,0,0,0,0,0,'Despawn - Captured Sprite Darter');
 /*!40000 ALTER TABLE `db_scripts` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -2044,4 +2069,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-02-15  9:48:26
+-- Dump completed on 2023-10-17 10:33:56

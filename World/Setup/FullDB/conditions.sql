@@ -7,7 +7,7 @@ TRUNCATE TABLE `conditions`;
 --
 -- Host: localhost    Database: mangos1
 -- ------------------------------------------------------
--- Server version	5.5.5-10.5.8-MariaDB
+-- Server version	5.5.5-10.11.1-MariaDB
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -36,9 +36,9 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `commen
 (7,7,186,1,NULL),
 (8,7,333,1,NULL),
 (9,7,202,1,NULL),
-(10,6,469,0,NULL),
+(10,6,469,0,'Alliance Player'),
 (11,9,1846,0,NULL),
-(12,6,67,0,NULL),
+(12,6,67,0,'Horde Player'),
 (13,2,13370,1,NULL),
 (14,10,0,0,NULL),
 (15,7,171,1,NULL),
@@ -193,11 +193,11 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `commen
 (1751,-1,24,1750,'Replace Spectral Essence Gossip menu 3310 check'),
 (1752,9,9437,0,NULL),
 (1753,8,4512,0,'Show gossip text 3099 if quest, A Little Slime Goes a Long Way (Part 1),
-\n\n is rewarded'),
+\n\n\n is rewarded'),
 (1754,8,4513,0,'Show gossip text 3098 if quest, A Little Slime Goes a Long Way (Part 2),
-\n\n is rewarded'),
+\n\n\n is rewarded'),
 (1755,-3,1754,0,'Only show if quest, A Little Slime Goes a Long Way (Part 2),
-\n\n is NOT rewarded'),
+\n\n\n is NOT rewarded'),
 (1756,-1,1753,1755,'Condition Check for A Little Slime Goes a Long Way gossip'),
 (887,11,24746,0,'Greater Wind Stone GO gossip'),
 (888,1,24746,0,'Greater Wind Stone GO gossip'),
@@ -213,7 +213,25 @@ INSERT INTO `conditions` (`condition_entry`, `type`, `value1`, `value2`, `commen
 (916,-1,894,912,'Greater Wind Stone GO gossip'),
 (917,-1,894,913,'Greater Wind Stone GO gossip'),
 (918,-1,894,914,'Greater Wind Stone GO gossip'),
-(975,8,1029,0,NULL);
+(975,8,1029,0,NULL),
+(1757,8,8325,0,'NPC text display - check q.8325 completed'),
+(1758,8,8347,0,'NPC text display - check q.8347 completed'),
+(1759,9,8347,0,'NPC text display - check q.8347 taken'),
+(1760,-2,1758,1759,'NPC text display - check q.8347 taken/completed'),
+(1761,8,9146,0,'Quest ID 9146 Rewarded'),
+(1762,8,9212,0,'Quest ID 9212 Rewarded'),
+(1763,-1,1761,1762,'(Quest 9146 Rewarded AND Quest 9212 Rewarded)'),
+(1764,9,9215,0,'Quest ID 9215 Taken'),
+(1765,9,9214,0,'Quest ID 9214 Taken'),
+(1766,-2,1764,1765,'(Quest 9215 Taken OR Quest 9214 Taken)'),
+(1767,8,9215,0,'Quest ID 9215 Rewarded'),
+(1768,8,9214,0,'Quest ID 9214 Rewarded'),
+(1769,-1,1767,1768,'(Quest ID 9215 Rewarded AND Quest ID 9214 Rewarded)'),
+(1770,-1,1763,1769,'((Quest ID 9146,9212,9215,9214 Rewarded'),
+(195,24,23792,1,'Have tree disguise.'),
+(196,9,9531,0,'Have Quest check.'),
+(528,-1,196,195,'Have item and quest.'),
+(387,11,42169,1,'Inspector Tarem gossip option.');
 /*!40000 ALTER TABLE `conditions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -226,4 +244,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-02-15  9:48:22
+-- Dump completed on 2023-10-17 10:33:52
