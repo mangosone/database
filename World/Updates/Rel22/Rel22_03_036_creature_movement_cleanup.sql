@@ -6,7 +6,8 @@ DROP PROCEDURE IF EXISTS `update_mangos`;
 
 DELIMITER $$
 
-CREATE DEFINER=`root`@`localhost` PROCEDURE `update_mangos`()
+-- CREATE DEFINER=`root`@`localhost` PROCEDURE `update_mangos`()
+CREATE PROCEDURE `update_mangos`()
 BEGIN
     DECLARE bRollback BOOL  DEFAULT FALSE ;
     DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SET `bRollback` = TRUE;
@@ -44,7 +45,7 @@ BEGIN
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
 		
 -- Adjust the Movement Points down by one if the entries don't start at 0
-UPDATE creature_movement SET POINT=POINT-1 WHERE id IN (SELECT id FROM creature_movement GROUP BY id HAVING MIN(POINT)=1 ORDER BY id, POINT ASC);
+UPDATE IGNORE creature_movement SET POINT=POINT-1 WHERE id IN (SELECT id FROM creature_movement GROUP BY id HAVING MIN(POINT)=1 ORDER BY id, POINT ASC);
 UPDATE creature_movement_template SET POINT=POINT-1 WHERE entry IN (SELECT entry FROM creature_movement_template GROUP BY entry HAVING MIN(POINT)=1 ORDER BY entry, POINT ASC);
 
 -- Catch a few remaining stragglers who started at 2
