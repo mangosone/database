@@ -1,6 +1,6 @@
 If your database is a version prior to:
 
-Rel22_03_032_Bartleby.sql
+Rel22_03_036_creature_movement_cleanup.sql
 
 You need to run the appriopriate updates in the zip file in the folder:
 

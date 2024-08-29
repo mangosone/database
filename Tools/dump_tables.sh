@@ -146,7 +146,7 @@ for TABLE in \
 echo "Dumping ${i}/129 ${TABLE}..."
 
 echo "--
--- Copyright (C) 2005-2021 MaNGOS <http://getmangos.eu/> <https://github.com/mangosone>
+-- Copyright (C) 2005-2024 MaNGOS <https://getmangos.eu/> <https://github.com/mangoszero>
 --
 -- This program is free software; you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
