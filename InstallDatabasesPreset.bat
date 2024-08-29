@@ -20,10 +20,10 @@ REM set user=root
 REM set pass=mangos
 REM set newpass=mangos
 REM set port=3306
-REM set wdb=mangos0
-REM set wdborig=mangos0
-REM set cdb=character0
-REM set cdborig=character0
+REM set wdb=mangos1
+REM set wdborig=mangos1
+REM set cdb=character1
+REM set cdborig=character1
 REM set rdb=realmd
 REM set rdborig=realmd
 REM set dbClientConnectionOptions=--login-path=local
