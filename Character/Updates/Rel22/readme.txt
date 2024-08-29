@@ -1,6 +1,6 @@
 If your database is a version prior to:
 
-Rel22_05_001_fix_ai_playerbot_names_name_length.sql
+Rel22_07_001_Add_Quest_Tracker_Table.sql
 
 You need to run the appriopriate updates in the zip file in the folder:
 
