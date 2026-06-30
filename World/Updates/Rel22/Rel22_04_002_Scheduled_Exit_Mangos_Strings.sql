@@ -6,8 +6,7 @@ DROP PROCEDURE IF EXISTS `update_mangos`;
 
 DELIMITER $$
 
--- CREATE DEFINER=`root`@`localhost` PROCEDURE `update_mangos`()
-CREATE PROCEDURE `update_mangos`()
+CREATE DEFINER=`root`@`localhost` PROCEDURE `update_mangos`()
 BEGIN
     DECLARE bRollback BOOL  DEFAULT FALSE ;
     DECLARE CONTINUE HANDLER FOR SQLEXCEPTION SET `bRollback` = TRUE;
@@ -43,6 +42,8 @@ BEGIN
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
         -- -- PLACE UPDATE SQL BELOW -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
         -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -
+
+DELETE FROM `mangos_string` WHERE `entry` IN (1730,1731,1732,1733,1734,1735,1736,1737);
 
 INSERT INTO `mangos_string` (`entry`, `content_default`, `content_loc1`, `content_loc2`, `content_loc3`, `content_loc4`, `content_loc5`, `content_loc6`, `content_loc7`, `content_loc8`, `source_file`, `source_enum_wrapper`, `source_enum_tag`) VALUES
 (1730,'This realm will be automatically restarting in 15 Minutes as part of its weekly schedule. Downtime is expected to be 1-2 minutes.',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'Language.h','MangosStrings','LANG_SCHEDULED_EXIT_RESTART_15_MIN'),

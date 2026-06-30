@@ -48,6 +48,8 @@ BEGIN
     -- occupancy for grids and cells to help quantify whether future
     -- cell-cluster object loading is worthwhile.
 
+    DELETE FROM `command` WHERE `id` IN (810,811);
+
     INSERT INTO `command` (`id`, `command_text`, `security`, `help_text`) VALUES
     (810,'grid info',3,'Syntax: .grid info [gridX gridY]\r\n\r\nReports static DB spawn-definition occupancy for one grid on the player''s current map: occupied/empty cell counts, total spawn GUIDs by type, and the busiest cells. With no args, uses the player''s current grid. Read-only.'),
     (811,'grid anchors',3,'Syntax: .grid anchors\r\n\r\nReports static DB spawn-definition occupancy for the ENABLED startup anchor grids on the player''s current map (the CREATURE_FLAG_EXTRA_ACTIVE set plus any LivingWorld anchors enabled by the current AnchorPolicyMask). Used to measure how sparse anchor-held grids are. Read-only.');
