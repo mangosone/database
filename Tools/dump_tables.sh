@@ -140,7 +140,7 @@ for TABLE in \
 `spell_template` \
 `spell_threat` \
 `transports` \
-`warden` \
+`warden_checks` \
 ; do
 
 echo "Dumping ${i}/129 ${TABLE}..."
