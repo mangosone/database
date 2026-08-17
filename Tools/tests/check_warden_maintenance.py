@@ -27,6 +27,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[2]
 INSTALL = (ROOT / "InstallDatabases.sh").read_text(encoding="utf-8")
 BACKUP = (ROOT / "Tools" / "backupDB.cmd").read_text(encoding="utf-8")
+DUMP_TABLES = (ROOT / "Tools" / "dump_tables.sh").read_text(encoding="utf-8")
 
 
 def shell_function(name: str) -> str:
@@ -95,6 +96,26 @@ class WardenBackupRoutingTests(unittest.TestCase):
             'move /Y "%OPTIONALREADY%" "%OPTIONALOUTPUT%" >nul', BACKUP
         )
         self.assertIn('type "%OPTIONALTEMP%" >> "%OPTIONALREADY%"', BACKUP)
+
+
+class WardenDumpRoutingTests(unittest.TestCase):
+    def test_unix_dump_selects_present_warden_schema_and_cleans_counterpart(self) -> None:
+        candidates = re.search(
+            r"for WARDEN_TABLE in ([^;\n]+); do", DUMP_TABLES
+        )
+        self.assertIsNotNone(candidates, "Warden table probe loop is missing")
+        self.assertEqual(candidates.group(1).split(), ["warden", "warden_checks"])
+        self.assertRegex(
+            DUMP_TABLES,
+            r"(?s)for WARDEN_TABLE in warden warden_checks; do.*?"
+            r"mysqldump .*--no-data.*\$\{DB\}.*\$\{WARDEN_TABLE\}",
+        )
+        self.assertIn(
+            'rm -f "${DUMPDIR}/warden.sql" "${DUMPDIR}/warden_checks.sql"',
+            DUMP_TABLES,
+        )
+        self.assertIn("${WARDEN_TABLES} \\", DUMP_TABLES)
+        self.assertNotRegex(DUMP_TABLES, r"(?m)^`warden(?:_checks)?` \\$")
 
 
 if __name__ == "__main__":
