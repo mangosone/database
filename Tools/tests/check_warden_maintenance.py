@@ -32,6 +32,13 @@ ROOT = Path(__file__).resolve().parents[2]
 INSTALL = (ROOT / "InstallDatabases.sh").read_text(encoding="utf-8")
 BACKUP = (ROOT / "Tools" / "backupDB.cmd").read_text(encoding="utf-8")
 DUMP_TABLES = (ROOT / "Tools" / "dump_tables.sh").read_text(encoding="utf-8")
+WARDEN_CHECK_PROFILE_UPDATE = (
+    ROOT
+    / "World"
+    / "Updates"
+    / "Rel22"
+    / "Rel22_09_001_Warden_Check_Profiles.sql"
+).read_text(encoding="utf-8")
 
 
 def shell_function(name: str) -> str:
@@ -104,6 +111,31 @@ def bash_executable() -> str:
         if candidate.is_file():
             return str(candidate)
     raise AssertionError("bash is required to validate dump_tables.sh")
+
+
+class WardenCheckProfileUpdateTests(unittest.TestCase):
+    def test_seed_validation_scopes_every_query_to_exact_8606_windows(self) -> None:
+        start = WARDEN_CHECK_PROFILE_UPDATE.index(
+            "        IF (SELECT COUNT(*) FROM `warden_checks`"
+        )
+        end = WARDEN_CHECK_PROFILE_UPDATE.index("        END IF;", start)
+        validation = WARDEN_CHECK_PROFILE_UPDATE[start:end]
+        source_count = len(re.findall(r"FROM\s+`warden_checks`", validation))
+        scope = (
+            r"WHERE\s+`build`\s*=\s*8606\s+AND\s+"
+            r"`platform`\s*=\s*0x57696E"
+        )
+
+        self.assertEqual(source_count, 4)
+        self.assertEqual(len(re.findall(scope, validation)), source_count)
+
+        # Prove the guard detects loss of any one repeated scope predicate.
+        unscoped, replacements = re.subn(scope, "", validation, count=1)
+        self.assertEqual(replacements, 1)
+        self.assertNotEqual(
+            len(re.findall(scope, unscoped)),
+            len(re.findall(r"FROM\s+`warden_checks`", unscoped)),
+        )
 
 
 class CharacterUpdateRoutingTests(unittest.TestCase):
