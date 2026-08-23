@@ -38,9 +38,9 @@ BEGIN
     IF (@cCurResult = @cOldResult) THEN
         START TRANSACTION;
 
-        -- A prior interrupted/manual seed may have left only part of build
-        -- 8606. Preserve unrelated rows so the validation below fails safely
-        -- instead of silently deleting operator data.
+        -- Replace only this exact build/platform seed. Unrelated operator or
+        -- future-profile rows remain untouched and outside the validation
+        -- scope below.
         DELETE FROM `warden_checks`
         WHERE `build` = 8606 AND `platform` = 0x57696E;
 
@@ -152,12 +152,17 @@ BEGIN
          0xB9EC18E100E88687F7FFE821FBFFFF68CCDDBB00B9B3120000BA18CBBB00E8BDFCFFFFA3D018E100,
          'Exact 8606 Warden bootstrap invariant');
 
-        IF (SELECT COUNT(*) FROM `warden_checks`) <> 32
-           OR (SELECT COUNT(*) FROM `warden_checks` WHERE `enabled` = 1) <> 32
+        IF (SELECT COUNT(*) FROM `warden_checks`
+            WHERE `build` = 8606 AND `platform` = 0x57696E) <> 32
+           OR (SELECT COUNT(*) FROM `warden_checks`
+               WHERE `build` = 8606 AND `platform` = 0x57696E
+                 AND `enabled` = 1) <> 32
            OR (SELECT COUNT(DISTINCT `build`,`platform`,`locale`)
-               FROM `warden_checks`) <> 8
+               FROM `warden_checks`
+               WHERE `build` = 8606 AND `platform` = 0x57696E) <> 8
            OR EXISTS (
                SELECT 1 FROM `warden_checks`
+               WHERE `build` = 8606 AND `platform` = 0x57696E
                GROUP BY `build`,`platform`,`locale`
                HAVING COUNT(*) <> 4 OR SUM(`enabled` = 1) <> 4
            ) THEN
