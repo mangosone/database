@@ -39,6 +39,16 @@ WARDEN_CHECK_PROFILE_UPDATE = (
     / "Rel22"
     / "Rel22_09_001_Warden_Check_Profiles.sql"
 ).read_text(encoding="utf-8")
+WARDEN_ZHTW_PROFILE_UPDATE_PATH = (
+    ROOT
+    / "World"
+    / "Updates"
+    / "Rel22"
+    / "Rel22_09_002_Warden_zhTW_Profile.sql"
+)
+WARDEN_ZHTW_PROFILE_UPDATE = WARDEN_ZHTW_PROFILE_UPDATE_PATH.read_text(
+    encoding="utf-8"
+)
 
 
 def shell_function(name: str) -> str:
@@ -136,6 +146,61 @@ class WardenCheckProfileUpdateTests(unittest.TestCase):
             len(re.findall(scope, unscoped)),
             len(re.findall(r"FROM\s+`warden_checks`", unscoped)),
         )
+
+
+class WardenZhTwProfileUpdateTests(unittest.TestCase):
+    def test_update_adds_the_exact_scoped_zhtw_profile(self) -> None:
+        self.assertTrue(
+            WARDEN_ZHTW_PROFILE_UPDATE_PATH.is_file(),
+            "missing Rel22_09_002 zhTW profile update",
+        )
+        self.assertEqual(
+            len(
+                re.findall(
+                    r"\(8606,0x57696E,0x7A685457,",
+                    WARDEN_ZHTW_PROFILE_UPDATE,
+                )
+            ),
+            4,
+        )
+        for expected in (
+            "41602044B1EA722C6798036AF787D8E9DD508A6A",
+            "E7A2BAE5AE9A",
+            "B9EC18E100E88687F7FFE821FBFFFF68CCDDBB00"
+            "B9B3120000BA18CBBB00E8BDFCFFFFA3D018E100",
+        ):
+            self.assertIn(expected, WARDEN_ZHTW_PROFILE_UPDATE)
+
+    def test_update_preserves_existing_profiles_and_advances_content(self) -> None:
+        self.assertNotIn("DELETE FROM `warden_checks`", WARDEN_ZHTW_PROFILE_UPDATE)
+        self.assertIn("SET @cOldContent = '001';", WARDEN_ZHTW_PROFILE_UPDATE)
+        self.assertIn("SET @cNewContent = '002';", WARDEN_ZHTW_PROFILE_UPDATE)
+        self.assertIn("START TRANSACTION;", WARDEN_ZHTW_PROFILE_UPDATE)
+        self.assertIn("ROLLBACK;", WARDEN_ZHTW_PROFILE_UPDATE)
+        self.assertIn(
+            "Stop mangosd and deploy this update with the matching server revision",
+            WARDEN_ZHTW_PROFILE_UPDATE,
+        )
+
+    def test_update_rejects_any_preexisting_exact_zhtw_profile(self) -> None:
+        start = WARDEN_ZHTW_PROFILE_UPDATE.index("        IF EXISTS (")
+        end = WARDEN_ZHTW_PROFILE_UPDATE.index("        END IF;", start)
+        guard = WARDEN_ZHTW_PROFILE_UPDATE[start:end]
+        scope = (
+            r"WHERE\s+`build`\s*=\s*8606\s+AND\s+"
+            r"`platform`\s*=\s*0x57696E\s+AND\s+"
+            r"`locale`\s*=\s*0x7A685457"
+        )
+
+        self.assertEqual(len(re.findall(scope, guard)), 1)
+        self.assertIn("SIGNAL SQLSTATE '45000'", guard)
+
+        # Prove the assertion fails if any part of the exact profile scope is lost.
+        unscoped, replacements = re.subn(
+            r"\s+AND\s+`locale`\s*=\s*0x7A685457", "", guard, count=1
+        )
+        self.assertEqual(replacements, 1)
+        self.assertEqual(len(re.findall(scope, unscoped)), 0)
 
 
 class CharacterUpdateRoutingTests(unittest.TestCase):
